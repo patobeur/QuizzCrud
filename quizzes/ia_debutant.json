@@ -1,0 +1,339 @@
+{
+  "title": "Test de positionnement - IA débutant",
+  "level": "Débutant",
+  "time": "≈ 5–10 min",
+  "color": "purple",
+  "main_title": "Culture générale & usages simples",
+  "card_description": "Notions de base (IA, LLM), exemples d'usages (texte, image), bonnes pratiques pour débuter, limites et éthique.",
+  "features": [
+    "20 questions (radio & checkbox)",
+    "Points par réponse & feedback personnalisé",
+    "Pertinence : évaluer l’aptitude à suivre une formation de 7 h"
+  ],
+  "themes": ["Culture IA", "Prompting", "Usages"],
+  "description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
+  "questions": [
+    {
+      "id": "Q1",
+      "theme": "Culture générale IA",
+      "question": "Qu’est-ce qu’une Intelligence Artificielle (IA) ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Un programme informatique capable d’imiter des tâches humaines",
+          "points": 5
+        },
+        { "label": "Un robot physique avec un cerveau", "points": 1 },
+        { "label": "Une conscience comme dans les films", "points": 0 }
+      ],
+      "feedback_correct": "Exact, c'est la définition la plus simple et juste.",
+      "feedback_partial": "L'IA est le logiciel, pas forcément le robot.",
+      "feedback_incorrect": "On en est encore loin ! L'IA actuelle est un outil, pas une conscience.",
+      "relevance": "Savoir ce qu'est une IA aide à mieux comprendre ce qu'on peut lui demander."
+    },
+    {
+      "id": "Q2",
+      "theme": "Culture générale IA",
+      "question": "Parmi ces outils, lequel est principalement une IA de conversation (chatbot) ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "ChatGPT", "points": 5 },
+        { "label": "Photoshop", "points": 0 },
+        { "label": "Microsoft Word", "points": 0 }
+      ],
+      "feedback_correct": "Oui, ChatGPT est l'exemple le plus connu d'IA conversationnelle.",
+      "feedback_partial": "Word a des fonctions d'IA, mais son but premier est le traitement de texte.",
+      "feedback_incorrect": "Photoshop est un outil de retouche d'image, bien qu'il intègre de plus en plus d'IA.",
+      "relevance": "Identifier les bons outils est la première étape pour bien les utiliser."
+    },
+    {
+      "id": "Q3",
+      "theme": "Culture générale IA",
+      "question": "Que signifie 'LLM' (Large Language Model) ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Un grand modèle de langage, entraîné sur d'énormes quantités de texte",
+          "points": 5
+        },
+        { "label": "Une loi sur l'utilisation des IA", "points": 0 },
+        { "label": "Un logiciel de traduction automatique", "points": 1 }
+      ],
+      "feedback_correct": "Parfait. C'est le 'moteur' derrière des outils comme ChatGPT.",
+      "feedback_partial": "La traduction est une des capacités des LLM, mais ce n'est pas leur définition.",
+      "feedback_incorrect": "LLM est un terme technique, pas juridique.",
+      "relevance": "Comprendre ce terme permet de mieux saisir comment fonctionnent ces IA."
+    },
+    {
+      "id": "Q4",
+      "theme": "Le prompt",
+      "question": "Comment appelle-t-on l’instruction que l’on donne à une IA ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Un prompt", "points": 5 },
+        { "label": "Un ordre", "points": 2 },
+        { "label": "Une question", "points": 2 }
+      ],
+      "feedback_correct": "Exact, le 'prompt' est le terme consacré.",
+      "feedback_partial": "C'est proche. Un prompt peut être un ordre, une question, ou bien plus.",
+      "feedback_incorrect": "Un prompt peut être une question, mais aussi une instruction ou une demande complexe.",
+      "relevance": "Utiliser le bon vocabulaire ('prompt') facilite les recherches et l'apprentissage."
+    },
+    {
+      "id": "Q5",
+      "theme": "Le prompt",
+      "question": "Pour obtenir une bonne réponse, un prompt doit être...",
+      "selectionType": "single",
+      "options": [
+        { "label": "Clair et précis", "points": 5 },
+        { "label": "Très court et vague", "points": 0 },
+        { "label": "Écrit en majuscules", "points": 0 }
+      ],
+      "feedback_correct": "Oui, la clarté et la précision sont les clés d'un bon prompt.",
+      "feedback_partial": "Les majuscules peuvent être interprétées comme un ton agressif, mais n'améliorent pas la qualité.",
+      "feedback_incorrect": "Un prompt vague donnera une réponse vague. Soyez précis !",
+      "relevance": "La qualité de votre prompt détermine 80% de la qualité de la réponse."
+    },
+    {
+      "id": "Q6",
+      "theme": "Le prompt",
+      "question": "Si l’IA ne répond pas correctement, que faut-il faire en premier ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Reformuler le prompt pour être plus clair", "points": 5 },
+        { "label": "Abandonner et chercher sur Google", "points": 1 },
+        { "label": "Lui dire qu'elle a tort", "points": 2 }
+      ],
+      "feedback_correct": "Exact, l'itération et la reformulation sont des compétences clés.",
+      "feedback_partial": "Lui dire qu'elle a tort peut marcher, mais reformuler est plus efficace.",
+      "feedback_incorrect": "Ne baissez pas les bras ! 9 fois sur 10, une reformulation suffit.",
+      "relevance": "Savoir reformuler et 'débugger' ses prompts est essentiel pour progresser."
+    },
+    {
+      "id": "Q7",
+      "theme": "Usages courants",
+      "question": "Que peut faire une IA comme ChatGPT pour vous ?",
+      "selectionType": "multi",
+      "options": [
+        { "label": "Rédiger un email", "points": 2 },
+        { "label": "Résumer un texte", "points": 2 },
+        { "label": "Expliquer un sujet complexe", "points": 2 }
+      ],
+      "feedback_correct": "Parfait, vous avez identifié plusieurs usages très courants et utiles.",
+      "feedback_partial": "Bien. Et ce n'est que le début, elle peut aussi traduire, brainstormer, etc.",
+      "feedback_incorrect": "Les IA de texte excellent dans toutes ces tâches. N'hésitez pas à tester !",
+      "relevance": "Connaître l'éventail des possibles ouvre de nouvelles portes pour votre productivité."
+    },
+    {
+      "id": "Q8",
+      "theme": "Usages courants",
+      "question": "Peut-on demander à une IA de générer une image ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Oui, avec des outils comme Midjourney ou DALL-E", "points": 5 },
+        { "label": "Non, les IA ne font que du texte", "points": 0 },
+        { "label": "Seulement des images en noir et blanc", "points": 0 }
+      ],
+      "feedback_correct": "Oui, et les résultats sont souvent bluffants !",
+      "feedback_partial": "Les IA génèrent des images très colorées et complexes.",
+      "feedback_incorrect": "Il existe des IA spécialisées dans la génération d'images, qui sont distinctes des IA de texte.",
+      "relevance": "L'IA n'est pas limitée au texte. La génération d'images est une autre révolution."
+    },
+    {
+      "id": "Q9",
+      "theme": "Usages courants",
+      "question": "Pour trouver des idées de titre pour un article de blog, que demandez-vous ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "'Donne-moi 10 idées de titre pour un article sur [sujet]'",
+          "points": 5
+        },
+        { "label": "'Titre'", "points": 0 },
+        { "label": "'Je veux un titre'", "points": 1 }
+      ],
+      "feedback_correct": "Excellent prompt : il est clair, précis et demande un format de sortie (10 idées).",
+      "feedback_partial": "C'est trop vague. Précisez le sujet et le nombre d'idées souhaitées.",
+      "feedback_incorrect": "Un prompt aussi court ne donnera rien de bon. Contextualisez votre demande.",
+      "relevance": "Le 'brainstorming assisté par IA' est un excellent moyen de surmonter la page blanche."
+    },
+    {
+      "id": "Q10",
+      "theme": "Limites & éthique",
+      "question": "Les réponses d’une IA sont-elles toujours vraies ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Non, il faut toujours vérifier les informations importantes",
+          "points": 5
+        },
+        { "label": "Oui, toujours", "points": 0 },
+        { "label": "Seulement si on paie pour l'IA", "points": 0 }
+      ],
+      "feedback_correct": "Exact, c'est un réflexe crucial à avoir. L'IA peut se tromper ou 'halluciner'.",
+      "feedback_partial": "Même les versions payantes peuvent faire des erreurs. La vigilance est de mise.",
+      "feedback_incorrect": "Non, les IA n'ont pas la notion de vérité. Elles prédisent le mot suivant le plus probable.",
+      "relevance": "La vérification des sources est une compétence fondamentale à l'ère de l'IA."
+    },
+    {
+      "id": "Q11",
+      "theme": "Limites & éthique",
+      "question": "Peut-on copier-coller le texte d'une IA dans un devoir ou un rapport professionnel ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Non, c'est considéré comme du plagiat si on ne le cite pas",
+          "points": 5
+        },
+        { "label": "Oui, sans problème", "points": 0 },
+        { "label": "Seulement si on reformule un peu", "points": 2 }
+      ],
+      "feedback_correct": "Très juste. Il faut s'en servir comme d'un assistant, pas d'un remplaçant.",
+      "feedback_partial": "Reformuler est mieux, mais la bonne pratique est de s'en inspirer et de réécrire avec ses propres mots.",
+      "feedback_incorrect": "Attention, le copier-coller sans attribution est souvent considéré comme du plagiat.",
+      "relevance": "L'intégrité académique et professionnelle est primordiale. Utilisez l'IA comme un outil, pas une béquille."
+    },
+    {
+      "id": "Q12",
+      "theme": "Limites & éthique",
+      "question": "Les IA ont-elles des émotions ou une conscience ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Non, elles simulent les émotions en se basant sur les textes qu'elles ont appris", "points": 5 },
+        { "label": "Oui, elles peuvent être tristes ou joyeuses", "points": 0 },
+        { "label": "On ne sait pas encore", "points": 1 }
+      ],
+      "feedback_correct": "Parfait. C'est une simulation très convaincante, mais une simulation quand même.",
+      "feedback_partial": "La recherche est assez claire sur ce point : pas de conscience à l'horizon.",
+      "feedback_incorrect": "Les IA sont des calculateurs de probabilités, elles n'ont pas de sentiments propres.",
+      "relevance": "Distinguer la simulation de la réalité permet de garder une distance critique et saine avec l'outil."
+    },
+    {
+      "id": "Q13",
+      "theme": "Le prompt",
+      "question": "Pour que l'IA adopte un certain style (ex: amical, professionnel), que pouvez-vous ajouter au prompt ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Une instruction sur le ton : 'Adopte un ton professionnel'", "points": 5 },
+        { "label": "Des smileys", "points": 1 },
+        { "label": "Rien, l'IA choisit toute seule", "points": 0 }
+      ],
+      "feedback_correct": "Exact, on peut 'donner un rôle' à l'IA pour guider son style.",
+      "feedback_partial": "Les smileys peuvent aider, mais une instruction claire est beaucoup plus efficace.",
+      "feedback_incorrect": "Vous avez le contrôle ! N'hésitez pas à lui donner des instructions de style.",
+      "relevance": "Maîtriser le ton de l'IA est essentiel pour adapter ses réponses à différents contextes."
+    },
+    {
+      "id": "Q14",
+      "theme": "Culture générale IA",
+      "question": "Qui est derrière le développement de ChatGPT ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "OpenAI", "points": 5 },
+        { "label": "Google", "points": 1 },
+        { "label": "Microsoft", "points": 2 }
+      ],
+      "feedback_correct": "Oui, c'est bien OpenAI.",
+      "feedback_partial": "Microsoft est un partenaire majeur, mais OpenAI est le développeur.",
+      "feedback_incorrect": "Google a sa propre IA, Gemini (anciennement Bard).",
+      "relevance": "Connaître les acteurs principaux de l'IA aide à suivre l'actualité du domaine."
+    },
+    {
+      "id": "Q15",
+      "theme": "Usages courants",
+      "question": "Quel est l'intérêt d'utiliser une IA pour apprendre une nouvelle langue ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "On peut pratiquer la conversation à tout moment",
+          "points": 5
+        },
+        { "label": "Ça remplace complètement un professeur", "points": 0 },
+        { "label": "C'est plus rapide que les méthodes traditionnelles", "points": 2 }
+      ],
+      "feedback_correct": "Exact, l'IA est un partenaire de conversation infatigable et sans jugement.",
+      "feedback_partial": "Ça peut accélérer l'apprentissage, mais la rapidité dépend de chacun.",
+      "feedback_incorrect": "C'est un excellent complément, mais l'interaction avec un humain reste très précieuse.",
+      "relevance": "L'IA ouvre des possibilités inédites pour l'apprentissage personnalisé et accessible."
+    },
+    {
+      "id": "Q16",
+      "theme": "Le prompt",
+      "question": "Vous voulez une liste de 5 points. Comment le préciser dans le prompt ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "'Liste-moi 5 avantages de [sujet]'",
+          "points": 5
+        },
+        { "label": "'Fais une liste'", "points": 1 },
+        { "label": "L'IA fera une liste si elle le juge pertinent", "points": 0 }
+      ],
+      "feedback_correct": "Parfait. Demander un format spécifique (nombre de points, tableau, etc.) est une très bonne pratique.",
+      "feedback_partial": "Soyez plus directif ! Précisez le nombre de points attendus.",
+      "feedback_incorrect": "Ne laissez pas l'IA deviner. Imposez-lui le format de sortie désiré.",
+      "relevance": "Contrôler le format de la réponse vous fait gagner un temps précieux en post-traitement."
+    },
+    {
+      "id": "Q17",
+      "theme": "Culture générale IA",
+      "question": "L'IA est un domaine récent qui a émergé avec Internet.",
+      "selectionType": "single",
+      "options": [
+        { "label": "Faux, les concepts de base datent des années 1950", "points": 5 },
+        { "label": "Vrai, tout a commencé dans les années 2000", "points": 0 }
+      ],
+      "feedback_correct": "Absolument. Le domaine a connu des 'hivers' et des 'étés', mais ses racines sont anciennes.",
+      "feedback_incorrect": "C'est une idée reçue. Les bases théoriques de l'IA sont bien plus anciennes qu'Internet.",
+      "relevance": "Avoir une perspective historique permet de mieux comprendre l'effervescence actuelle."
+    },
+    {
+      "id": "Q18",
+      "theme": "Limites & éthique",
+      "question": "Les données que vous entrez dans une IA publique (comme la version gratuite de ChatGPT) sont...",
+      "selectionType": "single",
+      "options": [
+        { "label": "Potentiellement utilisées pour entraîner le modèle", "points": 5 },
+        { "label": "Toujours privées et supprimées immédiatement", "points": 0 },
+        { "label": "Vendues à des publicitaires", "points": 1 }
+      ],
+      "feedback_correct": "C'est exact. Il ne faut jamais entrer d'informations confidentielles ou personnelles.",
+      "feedback_partial": "Ce n'est pas le modèle économique principal, mais la réutilisation pour l'entraînement est souvent la norme.",
+      "feedback_incorrect": "Lisez bien les conditions d'utilisation. Les données peuvent être conservées et analysées.",
+      "relevance": "La confidentialité des données est LE point de vigilance numéro 1 avec les IA publiques."
+    },
+    {
+      "id": "Q19",
+      "theme": "Usages courants",
+      "question": "Vous organisez un voyage. Comment une IA peut-elle vous aider ?",
+      "selectionType": "multi",
+      "options": [
+        { "label": "Proposer un itinéraire jour par jour", "points": 2 },
+        { "label": "Donner des estimations de budget", "points": 2 },
+        {
+          "label": "Rédiger un email pour réserver un hôtel",
+          "points": 2
+        }
+      ],
+      "feedback_correct": "Excellent ! L'IA est un formidable assistant de voyage pour la planification.",
+      "feedback_partial": "Bien. Et elle peut aussi vous aider à trouver des activités, des restaurants, etc.",
+      "feedback_incorrect": "L'IA est très douée pour toutes ces tâches. Testez-la pour votre prochain voyage !",
+      "relevance": "Utiliser l'IA pour des tâches personnelles du quotidien permet de s'entraîner de manière ludique."
+    },
+    {
+      "id": "Q20",
+      "theme": "Le prompt",
+      "question": "Quelle est la meilleure façon de commencer à apprendre à 'prompter' ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Essayer, expérimenter et voir ce qui marche le mieux", "points": 5 },
+        { "label": "Lire un livre de 500 pages sur le sujet", "points": 1 },
+        { "label": "Il n'y a rien à apprendre, c'est comme parler à un humain", "points": 0 }
+      ],
+      "feedback_correct": "Absolument. La pratique et l'expérimentation sont les meilleures enseignantes.",
+      "feedback_partial": "La théorie est utile, mais sans pratique, elle reste lettre morte.",
+      "feedback_incorrect": "C'est une compétence à part entière. On apprend à 'parler machine' pour obtenir les meilleurs résultats.",
+      "relevance": "Le 'test and learn' est l'approche la plus efficace pour maîtriser l'art du prompting."
+    }
+  ]
+}
