@@ -1,5 +1,16 @@
 {
   "title": "Test de positionnement - Excel avancé",
+  "level": "Avancé",
+  "time": "≈ 10–15 min",
+  "color": "gray",
+  "main_title": "Analyse & fonctionnalités avancées",
+  "card_description": "Analyse de données, tableaux croisés dynamiques, fonctions de recherche, bonnes pratiques sur grands volumes, visualisation.",
+  "features": [
+    "20 questions (radio & checkbox)",
+    "Points par réponse & feedback personnalisé",
+    "Pertinence : évaluer l’aptitude à suivre une formation de 14 h"
+  ],
+  "themes": ["TCD", "Recherche", "Graphiques"],
   "description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
   "questions": [
     {

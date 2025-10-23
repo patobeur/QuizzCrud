@@ -1,395 +1,351 @@
 {
   "title": "Test de positionnement - Excel intermédiaire",
+  "level": "Intermédiaire",
+  "time": "≈ 10–15 min",
+  "color": "gray",
+  "main_title": "Formules & bases de données",
+  "card_description": "Calculs multi-feuilles, fonctions logiques (SI), recherche (RECHERCHEV), gestion de listes (filtres, tri), graphiques.",
+  "features": [
+    "20 questions (radio & checkbox)",
+    "Points par réponse & feedback personnalisé",
+    "Pertinence : évaluer l’aptitude à suivre une formation de 14 h"
+  ],
+  "themes": ["Formules", "Logique", "Données"],
   "description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
   "questions": [
     {
-      "id": "M1",
-      "theme": "Pré-requis & environnement",
-      "question": "Disposez-vous d’un Excel utilisable pour pratiquer ?",
+      "id": "Q1",
+      "theme": "Équipement & environnement",
+      "question": "Quel matériel possédez-vous pour suivre la formation ?",
       "selectionType": "single",
       "options": [
         {
-          "label": "Excel pour Windows ou Mac installé sur mon ordinateur",
-          "points": 6
+          "label": "Ordinateur de bureau ou portable avec Excel installé",
+          "points": 10
         },
-        { "label": "Excel Online (navigateur)", "points": 3 },
-        {
-          "label": "Un autre tableur (LibreOffice / Google Sheets)",
-          "points": 2
-        },
-        { "label": "Je ne sais pas / je n’ai pas Excel", "points": 1 }
+        { "label": "Tablette uniquement", "points": 0 },
+        { "label": "Smartphone uniquement", "points": 0 },
+        { "label": "Aucun des trois", "points": 0 }
       ],
-      "feedback_correct": "Très bien, vous pourrez pratiquer confortablement.",
-      "feedback_partial": "C’est possible, mais certaines fonctions diffèrent selon l’outil. On s’adaptera.",
-      "feedback_incorrect": "Un ordinateur avec Excel (ou un équivalent proche) facilitera beaucoup votre progression.",
-      "relevance": "Vérifie que vous avez un environnement minimal pour suivre, même si tout n’est pas parfait."
+      "feedback_correct": "Parfait ! Un ordinateur avec Excel vous permettra de pratiquer confortablement.",
+      "feedback_partial": "Si vous avez un doute sur votre matériel, on peut vérifier ensemble et vous conseiller.",
+      "feedback_incorrect": "Pour profiter pleinement de la formation intermédiaire, un ordinateur avec Excel est nécessaire.",
+      "relevance": "Le bon matériel est votre meilleur allié : pratiquer sur un ordinateur rend l’apprentissage fluide et agréable."
     },
     {
-      "id": "M2",
-      "theme": "Pré-requis & environnement",
-      "question": "Que fait « Enregistrer sous » dans Excel ?",
+      "id": "Q2",
+      "theme": "Équipement & environnement",
+      "question": "Quelle version d’Excel utilisez-vous ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Excel 2016 ou plus récent", "points": 6 },
+        { "label": "Excel 2010 ou 2013", "points": 5 },
+        { "label": "Excel Online (navigateur)", "points": 2 },
+        { "label": "LibreOffice / autre tableur", "points": 1 },
+        { "label": "Je ne sais pas", "points": 2 }
+      ],
+      "feedback_correct": "Très bien, votre version est pleinement compatible avec les fonctionnalités abordées.",
+      "feedback_partial": "C’est jouable, mais certaines fonctions peuvent varier. On vérifiera ensemble au besoin.",
+      "feedback_incorrect": "Votre outil risque de limiter certaines fonctions clés de la formation.",
+      "relevance": "La version d’Excel influe sur les fonctionnalités disponibles. Pas d’inquiétude si vous hésitez : on peut vérifier facilement."
+    },
+    {
+      "id": "Q3",
+      "theme": "Équipement & environnement",
+      "question": "Avez-vous déjà ouvert un fichier Excel ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Oui, régulièrement", "points": 4 },
+        { "label": "Oui, quelques fois", "points": 3 },
+        { "label": "Non, jamais", "points": 0 }
+      ],
+      "feedback_correct": "Excellent, votre pratique régulière facilitera l’entrée dans les sujets intermédiaires.",
+      "feedback_partial": "C’est un bon début ! Quelques rappels vous mettront parfaitement à l’aise.",
+      "feedback_incorrect": "Une brève initiation (1–2 h) vous aidera à prendre vos marques avant le module intermédiaire.",
+      "relevance": "Un premier contact, même léger, rend la progression plus confortable. Chaque expérience compte."
+    },
+    {
+      "id": "Q4",
+      "theme": "Équipement & environnement",
+      "question": "Savez-vous créer un nouveau fichier Excel et l’enregistrer sous un nom précis ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Oui", "points": 6 },
+        { "label": "Non", "points": 0 },
+        { "label": "Pas sûr", "points": 2 }
+      ],
+      "feedback_correct": "Parfait, c’est une base d’autonomie indispensable.",
+      "feedback_partial": "Presque ! Une petite mise au point sur la gestion des fichiers suffira.",
+      "feedback_incorrect": "Pas de souci : on peut voir ensemble la création et l’enregistrement en quelques minutes.",
+      "relevance": "Maîtriser fichiers et dossiers enlève beaucoup de frictions et vous rend autonome."
+    },
+    {
+      "id": "Q5",
+      "theme": "Bases d’Excel",
+      "question": "Comment insérer une nouvelle colonne entre deux colonnes existantes ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Clic droit > Insérer", "points": 4 },
+        {
+          "label": "Taper \"Ajouter colonne\" dans une cellule",
+          "points": 0
+        },
+        {
+          "label": "Impossible d’ajouter entre deux colonnes",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Exact, c’est la méthode simple et efficace.",
+      "feedback_partial": "Il existe une méthode plus directe via le clic droit.",
+      "feedback_incorrect": "Bonne nouvelle : on peut facilement insérer une colonne via le menu contextuel.",
+      "relevance": "Ces manipulations de base rendent vos tableaux plus souples et faciles à organiser."
+    },
+    {
+      "id": "Q6",
+      "theme": "Bases d’Excel",
+      "question": "Quelle est la différence entre une cellule et une feuille ?",
       "selectionType": "single",
       "options": [
         {
-          "label": "Crée une copie du fichier sous un nouveau nom ou emplacement",
+          "label": "Une cellule est une case ; une feuille regroupe des cellules",
           "points": 4
         },
+        { "label": "C’est la même chose", "points": 0 },
         {
-          "label": "Écrase le fichier actuel sans rien demander",
-          "points": 0
-        },
-        { "label": "Imprime le fichier", "points": 0 },
-        { "label": "Ferme le classeur", "points": 0 }
-      ],
-      "feedback_correct": "Exact, c’est la manière sûre de créer une nouvelle version.",
-      "feedback_partial": "On y est presque : « Enregistrer sous » sert à créer une copie (nom/emplacement).",
-      "feedback_incorrect": "Pas d’inquiétude : « Enregistrer sous » sert à créer une nouvelle copie du fichier.",
-      "relevance": "Assure une base sereine pour gérer vos fichiers pendant la formation."
-    },
-    {
-      "id": "M3",
-      "theme": "Pré-requis & environnement",
-      "question": "Quelle extension correspond au classeur Excel « moderne » ?",
-      "selectionType": "single",
-      "options": [
-        { "label": ".xlsx", "points": 4 },
-        { "label": ".xls", "points": 2 },
-        { "label": ".csv", "points": 1 },
-        { "label": ".docx", "points": 0 }
-      ],
-      "feedback_correct": "Oui : .xlsx est l’extension standard des classeurs récents.",
-      "feedback_partial": ".xls et .csv existent, mais .xlsx est le format recommandé aujourd’hui.",
-      "feedback_incorrect": ".docx est pour Word. Pour Excel, préférez .xlsx.",
-      "relevance": "Aide à reconnaître les formats usuels quand vous ouvrez/enregistrez."
-    },
-    {
-      "id": "M4",
-      "theme": "Pré-requis & environnement",
-      "question": "Comment sélectionner toute une ligne rapidement ?",
-      "selectionType": "single",
-      "options": [
-        { "label": "Cliquer sur son numéro (à gauche)", "points": 4 },
-        {
-          "label": "Cliquer la première cellule puis glisser jusqu’à la fin",
-          "points": 1
-        },
-        {
-          "label": "Cliquer le triangle en haut à gauche (sélectionne toute la feuille)",
-          "points": 2
-        }
-      ],
-      "feedback_correct": "Parfait : viser le numéro de ligne est la méthode directe.",
-      "feedback_partial": "Il existe plus rapide : le numéro de ligne ou le triangle (toute la feuille).",
-      "feedback_incorrect": "Le triangle sélectionne toute la feuille, pas une ligne précise.",
-      "relevance": "Vérifie des gestes simples pour manipuler des zones entières."
-    },
-    {
-      "id": "M5",
-      "theme": "Saisie & mise en forme",
-      "question": "Afficher 15% dans une cellule : quelles méthodes conviennent ? (plusieurs réponses possibles)",
-      "selectionType": "multi",
-      "options": [
-        { "label": "Saisir 15%", "points": 2 },
-        {
-          "label": "Saisir 0,15 puis appliquer le format %",
-          "points": 2
-        },
-        {
-          "label": "Saisir 15 puis appliquer le format % (donnera 1500%)",
+          "label": "Une feuille est plus petite qu’une cellule",
           "points": 0
         }
       ],
-      "feedback_correct": "Très bien : les deux premières méthodes conviennent.",
-      "feedback_partial": "Bien vu. Pour 15%, on saisit « 15% » ou « 0,15 » puis on applique le format %.",
-      "feedback_incorrect": "Astuce : « 15% » directement, ou « 0,15 » puis le format %.",
-      "relevance": "Aide à relier ce que l’on saisit au format appliqué (valeur vs affichage)."
+      "feedback_correct": "Bien vu ! Vous distinguez les éléments essentiels d’Excel.",
+      "feedback_partial": "Presque, mais la feuille est un ensemble de cellules.",
+      "feedback_incorrect": "Rassurez-vous : c’est un point rapide à clarifier, et ensuite tout devient plus logique.",
+      "relevance": "Connaître les « briques » de base aide à construire des classeurs clairs et robustes."
     },
     {
-      "id": "M6",
-      "theme": "Saisie & mise en forme",
-      "question": "Ajuster vite la largeur d’une colonne : que pouvez-vous faire ? (plusieurs réponses possibles)",
-      "selectionType": "multi",
+      "id": "Q7",
+      "theme": "Bases d’Excel",
+      "question": "Que s’affiche dans la cellule B3 si vous saisissez `=5+3` ?",
+      "selectionType": "single",
       "options": [
-        {
-          "label": "Double-cliquer sur la bordure droite de l’en-tête de colonne",
-          "points": 2
-        },
-        {
-          "label": "Faire glisser la bordure droite de l’en-tête",
-          "points": 2
-        },
-        {
-          "label": "Activer « Renvoyer à la ligne automatiquement »",
-          "points": 0
-        },
-        { "label": "Réduire la taille de police", "points": 0 }
+        { "label": "8", "points": 4 },
+        { "label": "5+3", "points": 0 },
+        { "label": "Rien", "points": 0 }
       ],
-      "feedback_correct": "Exact : double-clic ou glisser la bordure ajuste la largeur.",
-      "feedback_partial": "On y est : pensez au double-clic ou au glisser sur la bordure de l’en-tête.",
-      "feedback_incorrect": "Pour la largeur, utilisez la bordure de l’en-tête de colonne (double-clic ou glisser).",
-      "relevance": "Montre des gestes rapides pour régler l’affichage des colonnes."
+      "feedback_correct": "Parfait : la cellule affiche le résultat, la formule reste visible dans la barre de formule.",
+      "feedback_partial": "La formule est bien `=5+3`, mais elle s’affiche dans la barre de formule, pas dans la cellule.",
+      "feedback_incorrect": "La cellule affiche le résultat (8) ; la formule est visible dans la barre de formule.",
+      "relevance": "Distinguer résultat affiché et formule tapée est fondamental pour comprendre Excel."
     },
     {
-      "id": "M7",
-      "theme": "Saisie & mise en forme",
-      "question": "Afficher un texte long sur plusieurs lignes dans la même cellule :",
-      "selectionType": "multi",
-      "options": [
-        {
-          "label": "Utiliser « Renvoyer à la ligne automatiquement »",
-          "points": 2
-        },
-        {
-          "label": "Insérer un saut de ligne manuel (Alt+Entrée)",
-          "points": 2
-        },
-        { "label": "« Fusionner et centrer »", "points": 0 }
-      ],
-      "feedback_correct": "Parfait : retour à la ligne auto ou Alt+Entrée selon le besoin.",
-      "feedback_partial": "Bien vu. « Fusionner et centrer » ne crée pas de retour à la ligne.",
-      "feedback_incorrect": "Pensez au retour à la ligne auto ou au saut manuel (Alt+Entrée).",
-      "relevance": "Distingue mise en forme du texte et fusion de cellules (à éviter par défaut)."
-    },
-    {
-      "id": "M8",
-      "theme": "Saisie & mise en forme",
-      "question": "Appliquer un format monétaire (€) proprement :",
+      "id": "Q8",
+      "theme": "Bases d’Excel",
+      "question": "Comment sélectionner rapidement toute une colonne ?",
       "selectionType": "single",
       "options": [
         {
-          "label": "Accueil > groupe « Nombre » > choisir le symbole €",
+          "label": "Cliquer sur son en-tête (la lettre en haut)",
           "points": 4
         },
-        {
-          "label": "Taper le symbole € manuellement dans la cellule",
-          "points": 1
-        },
-        { "label": "Laisser le format Standard", "points": 0 }
+        { "label": "Sélectionner cellule par cellule", "points": 1 },
+        { "label": "Impossible", "points": 0 }
       ],
-      "feedback_correct": "Oui, c’est la méthode recommandée (format numérique, pas du texte).",
-      "feedback_partial": "Mieux vaut un vrai format € plutôt que du texte contenant « € ». ",
-      "feedback_incorrect": "Un format monétaire dédié est préférable au format Standard.",
-      "relevance": "Utiliser les formats protège les calculs et l’alignement des nombres."
+      "feedback_correct": "Exact ! Un geste simple qui fait gagner beaucoup de temps.",
+      "feedback_partial": "Bonne intuition. Cliquez directement sur la lettre d’en-tête pour aller plus vite.",
+      "feedback_incorrect": "Bonne nouvelle : un clic sur la lettre en haut sélectionne toute la colonne.",
+      "relevance": "Adopter les bons réflexes accélère toutes les manipulations quotidiennes."
     },
     {
-      "id": "M9",
-      "theme": "Saisie & mise en forme",
-      "question": "« Mettre sous forme de tableau » (Format as Table) apporte… (plusieurs réponses possibles)",
+      "id": "Q9",
+      "theme": "Bases d’Excel",
+      "question": "Comment gérer un texte trop large pour la cellule ? (plusieurs réponses possibles)",
       "selectionType": "multi",
       "options": [
         {
-          "label": "Des filtres automatiques sur les en-têtes",
+          "label": "Activer le retour à la ligne automatique",
           "points": 2
         },
-        { "label": "Un style avec bandes alternées", "points": 1 },
-        {
-          "label": "La recopie automatique des formules dans la colonne",
-          "points": 2
-        },
-        { "label": "Un tri croissant obligatoire", "points": 0 },
-        { "label": "Une sauvegarde automatique du fichier", "points": 0 }
+        { "label": "Réduire la taille de police", "points": 1 },
+        { "label": "Agrandir la largeur de colonne", "points": 2 }
       ],
-      "feedback_correct": "Exact : filtres, style et formules qui se propagent dans la colonne.",
-      "feedback_partial": "Bien. Les filtres et le style sont là ; les formules se propagent aussi en tableau.",
-      "feedback_incorrect": "L’outil ajoute filtres, style et facilite la maintenance des colonnes de formules.",
-      "relevance": "Pose les bases d’un tableau « intelligent » : plus propre et plus pratique."
+      "feedback_correct": "Parfait ! Vous connaissez plusieurs solutions : vous saurez choisir selon le contexte.",
+      "feedback_partial": "Bien joué. Il existe souvent plusieurs bonnes approches : essayez aussi l’ajustement de largeur et le retour à la ligne.",
+      "feedback_incorrect": "Pas de souci : on peut agrandir la colonne, activer le retour à la ligne ou réduire légèrement la police.",
+      "relevance": "Excel offre souvent plusieurs chemins : savoir choisir la solution adaptée est une vraie compétence."
     },
     {
-      "id": "M10",
-      "theme": "Saisie & mise en forme",
-      "question": "À quoi sert « Figer les volets » ?",
+      "id": "Q10",
+      "theme": "Bases d’Excel",
+      "question": "À quoi sert la poignée de recopie (petit carré en bas à droite d’une cellule) ?",
       "selectionType": "single",
       "options": [
         {
-          "label": "Garder visibles les en-têtes quand on défile",
+          "label": "Copier la valeur/la formule dans les cellules voisines",
           "points": 4
         },
+        { "label": "Effacer la cellule", "points": 0 },
+        { "label": "Déplacer la cellule", "points": 0 }
+      ],
+      "feedback_correct": "Exact, c’est un outil de productivité incontournable.",
+      "feedback_partial": "La poignée sert surtout à recopier valeurs et formules vers d’autres cellules.",
+      "feedback_incorrect": "Astuce : la poignée permet de recopier rapidement une valeur ou une formule.",
+      "relevance": "Un geste très simple qui fait gagner énormément de temps au quotidien."
+    },
+    {
+      "id": "Q11",
+      "theme": "Logique des formules",
+      "question": "Quelle formule additionne les valeurs de A1 à A10 ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "=SOMME(A1:A10)", "points": 5 },
+        { "label": "=A1+A10", "points": 1 },
+        { "label": "=MOYENNE(A1:A10)", "points": 0 }
+      ],
+      "feedback_correct": "Très bien ! SOMME est la fonction adaptée.",
+      "feedback_partial": "On se rapproche ! La formule la plus efficace ici est =SOMME(A1:A10).",
+      "feedback_incorrect": "Petit rappel : pour additionner une plage, utilisez plutôt =SOMME(A1:A10).",
+      "relevance": "Les fonctions de base (SOMME, MOYENNE…) ouvrent la porte aux calculs plus avancés."
+    },
+    {
+      "id": "Q12",
+      "theme": "Logique des formules",
+      "question": "Que renvoie la fonction =AUJOURDHUI() ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "La date du jour", "points": 5 },
+        { "label": "Le mot « AUJOURDHUI »", "points": 0 },
+        { "label": "Rien", "points": 0 }
+      ],
+      "feedback_correct": "Exact ! La date se met à jour automatiquement.",
+      "feedback_partial": "Ici, la fonction renvoie la date du jour et se met à jour toute seule.",
+      "feedback_incorrect": "=AUJOURDHUI() renvoie la date actuelle (pas du texte).",
+      "relevance": "Les fonctions automatiques rendent vos fichiers dynamiques et toujours à jour."
+    },
+    {
+      "id": "Q13",
+      "theme": "Logique des formules",
+      "question": "Si vous copiez la formule =A1+1 de B1 vers B2, que devient-elle ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "=A2+1", "points": 5 },
+        { "label": "=A1+1", "points": 1 },
+        { "label": "=B1+1", "points": 0 }
+      ],
+      "feedback_correct": "Parfait ! Vous maîtrisez les références relatives.",
+      "feedback_partial": "Bien vu. Avec la copie, la référence s’ajuste généralement à la ligne : =A2+1.",
+      "feedback_incorrect": "Astuce : les références s’adaptent lors de la recopie (ici, =A2+1).",
+      "relevance": "Comprendre références relatives/absolues rend vos formules réutilisables et robustes."
+    },
+    {
+      "id": "Q14",
+      "theme": "Logique des formules",
+      "question": "Quelles formules permettent de calculer une moyenne de A1 à A10 ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "=MOYENNE(A1:A10)", "points": 3 },
+        { "label": "=SOMME(A1:A10)/10", "points": 2 },
+        { "label": "=MAX(A1:A10)", "points": 0 }
+      ],
+      "feedback_correct": "Exact ! Vous connaissez les deux méthodes valides pour la moyenne.",
+      "feedback_partial": "Bien vu. Il existe deux méthodes correctes : MOYENNE ou SOMME/nb d’éléments.",
+      "feedback_incorrect": "La moyenne se calcule avec =MOYENNE(A1:A10) ou SOMME/nb d’éléments (pas MAX).",
+      "relevance": "Savoir qu’il y a plusieurs chemins corrects rend vos calculs plus flexibles."
+    },
+    {
+      "id": "Q15",
+      "theme": "Logique des formules",
+      "question": "Quelles formules permettent de vérifier si une cellule est vide ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "=SI(A1=\"\";\"Vide\";\"Rempli\")", "points": 2 },
+        { "label": "=ESTVIDE(A1)", "points": 3 },
+        { "label": "=NB(A1)", "points": 0 }
+      ],
+      "feedback_correct": "Très bien ! Deux approches utiles selon le besoin.",
+      "feedback_partial": "Bien joué. On peut tester le vide avec une condition ou avec ESTVIDE.",
+      "feedback_incorrect": "Astuce : utilisez =ESTVIDE(A1) ou une condition =SI(A1=\"\";…).",
+      "relevance": "Les tests logiques permettent d’automatiser des contrôles simples et fiables."
+    },
+    {
+      "id": "Q16",
+      "theme": "Logique des formules",
+      "question": "À quoi sert la fonction RECHERCHEV ?",
+      "selectionType": "single",
+      "options": [
         {
-          "label": "Verrouiller la feuille par mot de passe",
+          "label": "Rechercher une valeur dans une colonne et renvoyer une donnée associée",
+          "points": 5
+        },
+        {
+          "label": "Trier des données par ordre alphabétique",
           "points": 0
         },
-        { "label": "Empêcher le tri et le filtre", "points": 0 }
+        { "label": "Trouver la plus grande valeur", "points": 0 }
       ],
-      "feedback_correct": "Exact : très utile pour lire un tableau long.",
-      "feedback_partial": "L’idée : garder des lignes/colonnes visibles pendant le défilement.",
-      "feedback_incorrect": "Ce n’est pas une protection : cela sert à garder des en-têtes visibles.",
-      "relevance": "Améliore la lecture quand on parcourt des listes longues."
+      "feedback_correct": "Exact, c’est un pilier de la recherche d’informations.",
+      "feedback_partial": "RECHERCHEV sert à retrouver des informations liées à une valeur recherchée.",
+      "feedback_incorrect": "RECHERCHEV ne trie pas et ne cherche pas le maximum : elle ramène une info associée.",
+      "relevance": "La recherche/jonction de données est au cœur de nombreuses analyses."
     },
     {
-      "id": "M11",
-      "theme": "Calculs de base",
-      "question": "Comment commencer une formule dans Excel ?",
+      "id": "Q17",
+      "theme": "Culture & analyse",
+      "question": "Quel outil utiliser pour obtenir rapidement une synthèse d’un grand tableau ?",
       "selectionType": "single",
       "options": [
-        { "label": "Avec le signe « = »", "points": 4 },
-        {
-          "label": "Avec « + » (fonctionne aussi, selon versions)",
-          "points": 3
-        },
-        { "label": "Sans aucun signe", "points": 0 }
+        { "label": "Tableau croisé dynamique", "points": 5 },
+        { "label": "Trier les données", "points": 1 },
+        { "label": "Filtrer les données", "points": 2 }
       ],
-      "feedback_correct": "Oui : « = » est la manière standard de démarrer une formule.",
-      "feedback_partial": "Ça peut fonctionner, mais la bonne habitude reste de commencer par « = ». ",
-      "feedback_incorrect": "En Excel, une formule commence par « = » (ou « + » selon les versions).",
-      "relevance": "Asseoir le réflexe de base pour tous les calculs."
+      "feedback_correct": "Parfait ! Le TCD est l’outil dédié à la synthèse rapide.",
+      "feedback_partial": "Bon réflexe. Pour une synthèse complète, pensez aussi au tableau croisé dynamique.",
+      "feedback_incorrect": "Le TCD est l’outil le plus adapté pour synthétiser un grand tableau.",
+      "relevance": "Identifier l’outil clé pour résumer une base de données est un excellent signe."
     },
     {
-      "id": "M12",
-      "theme": "Calculs de base",
-      "question": "Additionner rapidement une colonne de nombres : (plusieurs réponses possibles)",
-      "selectionType": "multi",
-      "options": [
-        { "label": "Utiliser le bouton « AutoSomme » (Σ)", "points": 2 },
-        { "label": "Écrire la fonction =SOMME(plage)", "points": 3 },
-        { "label": "Écrire manuellement n1+n2+n3…", "points": 0 }
-      ],
-      "feedback_correct": "Parfait : AutoSomme insère =SOMME(…) automatiquement ; =SOMME reste la méthode directe.",
-      "feedback_partial": "Bien vu. AutoSomme insère justement la fonction =SOMME(…).",
-      "feedback_incorrect": "Évitez les additions à rallonge : préférez AutoSomme / =SOMME(…).",
-      "relevance": "Place les bons réflexes pour gagner du temps sur les totaux."
-    },
-    {
-      "id": "M13",
-      "theme": "Calculs de base",
-      "question": "Calculer la moyenne de B2 à B10 : (plusieurs réponses possibles)",
-      "selectionType": "multi",
-      "options": [
-        { "label": "=MOYENNE(B2:B10)", "points": 3 },
-        { "label": "=SOMME(B2:B10)/9", "points": 2 },
-        { "label": "=B2+B10/9", "points": 0 }
-      ],
-      "feedback_correct": "Exact : les deux premières méthodes donnent la moyenne.",
-      "feedback_partial": "Bien vu. On peut utiliser MOYENNE ou SOMME/nb d’éléments.",
-      "feedback_incorrect": "Ici, privilégiez =MOYENNE(B2:B10) ou SOMME/9.",
-      "relevance": "Montre qu’il y a souvent plusieurs chemins corrects."
-    },
-    {
-      "id": "M14",
-      "theme": "Calculs de base",
-      "question": "Recopier une formule vers le bas efficacement : (plusieurs réponses possibles)",
-      "selectionType": "multi",
-      "options": [
-        {
-          "label": "Tirer la poignée de recopie vers le bas",
-          "points": 2
-        },
-        { "label": "Double-cliquer la poignée de recopie", "points": 2 },
-        { "label": "Copier-coller la cellule", "points": 1 },
-        { "label": "Retaper la formule à chaque ligne", "points": 0 }
-      ],
-      "feedback_correct": "Parfait : poignée (tirer ou double-cliquer) et copier-coller sont efficaces.",
-      "feedback_partial": "Bien. Pensez au double-clic sur la poignée pour aller jusqu’en bas du bloc.",
-      "feedback_incorrect": "Utilisez la poignée de recopie pour aller bien plus vite.",
-      "relevance": "Installe des gestes rapides autour de la poignée de recopie."
-    },
-    {
-      "id": "M15",
-      "theme": "Calculs de base",
-      "question": "Dans la notation A1:A10, le « : » signifie…",
+      "id": "Q18",
+      "theme": "Culture & analyse",
+      "question": "Meilleure façon de représenter visuellement une évolution sur 12 mois ?",
       "selectionType": "single",
       "options": [
-        { "label": "Une plage continue de A1 jusqu’à A10", "points": 4 },
-        { "label": "Une addition", "points": 0 },
-        {
-          "label": "Un séparateur d’arguments de fonctions",
-          "points": 0
-        }
+        { "label": "Graphique en courbes", "points": 4 },
+        { "label": "Graphique en secteurs", "points": 1 },
+        { "label": "Histogramme horizontal", "points": 2 }
       ],
-      "feedback_correct": "Exact : c’est une plage continue.",
-      "feedback_partial": "Le « : » relie le début et la fin d’une plage.",
-      "feedback_incorrect": "Ici, « : » n’est ni une addition ni un séparateur d’arguments.",
-      "relevance": "Comprendre la syntaxe des plages (A1:A10) est fondamental."
+      "feedback_correct": "Exact. La courbe montre au mieux l’évolution dans le temps.",
+      "feedback_partial": "Pas mal. La courbe reste toutefois la plus lisible pour une série temporelle.",
+      "feedback_incorrect": "Pour visualiser une évolution, la courbe est généralement la plus adaptée.",
+      "relevance": "Choisir le bon graphique aide à raconter clairement l’histoire de vos données."
     },
     {
-      "id": "M16",
-      "theme": "Listes & lecture",
-      "question": "Différence entre Trier et Filtrer : (plusieurs réponses possibles)",
-      "selectionType": "multi",
-      "options": [
-        {
-          "label": "Trier réordonne les lignes selon un critère",
-          "points": 2
-        },
-        {
-          "label": "Filtrer masque temporairement certaines lignes",
-          "points": 2
-        },
-        { "label": "Trier supprime des lignes", "points": 0 },
-        { "label": "Filtrer supprime des lignes", "points": 0 }
-      ],
-      "feedback_correct": "Exact : trier réordonne, filtrer masque (rien n’est supprimé).",
-      "feedback_partial": "On progresse : trier ≠ filtrer ; ni l’un ni l’autre ne supprime des lignes.",
-      "feedback_incorrect": "Rappel : trier réordonne, filtrer masque ; aucune ligne n’est supprimée.",
-      "relevance": "Met en place les bons réflexes d’exploration des données."
-    },
-    {
-      "id": "M17",
-      "theme": "Listes & lecture",
-      "question": "Activer rapidement un filtre sur un tableau : (plusieurs réponses possibles)",
-      "selectionType": "multi",
-      "options": [
-        { "label": "Onglet Données > Filtrer", "points": 3 },
-        { "label": "Raccourci Ctrl+Maj+L", "points": 2 },
-        {
-          "label": "Onglet Accueil > Trier et filtrer > Filtrer",
-          "points": 2
-        },
-        { "label": "Onglet Insertion > Filtrer", "points": 0 }
-      ],
-      "feedback_correct": "Parfait : menu Données, bouton Filtrer, ou Ctrl+Maj+L fonctionnent.",
-      "feedback_partial": "Bien vu. Essayez aussi le raccourci Ctrl+Maj+L.",
-      "feedback_incorrect": "Le filtre se trouve dans Données (ou Accueil > Trier et filtrer) et via Ctrl+Maj+L.",
-      "relevance": "Ancre des accès rapides pour gagner du temps au quotidien."
-    },
-    {
-      "id": "M18",
-      "theme": "Listes & lecture",
-      "question": "Quel graphique convient le mieux pour comparer des valeurs par catégorie ?",
+      "id": "Q19",
+      "theme": "Culture & analyse",
+      "question": "À quoi sert le tri croissant dans Excel ?",
       "selectionType": "single",
       "options": [
-        { "label": "Histogramme (colonnes)", "points": 4 },
-        { "label": "Secteurs (camembert)", "points": 1 },
-        { "label": "Courbes", "points": 1 }
+        { "label": "Ranger du plus petit au plus grand", "points": 3 },
+        { "label": "Trouver la valeur la plus grande", "points": 1 },
+        { "label": "Supprimer les doublons", "points": 0 }
       ],
-      "feedback_correct": "Oui : les colonnes comparent bien des catégories.",
-      "feedback_partial": "C’est possible, mais la colonne est souvent plus lisible pour comparer.",
-      "feedback_incorrect": "Pour comparer des catégories, privilégiez l’histogramme (colonnes).",
-      "relevance": "Aide à choisir un visuel simple et efficace."
+      "feedback_correct": "Exact, c’est la définition du tri croissant.",
+      "feedback_partial": "Le tri croissant organise la liste. Pour trouver un maximum, d’autres outils peuvent être plus directs.",
+      "feedback_incorrect": "Le tri croissant ordonne les données du plus petit au plus grand.",
+      "relevance": "Trier, filtrer et nettoyer sont des réflexes essentiels pour analyser."
     },
     {
-      "id": "M19",
-      "theme": "Listes & lecture",
-      "question": "Enlever des lignes strictement identiques dans une liste :",
-      "selectionType": "single",
-      "options": [
-        { "label": "Données > Supprimer les doublons", "points": 4 },
-        { "label": "Filtrer", "points": 1 },
-        { "label": "Rechercher/Remplacer", "points": 1 },
-        {
-          "label": "Supprimer manuellement ligne par ligne",
-          "points": 0
-        }
-      ],
-      "feedback_correct": "Exact : l’outil dédié est « Supprimer les doublons ». ",
-      "feedback_partial": "Il existe un outil dédié : « Supprimer les doublons ». Plus sûr et plus rapide.",
-      "feedback_incorrect": "Préférez l’outil « Supprimer les doublons » : simple et efficace.",
-      "relevance": "Donne le bon réflexe pour nettoyer rapidement une base."
-    },
-    {
-      "id": "M20",
-      "theme": "Listes & lecture",
-      "question": "Quels types de fichiers Excel peut-il ouvrir facilement ? (plusieurs réponses possibles)",
+      "id": "Q20",
+      "theme": "Culture & analyse",
+      "question": "Vous recevez un fichier de 5 000 lignes : que faites-vous pour l’analyser efficacement ? (plusieurs réponses possibles)",
       "selectionType": "multi",
       "options": [
-        { "label": ".xlsx", "points": 2 },
-        { "label": ".csv", "points": 2 },
-        { "label": ".txt", "points": 1 },
-        { "label": ".docx", "points": 0 }
+        { "label": "Utiliser filtres et tri", "points": 2 },
+        { "label": "Créer un tableau croisé dynamique", "points": 3 },
+        { "label": "Parcourir ligne par ligne à la main", "points": 0 },
+        { "label": "Utiliser des graphiques", "points": 2 }
       ],
-      "feedback_correct": "Oui : .xlsx, .csv et .txt sont des formats habituels pour Excel.",
-      "feedback_partial": "Bien vu. Excel ouvre notamment .xlsx et .csv (et aussi .txt).",
-      "feedback_incorrect": ".docx correspond à Word. Excel ouvre plutôt .xlsx, .csv, .txt…",
-      "relevance": "Aide à reconnaître les formats courants pour l’import ou l’ouverture."
+      "feedback_correct": "Très bon réflexe ! Filtres/tri, TCD et graphiques transforment un gros tableau en informations claires.",
+      "feedback_partial": "Bien vu. Combinez filtres/tri, TCD et graphiques pour aller plus vite et plus loin.",
+      "feedback_incorrect": "Lire ligne par ligne est chronophage. Les filtres, TCD et graphiques font gagner un temps précieux.",
+      "relevance": "Avec les bons outils d’exploration et de synthèse, on structure rapidement une grande base."
     }
   ]
 }

@@ -1,5 +1,16 @@
 {
   "title": "Test de positionnement - Excel débutant",
+  "level": "Débutant",
+  "time": "≈ 10–15 min",
+  "color": "emerald",
+  "main_title": "Bases d’Excel & premiers réflexes",
+  "card_description": "Interface, création/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression.",
+  "features": [
+    "20 questions (radio & checkbox)",
+    "Points par réponse & feedback personnalisé",
+    "Pertinence : valider les essentiels avant d’aller plus loin"
+  ],
+  "themes": ["Démarrage", "Saisie", "Mise en forme"],
   "description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
   "questions": [
     {

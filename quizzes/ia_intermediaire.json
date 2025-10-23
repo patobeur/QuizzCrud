@@ -1,5 +1,16 @@
 {
   "title": "Test de positionnement – IA générative (intermédiaire)",
+  "level": "IA générative · Intermédiaire",
+  "time": "≈ 10–15 min",
+  "color": "violet",
+  "main_title": "Structuration, paramètres & RAG",
+  "card_description": "JSON strict & formats, réglages (température, top_p, max_tokens), few-shot, RAG (retrieval), function calling, sécurité & prompt injection.",
+  "features": [
+    "20 questions (radio, checkbox, select, multiselect, toggle, range, ranking, image)",
+    "Points par réponse & feedback personnalisé",
+    "Pertinence : vérifier l’aptitude à manipuler JSON, RAG et paramètres"
+  ],
+  "themes": ["JSON/Formats", "Paramètres", "Prompting", "RAG/Outils", "Sécurité"],
   "description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
   "questions": [
     {
