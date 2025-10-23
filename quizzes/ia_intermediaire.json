@@ -1,0 +1,424 @@
+{
+  "title": "Test de positionnement – IA générative (intermédiaire)",
+  "description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
+  "questions": [
+    {
+      "id": "INT01",
+      "theme": "Structuration",
+      "question": "Pour obtenir un JSON bien formé, que préciser dans le prompt ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        {
+          "label": "« Réponds uniquement avec un JSON, sans texte autour »",
+          "points": 2
+        },
+        {
+          "label": "Un petit exemple (schéma) du JSON attendu",
+          "points": 2
+        },
+        {
+          "label": "Le nom et le type des champs (string, number, etc.)",
+          "points": 2
+        },
+        { "label": "Rien : l’IA devinera toujours", "points": 0 }
+      ],
+      "feedback_correct": "Excellent : format explicite + exemple + types rendent les sorties fiables.",
+      "feedback_partial": "Bien ! Soyez explicite (format + exemple) pour limiter les erreurs.",
+      "feedback_incorrect": "Spécifiez format, exemple et types pour du JSON vraiment exploitable.",
+      "relevance": "Pose les bases d’un rendu structuré et parseable."
+    },
+    {
+      "id": "INT02",
+      "theme": "Structuration",
+      "question": "Quel rendu est le plus « prêt à parser » en JSON ?",
+      "selectionType": "image",
+      "options": [
+        {
+          "label": "{\"titre\":\"Exemple\",\"tags\":[\"a\",\"b\"]}",
+          "points": 4,
+          "emoji": "🧩"
+        },
+        {
+          "label": "Voici un JSON : { ... } (avec explications avant/après)",
+          "points": 1,
+          "emoji": "💬"
+        },
+        {
+          "label": "Un paragraphe qui décrit ce que serait le JSON",
+          "points": 0,
+          "emoji": "📄"
+        }
+      ],
+      "feedback_correct": "Parfait : un JSON pur, sans prose autour, est le plus simple à parser.",
+      "feedback_partial": "Un texte autour peut gêner le parsing. Privilégiez la sortie JSON seule.",
+      "feedback_incorrect": "Décrivez moins, demandez un JSON directement.",
+      "relevance": "Réduit la friction lors du parse côté code."
+    },
+    {
+      "id": "INT03",
+      "theme": "Structuration",
+      "question": "Si l’IA renvoie parfois un JSON invalide, que faire ? (sélection multiple)",
+      "selectionType": "multiselect",
+      "options": [
+        {
+          "label": "Valider/Parser côté client et demander une correction en cas d’erreur",
+          "points": 2
+        },
+        {
+          "label": "Rappeler « JSON strict uniquement » dans la consigne",
+          "points": 2
+        },
+        {
+          "label": "Fournir un schéma ou une regex de validation",
+          "points": 2
+        },
+        { "label": "Abandonner la structuration", "points": 0 }
+      ],
+      "feedback_correct": "Très bien : validation côté client + consigne stricte + schéma améliorent la robustesse.",
+      "feedback_partial": "Bien. Ajoutez validation côté client et consigne plus stricte.",
+      "feedback_incorrect": "Ne renoncez pas : combinez validation et consignes claires.",
+      "relevance": "Concilie fiabilité et ergonomie côté intégration."
+    },
+    {
+      "id": "INT04",
+      "theme": "Formats",
+      "question": "Pour un tableau Markdown à 3 colonnes (Nom | Rôle | Email), la meilleure consigne est…",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "« Donne un tableau Markdown avec en-têtes Nom | Rôle | Email et 3 lignes d’exemple »",
+          "points": 4
+        },
+        { "label": "« Fais un tableau »", "points": 1 },
+        { "label": "« Rends ça joli »", "points": 0 }
+      ],
+      "feedback_correct": "Exact : objectif + format + en-têtes précis",
+      "feedback_partial": "Soyez plus explicite sur le format et les en-têtes.",
+      "feedback_incorrect": "Précisez le format et les colonnes attendues.",
+      "relevance": "Encourage les prompts concrets et reproductibles."
+    },
+    {
+      "id": "INT05",
+      "theme": "Formats",
+      "question": "Pour limiter les variations de formatting, que pouvez-vous demander ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "Un exemple de sortie exact à imiter", "points": 2 },
+        {
+          "label": "Des délimiteurs clairs (ex. « Réponds uniquement entre { } »)",
+          "points": 2
+        },
+        { "label": "« Au feeling »", "points": 0 }
+      ],
+      "feedback_correct": "Oui : exemple précis + contraintes de délimitation stabilisent les sorties.",
+      "feedback_partial": "Ajoutez un exemple exact pour réduire les variations.",
+      "feedback_incorrect": "Soyez précis : exemple + délimiteurs > « au feeling ». ",
+      "relevance": "Réduit les écarts de format entre réponses."
+    },
+    {
+      "id": "INT06",
+      "theme": "Paramètres",
+      "question": "La « température » contrôle surtout…",
+      "selectionType": "single",
+      "options": [
+        { "label": "La créativité/variabilité des sorties", "points": 4 },
+        { "label": "La vitesse de votre connexion", "points": 0 },
+        { "label": "Le nombre maximal de tokens", "points": 0 }
+      ],
+      "feedback_correct": "Oui : plus haut = plus varié/creatif (souvent moins prévisible).",
+      "feedback_partial": "Retenez : cela influe la variabilité/ créativité.",
+      "feedback_incorrect": "La température ne gère ni la vitesse ni la longueur max.",
+      "relevance": "Aide à choisir un réglage pertinent."
+    },
+    {
+      "id": "INT07",
+      "theme": "Paramètres",
+      "question": "« top_p » (nucléus sampling) sert à…",
+      "selectionType": "select",
+      "options": [
+        {
+          "label": "Limiter la masse de probabilité cumulée explorée",
+          "points": 4
+        },
+        { "label": "Fixer la longueur max de sortie", "points": 0 },
+        {
+          "label": "Télécharger plus de données d’entraînement",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Exact : on échantillonne dans un « noyau » de probabilité.",
+      "feedback_partial": "Idée : on borne la zone de probabilité explorée.",
+      "feedback_incorrect": "top_p ne gère pas la longueur ni l’entraînement.",
+      "relevance": "Nuance utile avec la température."
+    },
+    {
+      "id": "INT08",
+      "theme": "Paramètres",
+      "question": "« max_tokens » détermine principalement…",
+      "selectionType": "single",
+      "options": [
+        { "label": "La taille maximale de la sortie", "points": 4 },
+        { "label": "La créativité", "points": 0 },
+        { "label": "La date de connaissance du modèle", "points": 0 }
+      ],
+      "feedback_correct": "Oui : c’est la limite de longueur de la réponse.",
+      "feedback_partial": "Pensez « taille de sortie ».",
+      "feedback_incorrect": "Ce n’est pas la créativité ni la fraîcheur des infos.",
+      "relevance": "Évite les coupures de réponses."
+    },
+    {
+      "id": "INT09",
+      "theme": "Paramètres",
+      "question": "À quel point êtes-vous à l’aise pour ajuster température / top_p / max_tokens ?",
+      "selectionType": "range",
+      "range": {
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "bands": [
+          { "min": 0, "max": 3, "points": 1 },
+          { "min": 4, "max": 7, "points": 2 },
+          { "min": 8, "max": 10, "points": 3 }
+        ]
+      },
+      "options": [],
+      "feedback_correct": "Super ! Vous pourrez affiner rapidement selon les cas.",
+      "feedback_partial": "Parfait pour expérimenter sereinement.",
+      "feedback_incorrect": "Pas grave : on proposera des réglages de départ.",
+      "relevance": "Mesure votre confort de pilotage fin."
+    },
+    {
+      "id": "INT10",
+      "theme": "Prompting avancé",
+      "question": "À propos du few-shot (exemples dans le prompt), que recommandez-vous ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "1–3 exemples courts et bien annotés", "points": 2 },
+        { "label": "Inclure des contre-exemples si utile", "points": 2 },
+        { "label": "Étiqueter clairement entrées/sorties", "points": 2 },
+        { "label": "20 exemples très longs pour être sûr", "points": 0 }
+      ],
+      "feedback_correct": "Parfait : peu d’exemples, courts, bien étiquetés (et parfois des contre-exemples).",
+      "feedback_partial": "Bien. Mieux vaut des exemples courts et clairs que trop longs.",
+      "feedback_incorrect": "Trop d’exemples longs peuvent dégrader le résultat.",
+      "relevance": "Stabilise le comportement du modèle."
+    },
+    {
+      "id": "INT11",
+      "theme": "Prompting avancé",
+      "question": "Ordonnez ces étapes pour itérer un prompt (glisser-déposer) :",
+      "selectionType": "ranking",
+      "options": [
+        { "label": "Définir l’objectif" },
+        { "label": "Ébaucher avec contraintes/exemples" },
+        { "label": "Tester sur 2–3 cas représentatifs" },
+        { "label": "Analyser écarts & ajuster" }
+      ],
+      "ranking": { "correctOrder": [0, 1, 2, 3], "pointsPerItem": 1 },
+      "feedback_correct": "Top : objectif → ébauche → tests → ajustements.",
+      "feedback_partial": "Logique globale OK, peaufinez l’ordre exact.",
+      "feedback_incorrect": "Astuce : objectif, ébauche, tests, puis ajustements.",
+      "relevance": "Crée un cycle d’amélioration léger et efficace."
+    },
+    {
+      "id": "INT12",
+      "theme": "Prompting avancé",
+      "question": "Différence entre « message système » et « message utilisateur » :",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Système = règles/ton globaux ; Utilisateur = consigne concrète",
+          "points": 4
+        },
+        {
+          "label": "Système = données ; Utilisateur = moteur d’IA",
+          "points": 0
+        },
+        { "label": "Aucune différence", "points": 0 }
+      ],
+      "feedback_correct": "Exact : le système cadre, l’utilisateur demande.",
+      "feedback_partial": "Le système = cadre/ton ; l’utilisateur = demande ponctuelle.",
+      "feedback_incorrect": "Ils n’ont pas le même rôle.",
+      "relevance": "Aide à structurer des fils plus stables."
+    },
+    {
+      "id": "INT13",
+      "theme": "Prompting avancé",
+      "question": "Réduire les hallucinations : (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "Limiter la réponse au contexte fourni", "points": 2 },
+        {
+          "label": "Demander d’indiquer « je ne sais pas » si incertain",
+          "points": 2
+        },
+        {
+          "label": "Exiger des sources ou références si c’est factuel",
+          "points": 2
+        },
+        {
+          "label": "Autoriser l’invention libre pour combler les trous",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Très bien : contraintes + incertitude assumée + sources quand c’est factuel.",
+      "feedback_partial": "Bien. Ajoutez une consigne claire sur l’incertitude/sources.",
+      "feedback_incorrect": "Mieux vaut encadrer plutôt qu’inventer.",
+      "relevance": "Encourage des réponses fiables et circonscrites."
+    },
+    {
+      "id": "INT14",
+      "theme": "Prompting avancé",
+      "question": "Vous souhaitez éviter l’extraction de « chaînes de pensée » détaillées (raisonnements internes). Que demander à la place ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Un plan concis en étapes / justifications courtes",
+          "points": 4
+        },
+        {
+          "label": "Raconter tout le raisonnement interne détaillé",
+          "points": 0
+        },
+        { "label": "Aucune demande sur le format", "points": 1 }
+      ],
+      "feedback_correct": "Exact : préférez un plan/étapes concis sans raisonnement interne.",
+      "feedback_partial": "Demandez explicitement un format en étapes courtes.",
+      "feedback_incorrect": "Évitez de solliciter des raisonnements internes détaillés.",
+      "relevance": "Bonnes pratiques d’explicabilité sans dévoiler l’interne."
+    },
+    {
+      "id": "INT15",
+      "theme": "RAG",
+      "question": "Le RAG (Retrieval-Augmented Generation), c’est…",
+      "selectionType": "select",
+      "options": [
+        {
+          "label": "Générer à partir de documents récupérés/pertinents fournis au modèle",
+          "points": 4
+        },
+        {
+          "label": "Re-entraîner le modèle à chaque question",
+          "points": 0
+        },
+        {
+          "label": "Augmenter la température automatiquement",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Oui : on récupère des passages pertinents, puis on génère à partir d’eux.",
+      "feedback_partial": "Idée : la génération s’appuie sur des documents récupérés.",
+      "feedback_incorrect": "Le RAG n’est pas un ré-entraînement.",
+      "relevance": "Concept clé pour fiabiliser des réponses sur des contenus privés."
+    },
+    {
+      "id": "INT16",
+      "theme": "RAG",
+      "question": "Étapes utiles d’un mini-pipeline RAG (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "Indexer/embeddings des documents", "points": 2 },
+        { "label": "Rechercher des passages pertinents", "points": 2 },
+        { "label": "Joindre le contexte au prompt", "points": 2 },
+        { "label": "Ignorer les sources et inventer", "points": 0 },
+        {
+          "label": "Ré-entraîner le modèle pour chaque requête",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Parfait : indexer → rechercher → injecter le contexte.",
+      "feedback_partial": "Bien. Il faut injecter le contexte récupéré dans le prompt.",
+      "feedback_incorrect": "RAG ≠ ré-entraînement ; on exploite des passages pertinents.",
+      "relevance": "Structure un flux simple et efficace."
+    },
+    {
+      "id": "INT17",
+      "theme": "Appels de fonction",
+      "question": "« Function calling » (ou outils) sert surtout à…",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Structurer des arguments pour appeler une API/outil externe",
+          "points": 4
+        },
+        { "label": "Changer la personnalité du modèle", "points": 0 },
+        { "label": "Accélérer la carte graphique", "points": 0 }
+      ],
+      "feedback_correct": "Exact : l’IA produit des paramètres qu’un outil exécute.",
+      "feedback_partial": "Il s’agit d’orchestrer des appels à des outils.",
+      "feedback_incorrect": "Rien à voir avec la personnalité ou le GPU.",
+      "relevance": "Clé pour automatiser des actions fiables."
+    },
+    {
+      "id": "INT18",
+      "theme": "Sécurité & prompts",
+      "question": "Face à une tentative de « prompt injection » dans un document, vous… (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        {
+          "label": "Donnez la priorité aux règles système plutôt qu’aux instructions du document",
+          "points": 2
+        },
+        {
+          "label": "Limitez les actions au périmètre prévu (whitelist)",
+          "points": 2
+        },
+        {
+          "label": "Copiez/collez des clés secrètes pour satisfaire la demande",
+          "points": 0
+        },
+        {
+          "label": "Signalez ou filtrez le contenu suspect",
+          "points": 2
+        }
+      ],
+      "feedback_correct": "Très bien : respect des règles système, périmètre strict, signalement.",
+      "feedback_partial": "Bien. Appliquez un périmètre strict et ignorez les demandes hors cadre.",
+      "feedback_incorrect": "Ne suivez jamais des instructions malicieuses du contenu récupéré.",
+      "relevance": "Réduit les risques liés aux données injectées."
+    },
+    {
+      "id": "INT19",
+      "theme": "Évaluation",
+      "question": "Pour juger une réponse d’IA (avec contexte), critères utiles : (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        {
+          "label": "Fidélité au contexte (pas d’invention)",
+          "points": 2
+        },
+        { "label": "Complétude et clarté", "points": 2 },
+        {
+          "label": "Traçabilité / références quand c’est factuel",
+          "points": 2
+        },
+        {
+          "label": "Longueur maximale en toutes circonstances",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Parfait : fidélité, clarté, complétude et traçabilité.",
+      "feedback_partial": "Bien. Ajoutez la traçabilité pour le factuel.",
+      "feedback_incorrect": "Préférez la qualité à la longueur.",
+      "relevance": "Concentre l’évaluation sur la valeur utile."
+    },
+    {
+      "id": "INT20",
+      "theme": "Debug & amélioration",
+      "question": "Quand un cas échoue, la meilleure prochaine étape est…",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Créer un repro minimal (prompt+entrée), tester quelques variantes, ajuster",
+          "points": 4
+        },
+        { "label": "Augmenter la température au hasard", "points": 1 },
+        { "label": "Blâmer l’IA et arrêter", "points": 0 }
+      ],
+      "feedback_correct": "Exact : isolez le cas, testez, ajustez méthodiquement.",
+      "feedback_partial": "Testez des variantes plutôt qu’un réglage au hasard.",
+      "feedback_incorrect": "Une démarche structurée aide à corriger vite.",
+      "relevance": "Donne une méthode de progression concrète."
+    }
+  ]
+}

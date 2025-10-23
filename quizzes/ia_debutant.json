@@ -1,0 +1,399 @@
+{
+  "title": "Test de positionnement – IA générative (niveau modeste)",
+  "description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
+  "questions": [
+    {
+      "id": "IA01",
+      "theme": "Accès & outils",
+      "question": "Avez-vous déjà utilisé un assistant conversationnel (chatbot) d’IA générative ?",
+      "selectionType": "toggle",
+      "options": [
+        { "label": "Non", "points": 1 },
+        { "label": "Oui", "points": 3 }
+      ],
+      "feedback_correct": "Super ! Votre expérience vous aidera à aller plus vite.",
+      "feedback_partial": "Vous avez coché « Oui » : parfait pour démarrer.",
+      "feedback_incorrect": "Pas de souci : quelques questions suffiront pour prendre vos marques.",
+      "relevance": "Permet de situer votre familiarité générale avec les assistants IA."
+    },
+    {
+      "id": "IA02",
+      "theme": "Accès & outils",
+      "question": "Lequel est un assistant conversationnel d’IA ?",
+      "selectionType": "select",
+      "options": [
+        { "label": "ChatGPT", "points": 4 },
+        { "label": "Adobe Photoshop", "points": 0 },
+        { "label": "Microsoft Excel", "points": 0 },
+        { "label": "Notepad", "points": 0 }
+      ],
+      "feedback_correct": "Exact ! ChatGPT est un assistant conversationnel.",
+      "feedback_partial": "On s’en approche : c’est « ChatGPT ». ",
+      "feedback_incorrect": "ChatGPT est l’assistant conversationnel parmi ces choix.",
+      "relevance": "Ancre quelques repères d’outils courants."
+    },
+    {
+      "id": "IA03",
+      "theme": "Accès & outils",
+      "question": "Que peuvent générer les IA modernes ? (plusieurs réponses possibles)",
+      "selectionType": "multiselect",
+      "options": [
+        { "label": "Texte", "points": 2 },
+        { "label": "Images", "points": 2 },
+        { "label": "Code", "points": 2 },
+        { "label": "Audio/voix", "points": 2 },
+        { "label": "Tout résultat garanti 100% exact", "points": 0 }
+      ],
+      "feedback_correct": "Oui : texte, images, code, audio… mais jamais de garantie d’exactitude absolue.",
+      "feedback_partial": "Bien vu ! Les IA génèrent texte, images, audio, code… mais l’exactitude n’est pas garantie.",
+      "feedback_incorrect": "Elles génèrent du contenu (texte, image, audio, code) mais ne garantissent pas la vérité.",
+      "relevance": "Clarifie l’étendue (et la limite) des capacités."
+    },
+    {
+      "id": "IA04",
+      "theme": "Concepts",
+      "question": "Les IA génératives ont-elles toujours raison ?",
+      "selectionType": "toggle",
+      "options": [
+        { "label": "Oui, toujours", "points": 0 },
+        {
+          "label": "Non, elles peuvent se tromper (hallucinations)",
+          "points": 4
+        }
+      ],
+      "feedback_correct": "Exact : elles peuvent se tromper. Vérifier reste essentiel.",
+      "feedback_partial": "L’idée clé : elles peuvent halluciner des infos.",
+      "feedback_incorrect": "Elles se trompent parfois : il faut recouper.",
+      "relevance": "Installe un réflexe de vérification."
+    },
+    {
+      "id": "IA05",
+      "theme": "Concepts",
+      "question": "Un « prompt », c’est…",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "La consigne/description que vous donnez à l’IA",
+          "points": 4
+        },
+        { "label": "Le modèle d’IA lui-même", "points": 0 },
+        { "label": "Le navigateur web", "points": 0 }
+      ],
+      "feedback_correct": "Parfait : le prompt est la consigne que vous écrivez.",
+      "feedback_partial": "Le prompt n’est pas l’outil mais la consigne envoyée à l’outil.",
+      "feedback_incorrect": "Le prompt = votre consigne à l’IA.",
+      "relevance": "Le vocabulaire de base aide à communiquer efficacement."
+    },
+    {
+      "id": "IA06",
+      "theme": "Concepts",
+      "question": "Que signifie « hallucination » pour une IA ?",
+      "selectionType": "select",
+      "options": [
+        {
+          "label": "Une réponse inventée mais présentée avec confiance",
+          "points": 4
+        },
+        { "label": "Un problème de connexion Internet", "points": 0 },
+        { "label": "Un bug graphique de l’interface", "points": 0 }
+      ],
+      "feedback_correct": "Oui : l’IA peut inventer des détails plausibles mais faux.",
+      "feedback_partial": "On parle d’inventions plausibles, pas de réseau ou d’interface.",
+      "feedback_incorrect": "Ici, « hallucination » = réponse inventée plausible.",
+      "relevance": "Aide à adopter un esprit critique bienveillant."
+    },
+    {
+      "id": "IA07",
+      "theme": "Concepts",
+      "question": "Les IA génératives connaissent-elles en temps réel tout Internet ?",
+      "selectionType": "toggle",
+      "options": [
+        { "label": "Oui, toujours à jour automatiquement", "points": 0 },
+        {
+          "label": "Non, elles ont des limites et n’ont pas toujours accès au web",
+          "points": 4
+        }
+      ],
+      "feedback_correct": "Exact : l’accès au web et la fraîcheur varient selon l’outil et le paramétrage.",
+      "feedback_partial": "L’idée : ne pas supposer qu’elles savent tout en temps réel.",
+      "feedback_incorrect": "Elles ne sont pas magiques : il y a des limites d’accès/actualité.",
+      "relevance": "Évite des attentes irréalistes."
+    },
+    {
+      "id": "IA08",
+      "theme": "Prompts",
+      "question": "Éléments utiles d’un bon prompt (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "Contexte/objectif clairs", "points": 2 },
+        {
+          "label": "Format de sortie attendu (ex : 3 puces, JSON)",
+          "points": 2
+        },
+        { "label": "Exemples (quelques lignes)", "points": 2 },
+        { "label": "Ton/contraintes (ex : neutre, concis)", "points": 2 },
+        { "label": "« Fais au mieux » sans précision", "points": 0 }
+      ],
+      "feedback_correct": "Excellent : contexte, format, exemples et contraintes guident l’IA.",
+      "feedback_partial": "Bien ! Ajoutez contexte, format et/ou exemples pour de meilleurs résultats.",
+      "feedback_incorrect": "Pensez à préciser l’objectif, le format et, si possible, des exemples.",
+      "relevance": "Structure = réponses plus fiables et réutilisables."
+    },
+    {
+      "id": "IA09",
+      "theme": "Prompts",
+      "question": "Ordonnez ces étapes pour construire un prompt efficace (glisser-déposer) :",
+      "selectionType": "ranking",
+      "options": [
+        { "label": "Définir l’objectif" },
+        { "label": "Donner le contexte & les contraintes" },
+        { "label": "Spécifier le format de sortie" },
+        { "label": "Tester et affiner" }
+      ],
+      "ranking": {
+        "correctOrder": [0, 1, 2, 3],
+        "pointsPerItem": 1
+      },
+      "feedback_correct": "Parfait : objectif → contexte/contraintes → format → test/affinage.",
+      "feedback_partial": "Vous avez la logique globale. L’ordre exact maximise la clarté.",
+      "feedback_incorrect": "Astuce : objectif, puis contexte/contraintes, format, enfin test/affinage.",
+      "relevance": "Encourage une démarche simple et progressive."
+    },
+    {
+      "id": "IA10",
+      "theme": "Prompts",
+      "question": "À quel point vous sentez-vous à l’aise pour reformuler un prompt ?",
+      "selectionType": "range",
+      "range": {
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "bands": [
+          { "min": 0, "max": 3, "points": 1 },
+          { "min": 4, "max": 7, "points": 2 },
+          { "min": 8, "max": 10, "points": 3 }
+        ]
+      },
+      "options": [],
+      "feedback_correct": "Super ! La reformulation est un levier puissant d’amélioration.",
+      "feedback_partial": "Bien ! Avec quelques exemples, vous serez vite très à l’aise.",
+      "feedback_incorrect": "Pas grave : on progressera ensemble sur des reformulations guidées.",
+      "relevance": "Mesure votre confort : c’est la clef pour améliorer les résultats."
+    },
+    {
+      "id": "IA11",
+      "theme": "Prompts",
+      "question": "Quel rendu correspond le mieux à la consigne « Résume en 3 puces » ?",
+      "selectionType": "image",
+      "options": [
+        {
+          "label": "• Point 1 • Point 2 • Point 3",
+          "points": 4,
+          "emoji": "🔹"
+        },
+        {
+          "label": "Un paragraphe continu de 10 lignes",
+          "points": 0,
+          "emoji": "📄"
+        },
+        {
+          "label": "Un tableau complexe à 6 colonnes",
+          "points": 1,
+          "emoji": "📊"
+        }
+      ],
+      "feedback_correct": "Exact : une liste à puces concise répond le mieux à la consigne.",
+      "feedback_partial": "La consigne dit « 3 puces » : visez une liste plutôt qu’un paragraphe/tableau.",
+      "feedback_incorrect": "Pensez « liste à puces » quand on demande « en 3 puces ». ",
+      "relevance": "Montre l’importance d’aligner format demandé et sortie."
+    },
+    {
+      "id": "IA12",
+      "theme": "Sécurité & éthique",
+      "question": "Bonnes pratiques de confidentialité (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        {
+          "label": "Éviter de coller des données personnelles/sensibles",
+          "points": 2
+        },
+        {
+          "label": "Anonymiser/masquer les informations si nécessaire",
+          "points": 2
+        },
+        {
+          "label": "Vérifier les paramètres de conservation des conversations",
+          "points": 2
+        },
+        {
+          "label": "Partager des secrets de production pour obtenir une meilleure réponse",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Très bien : limitez les données sensibles et vérifiez les paramètres.",
+      "feedback_partial": "Bien. Pensez aussi à anonymiser et à vérifier la conservation des données.",
+      "feedback_incorrect": "Attention : pas de données sensibles, anonymisez et vérifiez la confidentialité.",
+      "relevance": "Installe une hygiène simple pour travailler sereinement."
+    },
+    {
+      "id": "IA13",
+      "theme": "Sécurité & éthique",
+      "question": "Est-il acceptable de demander une action illégale à l’IA ?",
+      "selectionType": "toggle",
+      "options": [
+        { "label": "Oui", "points": 0 },
+        { "label": "Non", "points": 4 }
+      ],
+      "feedback_correct": "Exact. Les demandes illégales ou dangereuses sont proscrites.",
+      "feedback_partial": "La bonne réponse est « Non ». ",
+      "feedback_incorrect": "Non : c’est interdit et contraire à l’éthique.",
+      "relevance": "Rappelle les limites indispensables."
+    },
+    {
+      "id": "IA14",
+      "theme": "Sécurité & éthique",
+      "question": "Quand faut-il citer ses sources ?",
+      "selectionType": "select",
+      "options": [
+        {
+          "label": "Dès qu’on publie/partage des infos factuelles issues de l’IA",
+          "points": 4
+        },
+        { "label": "Jamais, l’IA n’en a pas", "points": 0 },
+        { "label": "Uniquement pour des images", "points": 1 }
+      ],
+      "feedback_correct": "Oui : lorsqu’on diffuse des infos factuelles, mieux vaut sourcer et vérifier.",
+      "feedback_partial": "La règle saine : sourcer/vérifier les contenus factuels partagés.",
+      "feedback_incorrect": "Il est souhaitable de citer et vérifier les infos factuelles.",
+      "relevance": "Favorise des usages responsables et traçables."
+    },
+    {
+      "id": "IA15",
+      "theme": "Sécurité & éthique",
+      "question": "Comment vérifier une information donnée par l’IA ? (plusieurs réponses possibles)",
+      "selectionType": "multiselect",
+      "options": [
+        {
+          "label": "Chercher des sources fiables (articles officiels, docs)",
+          "points": 2
+        },
+        { "label": "Recouper avec plusieurs sources", "points": 2 },
+        { "label": "Tester soi-même quand c’est possible", "points": 2 },
+        {
+          "label": "Croire la réponse parce qu’elle semble sûre",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Parfait : sources fiables, recoupement et tests quand c’est possible.",
+      "feedback_partial": "C’est bien. Pensez à recouper et à tester quand vous le pouvez.",
+      "feedback_incorrect": "Recoupez, citez, testez : ne vous fiez pas au ton assuré.",
+      "relevance": "Développe l’esprit critique face aux réponses plausibles."
+    },
+    {
+      "id": "IA16",
+      "theme": "Usages",
+      "question": "Usages adaptés à l’IA (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "Brainstorming/idéation", "points": 2 },
+        { "label": "Résumé et reformulation", "points": 2 },
+        { "label": "Traduction simple", "points": 2 },
+        {
+          "label": "Diagnostic médical ou légal sans expert",
+          "points": 0
+        },
+        { "label": "Prédire avec certitude la bourse", "points": 0 }
+      ],
+      "feedback_correct": "Oui : idéation, résumé, reformulation, traduction simple sont adaptés.",
+      "feedback_partial": "Bien. Évitez les usages critiques sans expert ou garanties.",
+      "feedback_incorrect": "Privilégiez des usages non-critiques et vérifiables.",
+      "relevance": "Aide à cadrer ce qui est raisonnable ou risqué."
+    },
+    {
+      "id": "IA17",
+      "theme": "Usages",
+      "question": "Le paramètre « température » sert principalement à…",
+      "selectionType": "select",
+      "options": [
+        {
+          "label": "Contrôler la créativité/variabilité des réponses",
+          "points": 4
+        },
+        { "label": "Augmenter la vitesse d’exécution", "points": 0 },
+        {
+          "label": "Télécharger plus de données d’entraînement",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Exact : plus la température est élevée, plus c’est varié/ créatif (et parfois moins prévisible).",
+      "feedback_partial": "L’idée : cela influence la variabilité/ créativité des réponses.",
+      "feedback_incorrect": "La température ne concerne ni la vitesse ni l’entraînement.",
+      "relevance": "Aide à comprendre un réglage fréquent."
+    },
+    {
+      "id": "IA18",
+      "theme": "Usages",
+      "question": "Pour obtenir un JSON propre, que demander ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Demander explicitement un JSON et fournir un exemple du format attendu",
+          "points": 4
+        },
+        { "label": "Laisser l’IA choisir le format", "points": 0 },
+        {
+          "label": "Demander du XML puis le convertir soi-même",
+          "points": 1
+        }
+      ],
+      "feedback_correct": "Parfait : spécifiez « retourne un JSON » + un exemple/schéma minimal.",
+      "feedback_partial": "Mieux vaut demander un JSON explicite et montrer l’exemple attendu.",
+      "feedback_incorrect": "Soyez explicite : format JSON + exemple = sorties plus fiables.",
+      "relevance": "Favorise des sorties faciles à réutiliser."
+    },
+    {
+      "id": "IA19",
+      "theme": "Usages – images",
+      "question": "Pour améliorer un prompt d’image, que préciser ? (plusieurs réponses possibles)",
+      "selectionType": "multiselect",
+      "options": [
+        { "label": "Sujet/contexte et action", "points": 2 },
+        {
+          "label": "Style/référence visuelle (ex : aquarelle, photo studio)",
+          "points": 2
+        },
+        {
+          "label": "Cadrage/plan (ex : gros plan, plan large)",
+          "points": 2
+        },
+        { "label": "Secrets professionnels internes", "points": 0 }
+      ],
+      "feedback_correct": "Très bien : sujet, style, cadrage… évitez toute info sensible.",
+      "feedback_partial": "Bien vu. Ajoutez plus de détails créatifs, jamais d’infos sensibles.",
+      "feedback_incorrect": "Précisez sujet/style/cadrage, et protégez vos informations.",
+      "relevance": "Transfère la logique des prompts texte vers l’image."
+    },
+    {
+      "id": "IA20",
+      "theme": "Évaluation des réponses",
+      "question": "Quels critères aident à juger une réponse d’IA ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "Pertinence par rapport à la consigne", "points": 2 },
+        {
+          "label": "Clarté et structure (lisible, résumé si demandé)",
+          "points": 2
+        },
+        { "label": "Vérifiabilité / sources", "points": 2 },
+        {
+          "label": "Longueur maximale (toujours le plus long possible)",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Parfait : pertinence, clarté/structure et vérifiabilité priment.",
+      "feedback_partial": "Bien. Pensez aussi à la vérifiabilité quand c’est factuel.",
+      "feedback_incorrect": "Jugez par pertinence, clarté et possibilité de vérifier/sourcer.",
+      "relevance": "Encourage une évaluation simple et saine."
+    }
+  ]
+}

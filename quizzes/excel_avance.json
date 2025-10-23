@@ -1,0 +1,340 @@
+{
+  "title": "Test de positionnement - Excel avancé",
+  "description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
+  "questions": [
+    {
+      "id": "Q1",
+      "theme": "Équipement & environnement",
+      "question": "Quel matériel possédez-vous pour suivre la formation ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Ordinateur de bureau ou portable avec Excel installé",
+          "points": 10
+        },
+        { "label": "Tablette uniquement", "points": 0 },
+        { "label": "Smartphone uniquement", "points": 0 },
+        { "label": "Aucun des trois", "points": 0 }
+      ],
+      "feedback_correct": "Parfait ! Un ordinateur avec Excel vous permettra de pratiquer confortablement.",
+      "feedback_partial": "Si vous avez un doute sur votre matériel, on peut vérifier ensemble et vous conseiller.",
+      "feedback_incorrect": "Pour profiter pleinement de la formation avancée, un ordinateur avec Excel est nécessaire.",
+      "relevance": "Le bon matériel est votre meilleur allié : pratiquer sur un ordinateur rend l’apprentissage fluide et agréable."
+    },
+    {
+      "id": "Q2",
+      "theme": "Équipement & environnement",
+      "question": "Quelle version d’Excel utilisez-vous ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Excel 2016 ou plus récent", "points": 6 },
+        { "label": "Excel 2010 ou 2013", "points": 5 },
+        { "label": "Excel Online (navigateur)", "points": 2 },
+        { "label": "LibreOffice / autre tableur", "points": 1 },
+        { "label": "Je ne sais pas", "points": 2 }
+      ],
+      "feedback_correct": "Très bien, votre version est pleinement compatible avec les fonctionnalités abordées.",
+      "feedback_partial": "C’est jouable, mais certaines fonctions avancées peuvent varier. On vérifiera ensemble au besoin.",
+      "feedback_incorrect": "Votre outil risque de limiter certaines fonctions clés de la formation.",
+      "relevance": "La version d’Excel influe sur les fonctionnalités disponibles. Pas d’inquiétude si vous hésitez : on peut vérifier facilement."
+    },
+    {
+      "id": "Q3",
+      "theme": "Équipement & environnement",
+      "question": "Avez-vous déjà ouvert un fichier Excel ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Oui, régulièrement", "points": 4 },
+        { "label": "Oui, quelques fois", "points": 3 },
+        { "label": "Non, jamais", "points": 0 }
+      ],
+      "feedback_correct": "Excellent, votre pratique régulière facilitera l’entrée dans les sujets avancés.",
+      "feedback_partial": "C’est un bon début ! Quelques rappels vous mettront parfaitement à l’aise.",
+      "feedback_incorrect": "Une brève initiation (1–2 h) vous aidera à prendre vos marques avant le module avancé.",
+      "relevance": "Un premier contact, même léger, rend la progression plus confortable. Chaque expérience compte."
+    },
+    {
+      "id": "Q4",
+      "theme": "Équipement & environnement",
+      "question": "Savez-vous créer un nouveau fichier Excel et l’enregistrer sous un nom précis ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Oui", "points": 6 },
+        { "label": "Non", "points": 0 },
+        { "label": "Pas sûr", "points": 2 }
+      ],
+      "feedback_correct": "Parfait, c’est une base d’autonomie indispensable.",
+      "feedback_partial": "Presque ! Une petite mise au point sur la gestion des fichiers suffira.",
+      "feedback_incorrect": "Pas de souci : on peut voir ensemble la création et l’enregistrement en quelques minutes.",
+      "relevance": "Maîtriser fichiers et dossiers enlève beaucoup de frictions et vous rend autonome."
+    },
+    {
+      "id": "Q5",
+      "theme": "Bases d’Excel",
+      "question": "Comment insérer une nouvelle colonne entre deux colonnes existantes ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Clic droit > Insérer", "points": 4 },
+        {
+          "label": "Taper \"Ajouter colonne\" dans une cellule",
+          "points": 0
+        },
+        {
+          "label": "Impossible d’ajouter entre deux colonnes",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Exact, c’est la méthode simple et efficace.",
+      "feedback_partial": "Il existe une méthode plus directe via le clic droit.",
+      "feedback_incorrect": "Bonne nouvelle : on peut facilement insérer une colonne via le menu contextuel.",
+      "relevance": "Ces manipulations de base rendent vos tableaux plus souples et faciles à organiser."
+    },
+    {
+      "id": "Q6",
+      "theme": "Bases d’Excel",
+      "question": "Quelle est la différence entre une cellule et une feuille ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Une cellule est une case ; une feuille regroupe des cellules",
+          "points": 4
+        },
+        { "label": "C’est la même chose", "points": 0 },
+        {
+          "label": "Une feuille est plus petite qu’une cellule",
+          "points": 0
+        }
+      ],
+      "feedback_correct": "Bien vu ! Vous distinguez les éléments essentiels d’Excel.",
+      "feedback_partial": "Presque, mais la feuille est un ensemble de cellules.",
+      "feedback_incorrect": "Rassurez-vous : c’est un point rapide à clarifier, et ensuite tout devient plus logique.",
+      "relevance": "Connaître les « briques » de base aide à construire des classeurs clairs et robustes."
+    },
+    {
+      "id": "Q7",
+      "theme": "Bases d’Excel",
+      "question": "Que s’affiche dans la cellule B3 si vous saisissez `=5+3` ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "8", "points": 4 },
+        { "label": "5+3", "points": 0 },
+        { "label": "Rien", "points": 0 }
+      ],
+      "feedback_correct": "Parfait : la cellule affiche le résultat, la formule reste visible dans la barre de formule.",
+      "feedback_partial": "La formule est bien `=5+3`, mais elle s’affiche dans la barre de formule, pas dans la cellule.",
+      "feedback_incorrect": "La cellule affiche le résultat (8) ; la formule est visible dans la barre de formule.",
+      "relevance": "Distinguer résultat affiché et formule tapée est fondamental pour comprendre Excel."
+    },
+    {
+      "id": "Q8",
+      "theme": "Bases d’Excel",
+      "question": "Comment sélectionner rapidement toute une colonne ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Cliquer sur son en-tête (la lettre en haut)",
+          "points": 4
+        },
+        { "label": "Sélectionner cellule par cellule", "points": 1 },
+        { "label": "Impossible", "points": 0 }
+      ],
+      "feedback_correct": "Exact ! Un geste simple qui fait gagner beaucoup de temps.",
+      "feedback_partial": "Bonne intuition. Cliquez directement sur la lettre d’en-tête pour aller plus vite.",
+      "feedback_incorrect": "Bonne nouvelle : un clic sur la lettre en haut sélectionne toute la colonne.",
+      "relevance": "Adopter les bons réflexes accélère toutes les manipulations quotidiennes."
+    },
+    {
+      "id": "Q9",
+      "theme": "Bases d’Excel",
+      "question": "Comment gérer un texte trop large pour la cellule ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        {
+          "label": "Activer le retour à la ligne automatique",
+          "points": 2
+        },
+        { "label": "Réduire la taille de police", "points": 1 },
+        { "label": "Agrandir la largeur de colonne", "points": 2 }
+      ],
+      "feedback_correct": "Parfait ! Vous connaissez plusieurs solutions : vous saurez choisir selon le contexte.",
+      "feedback_partial": "Bien joué. Il existe souvent plusieurs bonnes approches : essayez aussi l’ajustement de largeur et le retour à la ligne.",
+      "feedback_incorrect": "Pas de souci : on peut agrandir la colonne, activer le retour à la ligne ou réduire légèrement la police.",
+      "relevance": "Excel offre souvent plusieurs chemins : savoir choisir la solution adaptée est une vraie compétence."
+    },
+    {
+      "id": "Q10",
+      "theme": "Bases d’Excel",
+      "question": "À quoi sert la poignée de recopie (petit carré en bas à droite d’une cellule) ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Copier la valeur/la formule dans les cellules voisines",
+          "points": 4
+        },
+        { "label": "Effacer la cellule", "points": 0 },
+        { "label": "Déplacer la cellule", "points": 0 }
+      ],
+      "feedback_correct": "Exact, c’est un outil de productivité incontournable.",
+      "feedback_partial": "La poignée sert surtout à recopier valeurs et formules vers d’autres cellules.",
+      "feedback_incorrect": "Astuce : la poignée permet de recopier rapidement une valeur ou une formule.",
+      "relevance": "Un geste très simple qui fait gagner énormément de temps au quotidien."
+    },
+    {
+      "id": "Q11",
+      "theme": "Logique des formules",
+      "question": "Quelle formule additionne les valeurs de A1 à A10 ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "=SOMME(A1:A10)", "points": 5 },
+        { "label": "=A1+A10", "points": 1 },
+        { "label": "=MOYENNE(A1:A10)", "points": 0 }
+      ],
+      "feedback_correct": "Très bien ! SOMME est la fonction adaptée.",
+      "feedback_partial": "On se rapproche ! La formule la plus efficace ici est =SOMME(A1:A10).",
+      "feedback_incorrect": "Petit rappel : pour additionner une plage, utilisez plutôt =SOMME(A1:A10).",
+      "relevance": "Les fonctions de base (SOMME, MOYENNE…) ouvrent la porte aux calculs plus avancés."
+    },
+    {
+      "id": "Q12",
+      "theme": "Logique des formules",
+      "question": "Que renvoie la fonction =AUJOURDHUI() ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "La date du jour", "points": 5 },
+        { "label": "Le mot « AUJOURDHUI »", "points": 0 },
+        { "label": "Rien", "points": 0 }
+      ],
+      "feedback_correct": "Exact ! La date se met à jour automatiquement.",
+      "feedback_partial": "Ici, la fonction renvoie la date du jour et se met à jour toute seule.",
+      "feedback_incorrect": "=AUJOURDHUI() renvoie la date actuelle (pas du texte).",
+      "relevance": "Les fonctions automatiques rendent vos fichiers dynamiques et toujours à jour."
+    },
+    {
+      "id": "Q13",
+      "theme": "Logique des formules",
+      "question": "Si vous copiez la formule =A1+1 de B1 vers B2, que devient-elle ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "=A2+1", "points": 5 },
+        { "label": "=A1+1", "points": 1 },
+        { "label": "=B1+1", "points": 0 }
+      ],
+      "feedback_correct": "Parfait ! Vous maîtrisez les références relatives.",
+      "feedback_partial": "Bien vu. Avec la copie, la référence s’ajuste généralement à la ligne : =A2+1.",
+      "feedback_incorrect": "Astuce : les références s’adaptent lors de la recopie (ici, =A2+1).",
+      "relevance": "Comprendre références relatives/absolues rend vos formules réutilisables et robustes."
+    },
+    {
+      "id": "Q14",
+      "theme": "Logique des formules",
+      "question": "Quelles formules permettent de calculer une moyenne de A1 à A10 ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "=MOYENNE(A1:A10)", "points": 3 },
+        { "label": "=SOMME(A1:A10)/10", "points": 2 },
+        { "label": "=MAX(A1:A10)", "points": 0 }
+      ],
+      "feedback_correct": "Exact ! Vous connaissez les deux méthodes valides pour la moyenne.",
+      "feedback_partial": "Bien vu. Il existe deux méthodes correctes : MOYENNE ou SOMME/nb d’éléments.",
+      "feedback_incorrect": "La moyenne se calcule avec =MOYENNE(A1:A10) ou SOMME/nb d’éléments (pas MAX).",
+      "relevance": "Savoir qu’il y a plusieurs chemins corrects rend vos calculs plus flexibles."
+    },
+    {
+      "id": "Q15",
+      "theme": "Logique des formules",
+      "question": "Quelles formules permettent de vérifier si une cellule est vide ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "=SI(A1=\"\";\"Vide\";\"Rempli\")", "points": 2 },
+        { "label": "=ESTVIDE(A1)", "points": 3 },
+        { "label": "=NB(A1)", "points": 0 }
+      ],
+      "feedback_correct": "Très bien ! Deux approches utiles selon le besoin.",
+      "feedback_partial": "Bien joué. On peut tester le vide avec une condition ou avec ESTVIDE.",
+      "feedback_incorrect": "Astuce : utilisez =ESTVIDE(A1) ou une condition =SI(A1=\"\";…).",
+      "relevance": "Les tests logiques permettent d’automatiser des contrôles simples et fiables."
+    },
+    {
+      "id": "Q16",
+      "theme": "Logique des formules",
+      "question": "À quoi sert la fonction RECHERCHEV ?",
+      "selectionType": "single",
+      "options": [
+        {
+          "label": "Rechercher une valeur dans une colonne et renvoyer une donnée associée",
+          "points": 5
+        },
+        {
+          "label": "Trier des données par ordre alphabétique",
+          "points": 0
+        },
+        { "label": "Trouver la plus grande valeur", "points": 0 }
+      ],
+      "feedback_correct": "Exact, c’est un pilier de la recherche d’informations.",
+      "feedback_partial": "RECHERCHEV sert à retrouver des informations liées à une valeur recherchée.",
+      "feedback_incorrect": "RECHERCHEV ne trie pas et ne cherche pas le maximum : elle ramène une info associée.",
+      "relevance": "La recherche/jonction de données est au cœur de nombreuses analyses."
+    },
+    {
+      "id": "Q17",
+      "theme": "Culture & analyse",
+      "question": "Quel outil utiliser pour obtenir rapidement une synthèse d’un grand tableau ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Tableau croisé dynamique", "points": 5 },
+        { "label": "Trier les données", "points": 1 },
+        { "label": "Filtrer les données", "points": 2 }
+      ],
+      "feedback_correct": "Parfait ! Le TCD est l’outil dédié à la synthèse rapide.",
+      "feedback_partial": "Bon réflexe. Pour une synthèse complète, pensez aussi au tableau croisé dynamique.",
+      "feedback_incorrect": "Le TCD est l’outil le plus adapté pour synthétiser un grand tableau.",
+      "relevance": "Identifier l’outil clé pour résumer une base de données est un excellent signe."
+    },
+    {
+      "id": "Q18",
+      "theme": "Culture & analyse",
+      "question": "Meilleure façon de représenter visuellement une évolution sur 12 mois ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Graphique en courbes", "points": 4 },
+        { "label": "Graphique en secteurs", "points": 1 },
+        { "label": "Histogramme horizontal", "points": 2 }
+      ],
+      "feedback_correct": "Exact. La courbe montre au mieux l’évolution dans le temps.",
+      "feedback_partial": "Pas mal. La courbe reste toutefois la plus lisible pour une série temporelle.",
+      "feedback_incorrect": "Pour visualiser une évolution, la courbe est généralement la plus adaptée.",
+      "relevance": "Choisir le bon graphique aide à raconter clairement l’histoire de vos données."
+    },
+    {
+      "id": "Q19",
+      "theme": "Culture & analyse",
+      "question": "À quoi sert le tri croissant dans Excel ?",
+      "selectionType": "single",
+      "options": [
+        { "label": "Ranger du plus petit au plus grand", "points": 3 },
+        { "label": "Trouver la valeur la plus grande", "points": 1 },
+        { "label": "Supprimer les doublons", "points": 0 }
+      ],
+      "feedback_correct": "Exact, c’est la définition du tri croissant.",
+      "feedback_partial": "Le tri croissant organise la liste. Pour trouver un maximum, d’autres outils peuvent être plus directs.",
+      "feedback_incorrect": "Le tri croissant ordonne les données du plus petit au plus grand.",
+      "relevance": "Trier, filtrer et nettoyer sont des réflexes essentiels pour analyser."
+    },
+    {
+      "id": "Q20",
+      "theme": "Culture & analyse",
+      "question": "Vous recevez un fichier de 5 000 lignes : que faites-vous pour l’analyser efficacement ? (plusieurs réponses possibles)",
+      "selectionType": "multi",
+      "options": [
+        { "label": "Utiliser filtres et tri", "points": 2 },
+        { "label": "Créer un tableau croisé dynamique", "points": 3 },
+        { "label": "Parcourir ligne par ligne à la main", "points": 0 },
+        { "label": "Utiliser des graphiques", "points": 2 }
+      ],
+      "feedback_correct": "Très bon réflexe ! Filtres/tri, TCD et graphiques transforment un gros tableau en informations claires.",
+      "feedback_partial": "Bien vu. Combinez filtres/tri, TCD et graphiques pour aller plus vite et plus loin.",
+      "feedback_incorrect": "Lire ligne par ligne est chronophage. Les filtres, TCD et graphiques font gagner un temps précieux.",
+      "relevance": "Avec les bons outils d’exploration et de synthèse, on structure rapidement une grande base."
+    }
+  ]
+}
