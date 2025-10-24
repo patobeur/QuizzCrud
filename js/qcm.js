@@ -5,6 +5,8 @@
 /* ==============================================================
    LOGIQUE / ETAT
    ============================================================== */
+const STORAGE_KEY = `qcm_progress_${QUIZ_ID}`;
+
 const state = {
 	index: 0,
 	validated: Array(QUESTIONS.length).fill(false),
@@ -12,6 +14,27 @@ const state = {
 	pointsEarned: Array(QUESTIONS.length).fill(0),
 	score: 0,
 };
+
+function saveState() {
+	try {
+		localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+	} catch (e) {
+		console.error("Impossible de sauvegarder l'état", e);
+	}
+}
+
+function loadState() {
+	try {
+		const saved = localStorage.getItem(STORAGE_KEY);
+		if (saved) {
+			const savedState = JSON.parse(saved);
+			// Fusionner l'état chargé
+			Object.assign(state, savedState);
+		}
+	} catch (e) {
+		console.error("Impossible de charger l'état", e);
+	}
+}
 
 const els = {
 	progressLabel: document.getElementById("progress-label"),
@@ -504,6 +527,7 @@ function validate() {
 	}
 
 	showFeedback();
+	saveState();
 }
 
 function nextQ() {
@@ -661,6 +685,21 @@ function finalize() {
 
 	els.final.classList.remove("hidden");
 	els.final.scrollIntoView({ behavior: "smooth", block: "start" });
+
+	// Sauvegarder le résultat final
+	try {
+		const resultsKey = 'qcm_results';
+		let allResults = JSON.parse(localStorage.getItem(resultsKey)) || {};
+		allResults[QUIZ_ID] = {
+			score: score,
+			total: total,
+			percentage: pct,
+			completed: true,
+		};
+		localStorage.setItem(resultsKey, JSON.stringify(allResults));
+	} catch (e) {
+		console.error("Impossible de sauvegarder le résultat final", e);
+	}
 }
 
 /* ---------- Utilitaires ---------- */
@@ -672,6 +711,7 @@ function restart() {
 	state.score = 0;
 	els.scoreLabel.textContent = `Score : 0`;
 	els.final.classList.add("hidden");
+	localStorage.removeItem(STORAGE_KEY);
 	renderQuestion();
 }
 function exportAnswers() {
@@ -734,4 +774,5 @@ els.restartBtn.addEventListener("click", restart);
 els.exportBtn.addEventListener("click", exportAnswers);
 
 /* ---------- Init ---------- */
+loadState();
 renderQuestion();
