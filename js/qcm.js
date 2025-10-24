@@ -528,23 +528,48 @@ function validate() {
 
 	showFeedback();
 	saveState();
+	updateLiveProgress();
+}
+
+function updateLiveProgress(isFinished = false) {
+	try {
+		const resultsKey = 'qcm_results';
+		let allResults = JSON.parse(localStorage.getItem(resultsKey)) || {};
+		const score = state.score;
+		const total = TOTAL_MAX;
+		const pct = total > 0 ? Math.round((score / total) * 100) : 0;
+
+		allResults[QUIZ_ID] = {
+			score: score,
+			total: total,
+			percentage: pct,
+			completed: isFinished,
+		};
+		localStorage.setItem(resultsKey, JSON.stringify(allResults));
+	} catch (e) {
+		console.error("Impossible de sauvegarder la progression", e);
+	}
 }
 
 function nextQ() {
 	if (state.index < QUESTIONS.length - 1) {
 		state.index += 1;
 		renderQuestion();
+		saveState();
 	}
 }
 function prevQ() {
 	if (state.index > 0) {
 		state.index -= 1;
 		renderQuestion();
+		saveState();
 	}
 }
 
 /* ---------- Finalisation ---------- */
 function finalize() {
+	updateLiveProgress(true); // Marquer comme terminé
+
 	const total = TOTAL_MAX;
 	const score = state.score;
 	const pct = Math.round((score / total) * 100);
@@ -685,21 +710,6 @@ function finalize() {
 
 	els.final.classList.remove("hidden");
 	els.final.scrollIntoView({ behavior: "smooth", block: "start" });
-
-	// Sauvegarder le résultat final
-	try {
-		const resultsKey = 'qcm_results';
-		let allResults = JSON.parse(localStorage.getItem(resultsKey)) || {};
-		allResults[QUIZ_ID] = {
-			score: score,
-			total: total,
-			percentage: pct,
-			completed: true,
-		};
-		localStorage.setItem(resultsKey, JSON.stringify(allResults));
-	} catch (e) {
-		console.error("Impossible de sauvegarder le résultat final", e);
-	}
 }
 
 /* ---------- Utilitaires ---------- */

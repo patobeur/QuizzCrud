@@ -213,12 +213,19 @@ HTML;
                 const quizId = card.dataset.quizId;
                 const result = allResults[quizId];
 
-                if (result && result.percentage === 100) {
-                    const successBadge = document.createElement('span');
-                    successBadge.className = 'absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full';
-                    successBadge.textContent = '100% Réussi';
+                if (result) {
                     card.style.position = 'relative';
-                    card.appendChild(successBadge);
+                    if (result.completed && result.percentage === 100) {
+                        const successBadge = document.createElement('span');
+                        successBadge.className = 'absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full';
+                        successBadge.textContent = '100% Réussi';
+                        card.appendChild(successBadge);
+                    } else if (!result.completed) {
+                        const progressBadge = document.createElement('span');
+                        progressBadge.className = 'absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-2.5 py-1 rounded-full';
+                        progressBadge.textContent = `${result.percentage}%`;
+                        card.appendChild(progressBadge);
+                    }
                 }
             });
         });

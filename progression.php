@@ -30,7 +30,7 @@
             const container = document.getElementById('progression-container');
 
             if (Object.keys(allResults).length === 0) {
-                container.innerHTML = '<p class="text-gray-600">Vous n\'avez pas encore terminé de test.</p>';
+                container.innerHTML = '<p class="text-gray-600">Vous n\'avez pas encore commencé de test.</p>';
                 return;
             }
 
@@ -40,18 +40,31 @@
                 card.className = 'bg-white rounded-2xl shadow p-5 md:p-6';
 
                 card.innerHTML = `
-                    <h2 class="text-lg md:text-xl font-semibold">${quizId}</h2>
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-lg md:text-xl font-semibold">${quizId}</h2>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full ${
+                            result.completed
+                                ? 'bg-green-100 text-green-800'
+                                : 'bg-blue-100 text-blue-800'
+                        }">
+                            ${result.completed ? 'Terminé' : 'En cours'}
+                        </span>
+                    </div>
                     <p class="text-sm text-gray-700 mt-2">
                         Score : ${result.score} / ${result.total} (${result.percentage}%)
                     </p>
                     <div class="w-full bg-gray-200 h-2 rounded mt-2">
-                        <div class="bg-indigo-500 h-2 rounded" style="width: ${result.percentage}%"></div>
+                        <div class="h-2 rounded ${
+                            result.completed && result.percentage === 100
+                                ? 'bg-green-500'
+                                : 'bg-indigo-500'
+                        }" style="width: ${result.percentage}%"></div>
                     </div>
                 `;
 
-                if (result.percentage === 100) {
-                    const successBadge = document.createElement('span');
-                    successBadge.className = 'mt-2 inline-flex items-center gap-2 text-xs font-semibold px-2.5 py-1 rounded-full bg-green-50 text-green-700 border border-green-200';
+                if (result.completed && result.percentage === 100) {
+                    const successBadge = document.createElement('p');
+                    successBadge.className = 'mt-3 text-sm font-semibold text-green-700';
                     successBadge.textContent = '✅ Terminé avec succès';
                     card.appendChild(successBadge);
                 }
