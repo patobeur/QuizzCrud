@@ -1,11 +1,6 @@
 <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-4">
-            <button id="burger-menu" class="lg:hidden">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
             <a href="/" class="flex items-center space-x-2">
                 <img src="https://avatars.githubusercontent.com/u/129993345?s=200&v=4" alt="QF-Library Logo" class="h-8 w-8 rounded-full">
                 <span class="text-xl font-bold">QF-Library</span>
@@ -45,6 +40,11 @@
                     </div>
                 </div>
             </div>
+            <button id="burger-menu" class="lg:hidden">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
     </nav>
 </header>
