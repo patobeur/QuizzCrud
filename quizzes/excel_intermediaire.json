@@ -1,8 +1,8 @@
 {
+  "id": "excel_intermediaire",
   "title": "Test de positionnement - Excel intermédiaire",
   "level": "Intermédiaire",
   "time": "≈ 10–15 min",
-  "color": "gray",
   "main_title": "Formules & bases de données",
   "card_description": "Calculs multi-feuilles, fonctions logiques (SI), recherche (RECHERCHEV), gestion de listes (filtres, tri), graphiques.",
   "features": [

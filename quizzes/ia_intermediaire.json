@@ -1,8 +1,8 @@
 {
+	"id": "ia_intermediaire",
 	"title": "Test de positionnement – IA générative (intermédiaire)",
 	"level": "Intermédiaire",
 	"time": "≈ 10–15 min",
-	"color": "violet",
 	"main_title": "IA générative - Structuration, paramètres & RAG",
 	"card_description": "JSON strict & formats, réglages (température, top_p, max_tokens), few-shot, RAG (retrieval), function calling, sécurité & prompt injection.",
 	"features": [
