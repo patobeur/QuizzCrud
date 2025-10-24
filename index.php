@@ -7,8 +7,9 @@
     <meta name="description" content="Choisissez votre test de positionnement." />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <div class="max-w-5xl mx-auto p-4 md:p-8">
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+    <?php include 'header.php'; ?>
+    <div class="max-w-5xl mx-auto p-4 md:p-8 w-full">
         <!-- Header -->
         <header class="mb-8 md:mb-10">
             <h1 class="text-2xl md:text-4xl font-bold">Tests de positionnement</h1>
@@ -199,15 +200,8 @@ HTML;
             ?>
         </section>
 
-        <!-- Footer -->
-        <footer class="mt-10 md:mt-14 text-center text-xs text-gray-500">
-            <p>© <span id="y"></span> Tests de positionnement. Interface Tailwind.</p>
-        </footer>
     </div>
-
-    <script>
-        // Année dynamique du footer
-        document.getElementById("y").textContent = new Date().getFullYear();
-    </script>
+    <?php include 'footer.php'; ?>
+    <script src="js/main.js"></script>
 </body>
 </html>
