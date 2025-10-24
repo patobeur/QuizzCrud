@@ -1,8 +1,8 @@
 {
+	"id": "excel_debutant",
 	"title": "Test de positionnement - Excel débutant",
-	"level": "Débutant",
+	"level": "Novice",
 	"time": "≈ 10–15 min",
-	"color": "emerald",
 	"main_title": "Bases d’Excel & premiers réflexes",
 	"card_description": "Interface, création/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression.",
 	"features": [

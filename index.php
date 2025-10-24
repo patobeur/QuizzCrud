@@ -23,22 +23,13 @@
         <!-- Cartes -->
         <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <?php
+            // Charger la configuration
+            $config_content = file_get_contents(__DIR__ . '/config.json');
+            $config = json_decode($config_content, true);
+
             // Fonction pour mapper un nom de couleur simple à un ensemble de classes Tailwind CSS
-            function getColorClasses(string $quiz_id): array
+            function getColorClasses(string $color_name): array
             {
-                // Associer chaque quiz à une couleur de base
-                $quiz_color_map = [
-                    'excel_debutant'    => 'emerald',
-                    'excel_intermediaire' => 'indigo',
-                    'excel_avance'      => 'gray',
-                    'ia_debutant'       => 'fuchsia',
-                    'ia_grand_debutant' => 'pink',
-                    'ia_intermediaire'  => 'violet',
-                    'ia_avance'         => 'purple',
-                ];
-
-                $color = $quiz_color_map[$quiz_id] ?? 'gray'; // 'gray' par défaut
-
                 // Définir les palettes de classes pour chaque couleur
                 $color_styles = [
                     'emerald' => [
@@ -113,7 +104,7 @@
                         'button_bg' => 'bg-violet-600',
                         'button_hover_bg' => 'group-hover:bg-violet-700',
                     ],
-                    'purple' => [ // Pour ia_avance
+                    'purple' => [
                         'border' => 'hover:border-purple-200',
                         'focus_ring' => 'focus:ring-purple-200',
                         'level_bg' => 'bg-purple-50',
@@ -127,7 +118,7 @@
                     ],
                 ];
 
-                return $color_styles[$color];
+                return $color_styles[$color_name] ?? $color_styles['gray'];
             }
 
             $quizzes_dir = __DIR__ . '/quizzes';
@@ -137,13 +128,12 @@
                 echo '<p class="text-red-500 col-span-full">Aucun quiz trouvé.</p>';
             } else {
                 foreach ($quiz_files as $file) {
-                    $quiz_id = basename($file, '.json');
                     $content = file_get_contents($file);
                     $data = json_decode($content, true);
 
-                    if (!$data) continue; // Passer si le JSON est invalide
+                    if (!$data || !isset($data['id'])) continue;
 
-                    // Récupérer les données avec des valeurs par défaut
+                    $quiz_id = $data['id'];
                     $level = htmlspecialchars($data['level'] ?? 'Niveau non défini');
                     $time = htmlspecialchars($data['time'] ?? 'N/A');
                     $main_title = htmlspecialchars($data['main_title'] ?? 'Titre non défini');
@@ -151,34 +141,33 @@
                     $features = $data['features'] ?? [];
                     $themes = $data['themes'] ?? [];
 
-                    // Obtenir les classes de couleur
-                    $colors = getColorClasses($quiz_id);
+                    $level_color_name = $config['levels'][$level]['color'] ?? 'gray';
+                    $level_colors = getColorClasses($level_color_name);
 
-                    // Construire le HTML pour les caractéristiques
                     $features_html = '';
                     foreach ($features as $feature) {
                         $features_html .= '<li>• ' . htmlspecialchars($feature) . '</li>';
                     }
 
-                    // Construire le HTML pour les thèmes
                     $themes_html = '';
                     foreach ($themes as $theme) {
+                        $theme_color_name = $config['themes'][$theme]['color'] ?? 'gray';
+                        $theme_colors = getColorClasses($theme_color_name);
                         $themes_html .= sprintf(
                             '<span class="text-xs px-2 py-1 rounded-full %s %s %s">%s</span>',
-                            $colors['theme_bg'],
-                            $colors['theme_text'],
-                            $colors['theme_border'],
+                            $theme_colors['theme_bg'],
+                            $theme_colors['theme_text'],
+                            $theme_colors['theme_border'],
                             htmlspecialchars($theme)
                         );
                     }
 
-                    // Afficher la carte
                     echo <<<HTML
                     <a href="qcm.php?quiz={$quiz_id}"
-                       class="group block bg-white rounded-2xl shadow p-5 md:p-6 border border-transparent {$colors['border']} hover:shadow-lg focus:outline-none focus:ring-4 {$colors['focus_ring']} transition">
+                       class="group block bg-white rounded-2xl shadow p-5 md:p-6 border border-transparent {$level_colors['border']} hover:shadow-lg focus:outline-none focus:ring-4 {$level_colors['focus_ring']} transition">
 
                         <div class="flex items-center justify-between">
-                            <span class="inline-flex items-center gap-2 text-xs font-semibold px-2.5 py-1 rounded-full {$colors['level_bg']} {$colors['level_text']} border {$colors['level_border']}">
+                            <span class="inline-flex items-center gap-2 text-xs font-semibold px-2.5 py-1 rounded-full {$level_colors['level_bg']} {$level_colors['level_text']} border {$level_colors['level_border']}">
                                 ● {$level}
                             </span>
                             <span class="text-xs text-gray-500">{$time}</span>
@@ -199,7 +188,7 @@
                         </div>
 
                         <div class="mt-6">
-                            <span class="inline-flex items-center justify-center px-4 py-2 rounded-xl {$colors['button_bg']} text-white text-sm {$colors['button_hover_bg']} transition">
+                            <span class="inline-flex items-center justify-center px-4 py-2 rounded-xl {$level_colors['button_bg']} text-white text-sm {$level_colors['button_hover_bg']} transition">
                                 Passer le test
                             </span>
                         </div>

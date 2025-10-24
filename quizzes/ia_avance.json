@@ -1,8 +1,8 @@
 {
+  "id": "ia_avance",
   "title": "Test de positionnement - IA avancé",
   "level": "Avancé",
   "time": "≈ 15–20 min",
-  "color": "purple",
   "main_title": "Prompting & cas d’usages avancés",
   "card_description": "Maîtrise des stratégies de prompting (few-shot, ReAct), analyse de documents, génération de code, création d’images, automatisation.",
   "features": [

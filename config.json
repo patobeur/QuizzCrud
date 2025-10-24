@@ -1,0 +1,36 @@
+{
+    "levels": {
+        "Débutant": {
+            "color": "pink"
+        },
+        "Novice": {
+            "color": "emerald"
+        },
+        "Intermédiaire": {
+            "color": "indigo"
+        },
+        "Avancé": {
+            "color": "purple"
+        },
+        "Expert": {
+            "color": "gray"
+        },
+        "Maître": {
+            "color": "black"
+        }
+    },
+    "themes": {
+        "Culture IA": {
+            "color": "fuchsia"
+        },
+        "Prompting": {
+            "color": "violet"
+        },
+        "Usages": {
+            "color": "purple"
+        },
+        "Excel": {
+            "color": "emerald"
+        }
+    }
+}

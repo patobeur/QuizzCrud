@@ -1,8 +1,8 @@
 {
+  "id": "excel_avance",
   "title": "Test de positionnement - Excel avancé",
   "level": "Avancé",
   "time": "≈ 10–15 min",
-  "color": "gray",
   "main_title": "Analyse & fonctionnalités avancées",
   "card_description": "Analyse de données, tableaux croisés dynamiques, fonctions de recherche, bonnes pratiques sur grands volumes, visualisation.",
   "features": [
