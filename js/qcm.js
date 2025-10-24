@@ -323,7 +323,8 @@ ${opts}
 	els.validateBtn.classList.toggle("hidden", isValidated);
 
 	const isLast = i === QUESTIONS.length - 1;
-	els.nextBtn.classList.toggle("hidden", isLast);
+	els.nextBtn.classList.toggle("hidden", isLast || !isValidated);
+	els.prevBtn.classList.toggle("hidden", i === 0);
 	els.nextBtn.disabled = !isValidated;
 	els.finishBtn.classList.toggle("hidden", !(isValidated && isLast));
 
