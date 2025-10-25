@@ -49,6 +49,7 @@ $ref = '234212850';
                     <div id="profile-menu-dropdown" class="absolute hidden mt-2 right-0 w-48 z-10">
                         <div class="bg-white shadow-lg rounded-md">
                             <a href="progression.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Ma progression</a>
+                            <a href="/admin" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Admin</a>
                             <a href="logout.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Déconnexion</a>
                         </div>
                     </div>

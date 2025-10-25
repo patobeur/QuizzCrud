@@ -147,7 +147,7 @@
                     $content = file_get_contents($file);
                     $data = json_decode($content, true);
 
-                    if (!$data || !isset($data['id'])) continue;
+                    if (!$data || !isset($data['id']) || ($data['status'] ?? 'draft') !== 'published') continue;
 
                     $quiz_id = $data['id'];
                     $level = htmlspecialchars($data['level'] ?? 'Niveau non défini');
