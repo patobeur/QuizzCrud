@@ -1,13 +1,21 @@
-<header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+<?php
+$ref = '234212850';
+?><header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-4">
             <a href="/" class="flex items-center space-x-2">
-                <img src="https://avatars.githubusercontent.com/u/129993345?s=200&v=4" alt="QF-Library Logo" class="h-8 w-8 rounded-full">
+                <svg alt="QF-Library Logo" class="h-8 w-8 rounded-sm" fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>barcode</title>
+                        <path d="M29 6.031h-26c-1.104 0-2 0.896-2 2v16.938c0 1.104 0.896 2 2 2h26c1.104 0 2-0.896 2-2v-16.938c0-1.104-0.896-2-2-2zM6 23.969h-2v-14.938h2v14.938zM8 22.031h-1v-13h1v13zM11 22.031h-1v-13h1v13zM14 22.031h-2v-13h2v13zM16 22.031h-1v-13h1v13zM20 22.031h-2v-13h2v13zM22 22.031h-1v-13h1v13zM25 22.031h-1v-13h1v13zM28 23.969h-2v-14.938h2v14.938z"></path>
+                    </g>
+                </svg>
                 <span class="text-xl font-bold">QF-Library</span>
             </a>
         </div>
         <div id="nav-links" class="hidden lg:flex items-center space-x-6">
-            <a href="index.php" class="text-gray-700 hover:text-indigo-600 transition">Accueil</a>
             <a href="progression.php" class="text-gray-700 hover:text-indigo-600 transition">Ma progression</a>
             <div class="relative">
                 <button id="tests-menu-button" class="text-gray-700 hover:text-indigo-600 transition flex items-center">
@@ -36,6 +44,7 @@
                 <div id="profile-menu-dropdown" class="absolute hidden mt-2 right-0 w-48 z-10">
                     <div class="bg-white shadow-lg rounded-md">
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Mon compte</a>
+                        <a href="progression.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Ma progression</a>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Paramètres</a>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Déconnexion</a>
                     </div>
