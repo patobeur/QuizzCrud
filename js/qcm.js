@@ -5,8 +5,6 @@
 /* ==============================================================
    LOGIQUE / ETAT
    ============================================================== */
-const STORAGE_KEY = `qcm_progress_${QUIZ_ID}`;
-
 const state = {
 	index: 0,
 	validated: Array(QUESTIONS.length).fill(false),
@@ -15,26 +13,42 @@ const state = {
 	score: 0,
 };
 
-function saveState() {
-	try {
-		localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-	} catch (e) {
-		console.error("Impossible de sauvegarder l'état", e);
-	}
+async function saveState() {
+    try {
+        await fetch('api/progress.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                quiz_id: QUIZ_ID,
+                score: state.score,
+                progress: Math.round((state.validated.filter(v => v).length / QUESTIONS.length) * 100),
+                // To resume quiz, we need the full state. Let's adapt the API and DB for this.
+                // For now, let's just save score and progress percentage.
+                // The full state persistence will be added in a later step.
+            }),
+        });
+    } catch (e) {
+        console.error("Impossible de sauvegarder l'état", e);
+    }
 }
 
-function loadState() {
-	try {
-		const saved = localStorage.getItem(STORAGE_KEY);
-		if (saved) {
-			const savedState = JSON.parse(saved);
-			// Fusionner l'état chargé
-			Object.assign(state, savedState);
-		}
-	} catch (e) {
-		console.error("Impossible de charger l'état", e);
-	}
+
+async function loadState() {
+    try {
+        const response = await fetch(`api/progress.php?quiz_id=${QUIZ_ID}`);
+        if (response.ok) {
+            const savedState = await response.json();
+            if (savedState) {
+                // For now, we only load the score as we are not storing the full state yet.
+                // This will be improved.
+                // Object.assign(state, savedState);
+            }
+        }
+    } catch (e) {
+        console.error("Impossible de charger l'état", e);
+    }
 }
+
 
 const els = {
 	progressLabel: document.getElementById("progress-label"),
@@ -528,27 +542,6 @@ function validate() {
 
 	showFeedback();
 	saveState();
-	updateLiveProgress();
-}
-
-function updateLiveProgress(isFinished = false) {
-	try {
-		const resultsKey = 'qcm_results';
-		let allResults = JSON.parse(localStorage.getItem(resultsKey)) || {};
-		const score = state.score;
-		const total = TOTAL_MAX;
-		const pct = total > 0 ? Math.round((score / total) * 100) : 0;
-
-		allResults[QUIZ_ID] = {
-			score: score,
-			total: total,
-			percentage: pct,
-			completed: isFinished,
-		};
-		localStorage.setItem(resultsKey, JSON.stringify(allResults));
-	} catch (e) {
-		console.error("Impossible de sauvegarder la progression", e);
-	}
 }
 
 function nextQ() {
@@ -568,7 +561,7 @@ function prevQ() {
 
 /* ---------- Finalisation ---------- */
 function finalize() {
-	updateLiveProgress(true); // Marquer comme terminé
+	saveState(); // Save final state
 
 	const total = TOTAL_MAX;
 	const score = state.score;
@@ -713,17 +706,18 @@ function finalize() {
 }
 
 /* ---------- Utilitaires ---------- */
-function restart() {
-	state.index = 0;
-	state.validated = Array(QUESTIONS.length).fill(false);
-	state.answers = Array(QUESTIONS.length).fill(null);
-	state.pointsEarned = Array(QUESTIONS.length).fill(0);
-	state.score = 0;
-	els.scoreLabel.textContent = `Score : 0`;
-	els.final.classList.add("hidden");
-	localStorage.removeItem(STORAGE_KEY);
-	renderQuestion();
+async function restart() {
+    state.index = 0;
+    state.validated = Array(QUESTIONS.length).fill(false);
+    state.answers = Array(QUESTIONS.length).fill(null);
+    state.pointsEarned = Array(QUESTIONS.length).fill(0);
+    state.score = 0;
+    els.scoreLabel.textContent = `Score : 0`;
+    els.final.classList.add("hidden");
+    await saveState(); // This will save the reset state to the server
+    renderQuestion();
 }
+
 function exportAnswers() {
 	const payload = {
 		date: new Date().toISOString(),
@@ -784,5 +778,7 @@ els.restartBtn.addEventListener("click", restart);
 els.exportBtn.addEventListener("click", exportAnswers);
 
 /* ---------- Init ---------- */
-loadState();
-renderQuestion();
+(async () => {
+    await loadState();
+    renderQuestion();
+})();

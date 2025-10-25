@@ -8,7 +8,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
-    <?php include 'header.php'; ?>
+    <?php
+    require_once 'includes/db_setup.php';
+    include 'header.php';
+
+    // Fetch user progress if logged in
+    $user_progress = [];
+    if (isset($_SESSION['user_id'])) {
+        $db = get_db_connection();
+        $stmt = $db->prepare("SELECT quiz_id, progress, score FROM user_progress WHERE user_id = ?");
+        $stmt->execute([$_SESSION['user_id']]);
+        $progress_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($progress_data as $row) {
+            $user_progress[$row['quiz_id']] = $row;
+        }
+    }
+    ?>
     <div class="max-w-5xl mx-auto p-4 md:p-8 w-full">
         <!-- Header -->
         <header class="mb-8 md:mb-10">
@@ -163,10 +178,23 @@
                         );
                     }
 
+                    $progress_html = '';
+                    if (isset($user_progress[$quiz_id])) {
+                        $progress = $user_progress[$quiz_id];
+                        $percentage = $progress['progress'];
+                        if ($percentage == 100) {
+                            $progress_html = "<span class='absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full'>100% Réussi</span>";
+                        } else {
+                            $progress_html = "<span class='absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-2.5 py-1 rounded-full'>{$percentage}%</span>";
+                        }
+                    }
+
                     echo <<<HTML
                     <a href="qcm.php?quiz={$quiz_id}"
                        data-quiz-id="{$quiz_id}"
-                       class="group block bg-white rounded-2xl shadow p-5 md:p-6 border border-transparent {$level_colors['border']} hover:shadow-lg focus:outline-none focus:ring-4 {$level_colors['focus_ring']} transition">
+                       class="group relative block bg-white rounded-2xl shadow p-5 md:p-6 border border-transparent {$level_colors['border']} hover:shadow-lg focus:outline-none focus:ring-4 {$level_colors['focus_ring']} transition">
+
+                        {$progress_html}
 
                         <div class="flex items-center justify-between">
                             <span class="inline-flex items-center gap-2 text-xs font-semibold px-2.5 py-1 rounded-full {$level_colors['level_bg']} {$level_colors['level_text']} border {$level_colors['level_border']}">
@@ -203,32 +231,5 @@ HTML;
 
     </div>
     <?php include 'footer.php'; ?>
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const resultsKey = 'qcm_results';
-            const allResults = JSON.parse(localStorage.getItem(resultsKey)) || {};
-
-            document.querySelectorAll('[data-quiz-id]').forEach(card => {
-                const quizId = card.dataset.quizId;
-                const result = allResults[quizId];
-
-                if (result) {
-                    card.style.position = 'relative';
-                    if (result.completed && result.percentage === 100) {
-                        const successBadge = document.createElement('span');
-                        successBadge.className = 'absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full';
-                        successBadge.textContent = '100% Réussi';
-                        card.appendChild(successBadge);
-                    } else if (!result.completed) {
-                        const progressBadge = document.createElement('span');
-                        progressBadge.className = 'absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-2.5 py-1 rounded-full';
-                        progressBadge.textContent = `${result.percentage}%`;
-                        card.appendChild(progressBadge);
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 </html>
