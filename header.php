@@ -7,7 +7,8 @@
             </a>
         </div>
         <div id="nav-links" class="hidden lg:flex items-center space-x-6">
-            <a href="#" class="text-gray-700 hover:text-indigo-600 transition">Accueil</a>
+            <a href="index.php" class="text-gray-700 hover:text-indigo-600 transition">Accueil</a>
+            <a href="progression.php" class="text-gray-700 hover:text-indigo-600 transition">Ma progression</a>
             <div class="relative">
                 <button id="tests-menu-button" class="text-gray-700 hover:text-indigo-600 transition flex items-center">
                     <span>Tests</span>

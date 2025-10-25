@@ -165,6 +165,7 @@
 
                     echo <<<HTML
                     <a href="qcm.php?quiz={$quiz_id}"
+                       data-quiz-id="{$quiz_id}"
                        class="group block bg-white rounded-2xl shadow p-5 md:p-6 border border-transparent {$level_colors['border']} hover:shadow-lg focus:outline-none focus:ring-4 {$level_colors['focus_ring']} transition">
 
                         <div class="flex items-center justify-between">
@@ -203,5 +204,31 @@ HTML;
     </div>
     <?php include 'footer.php'; ?>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const resultsKey = 'qcm_results';
+            const allResults = JSON.parse(localStorage.getItem(resultsKey)) || {};
+
+            document.querySelectorAll('[data-quiz-id]').forEach(card => {
+                const quizId = card.dataset.quizId;
+                const result = allResults[quizId];
+
+                if (result) {
+                    card.style.position = 'relative';
+                    if (result.completed && result.percentage === 100) {
+                        const successBadge = document.createElement('span');
+                        successBadge.className = 'absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full';
+                        successBadge.textContent = '100% Réussi';
+                        card.appendChild(successBadge);
+                    } else if (!result.completed) {
+                        const progressBadge = document.createElement('span');
+                        progressBadge.className = 'absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-2.5 py-1 rounded-full';
+                        progressBadge.textContent = `${result.percentage}%`;
+                        card.appendChild(progressBadge);
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

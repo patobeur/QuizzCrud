@@ -5,6 +5,8 @@
 /* ==============================================================
    LOGIQUE / ETAT
    ============================================================== */
+const STORAGE_KEY = `qcm_progress_${QUIZ_ID}`;
+
 const state = {
 	index: 0,
 	validated: Array(QUESTIONS.length).fill(false),
@@ -12,6 +14,27 @@ const state = {
 	pointsEarned: Array(QUESTIONS.length).fill(0),
 	score: 0,
 };
+
+function saveState() {
+	try {
+		localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+	} catch (e) {
+		console.error("Impossible de sauvegarder l'état", e);
+	}
+}
+
+function loadState() {
+	try {
+		const saved = localStorage.getItem(STORAGE_KEY);
+		if (saved) {
+			const savedState = JSON.parse(saved);
+			// Fusionner l'état chargé
+			Object.assign(state, savedState);
+		}
+	} catch (e) {
+		console.error("Impossible de charger l'état", e);
+	}
+}
 
 const els = {
 	progressLabel: document.getElementById("progress-label"),
@@ -504,23 +527,49 @@ function validate() {
 	}
 
 	showFeedback();
+	saveState();
+	updateLiveProgress();
+}
+
+function updateLiveProgress(isFinished = false) {
+	try {
+		const resultsKey = 'qcm_results';
+		let allResults = JSON.parse(localStorage.getItem(resultsKey)) || {};
+		const score = state.score;
+		const total = TOTAL_MAX;
+		const pct = total > 0 ? Math.round((score / total) * 100) : 0;
+
+		allResults[QUIZ_ID] = {
+			score: score,
+			total: total,
+			percentage: pct,
+			completed: isFinished,
+		};
+		localStorage.setItem(resultsKey, JSON.stringify(allResults));
+	} catch (e) {
+		console.error("Impossible de sauvegarder la progression", e);
+	}
 }
 
 function nextQ() {
 	if (state.index < QUESTIONS.length - 1) {
 		state.index += 1;
 		renderQuestion();
+		saveState();
 	}
 }
 function prevQ() {
 	if (state.index > 0) {
 		state.index -= 1;
 		renderQuestion();
+		saveState();
 	}
 }
 
 /* ---------- Finalisation ---------- */
 function finalize() {
+	updateLiveProgress(true); // Marquer comme terminé
+
 	const total = TOTAL_MAX;
 	const score = state.score;
 	const pct = Math.round((score / total) * 100);
@@ -672,6 +721,7 @@ function restart() {
 	state.score = 0;
 	els.scoreLabel.textContent = `Score : 0`;
 	els.final.classList.add("hidden");
+	localStorage.removeItem(STORAGE_KEY);
 	renderQuestion();
 }
 function exportAnswers() {
@@ -734,4 +784,5 @@ els.restartBtn.addEventListener("click", restart);
 els.exportBtn.addEventListener("click", exportAnswers);
 
 /* ---------- Init ---------- */
+loadState();
 renderQuestion();

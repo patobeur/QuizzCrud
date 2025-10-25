@@ -110,6 +110,7 @@ $colors = $color_styles[$level_color_name] ?? $color_styles['gray'];
 	</div>
     <?php include 'footer.php'; ?>
 	<script>
+		const QUIZ_ID = "<?php echo $quiz_id; ?>";
 		const QUESTIONS = <?php echo $questions_json; ?>;
 	</script>
 	<script src="js/qcm.js"></script>
