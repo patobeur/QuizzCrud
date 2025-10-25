@@ -6,17 +6,8 @@ define('DB_PATH', __DIR__ . '/../quiz.db');
 
 // Function to initialize the database
 function initialize_database() {
-    // Check if the database file already exists
-    if (file_exists(DB_PATH)) {
-        // If it exists, do nothing further
-        return;
-    }
-
     try {
-        // Create a new PDO instance for SQLite
         $db = new PDO('sqlite:' . DB_PATH);
-
-        // Set error mode to exceptions for better error handling
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // SQL to create the 'users' table
@@ -36,10 +27,19 @@ function initialize_database() {
             quiz_id TEXT NOT NULL,
             progress INTEGER DEFAULT 0,
             score INTEGER DEFAULT 0,
+            quiz_state TEXT,
             FOREIGN KEY (user_id) REFERENCES users(id),
             UNIQUE(user_id, quiz_id)
         )";
         $db->exec($sql_user_progress);
+
+        // Check if quiz_state column exists and add it if not
+        $stmt = $db->query("PRAGMA table_info(user_progress)");
+        $columns = $stmt->fetchAll(PDO::FETCH_COLUMN, 1);
+        if (!in_array('quiz_state', $columns)) {
+            $db->exec("ALTER TABLE user_progress ADD COLUMN quiz_state TEXT");
+        }
+
 
         // Close the database connection
         $db = null;

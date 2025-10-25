@@ -25,28 +25,35 @@
             if (!isset($_SESSION['user_id'])) {
                 echo '<p class="text-gray-600">Vous devez être <a href="login.php" class="text-blue-500">connecté</a> pour voir votre progression.</p>';
             } else {
-                $db = get_db_connection();
-                $stmt = $db->prepare("SELECT q.main_title, up.quiz_id, up.progress, up.score
-                                      FROM user_progress up
-                                      JOIN (SELECT id, main_title FROM quizzes) q ON up.quiz_id = q.id
-                                      WHERE up.user_id = ?");
-
-                // We need to load quizzes data to get total scores and titles.
-                // Let's assume a function to get all quizzes data.
-                function get_all_quizzes() {
+                // Helper function to load all quiz data
+                function get_all_quizzes_data() {
                     $quizzes = [];
-                    $quiz_files = glob('quizzes/*.json');
+                    $quiz_files = glob(__DIR__ . '/quizzes/*.json');
                     foreach ($quiz_files as $file) {
                         $quiz_data = json_decode(file_get_contents($file), true);
                         if ($quiz_data && isset($quiz_data['id'])) {
-                            $quizzes[$quiz_data['id']] = $quiz_data;
+                            $total_score = 0;
+                            if (isset($quiz_data['questions'])) {
+                                foreach ($quiz_data['questions'] as $q) {
+                                    if (isset($q['options'])) {
+                                        $points = array_map(function($o) { return $o['points'] ?? 0; }, $q['options']);
+                                        $total_score += max($points);
+                                    }
+                                }
+                            }
+                            $quizzes[$quiz_data['id']] = [
+                                'title' => $quiz_data['main_title'] ?? $quiz_data['id'],
+                                'total_score' => $total_score
+                            ];
                         }
                     }
                     return $quizzes;
                 }
 
-                $all_quizzes = get_all_quizzes();
+                $all_quizzes = get_all_quizzes_data();
+                $db = get_db_connection();
 
+                // Corrected Query: Select only from user_progress
                 $stmt = $db->prepare("SELECT quiz_id, progress, score FROM user_progress WHERE user_id = ?");
                 $stmt->execute([$_SESSION['user_id']]);
                 $progress_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -56,24 +63,13 @@
                 } else {
                     foreach ($progress_data as $progress) {
                         $quiz_id = $progress['quiz_id'];
-                        $quiz_info = $all_quizzes[$quiz_id] ?? null;
-                        $title = $quiz_info['main_title'] ?? $quiz_id;
-                        $total_score = 0; // In a real scenario, this should be calculated from the quiz file.
-                        if($quiz_info) {
-                            foreach($quiz_info['questions'] as $q) {
-                                // This is a simplified calculation. A more robust one would be needed.
-                                if(isset($q['options'])) {
-                                    foreach($q['options'] as $opt) {
-                                        if(isset($opt['points']) && $opt['points'] > 0) {
-                                            $total_score += $opt['points'];
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
+                        $quiz_info = $all_quizzes[$quiz_id] ?? ['title' => $quiz_id, 'total_score' => 0];
+                        $title = $quiz_info['title'];
+                        $total_score = $quiz_info['total_score'];
 
                         $completed = $progress['progress'] == 100;
+                        $score_display = $progress['score'] . ($total_score > 0 ? ' / ' . $total_score : '');
+
                         echo '
                         <div class="bg-white rounded-2xl shadow p-5 md:p-6">
                             <div class="flex justify-between items-start">
@@ -83,10 +79,10 @@
                                 </span>
                             </div>
                             <p class="text-sm text-gray-700 mt-2">
-                                Score : ' . $progress['score'] . ($total_score > 0 ? ' / ' . $total_score : '') . ' (' . $progress['progress'] . '%)
+                                Score : ' . $score_display . ' (' . $progress['progress'] . '%)
                             </p>
                             <div class="w-full bg-gray-200 h-2 rounded mt-2">
-                                <div class="h-2 rounded ' . ($completed && $progress['progress'] == 100 ? 'bg-green-500' : 'bg-indigo-500') . '" style="width: ' . $progress['progress'] . '%"></div>
+                                <div class="h-2 rounded ' . ($completed ? 'bg-green-500' : 'bg-indigo-500') . '" style="width: ' . $progress['progress'] . '%"></div>
                             </div>
                         </div>';
                     }

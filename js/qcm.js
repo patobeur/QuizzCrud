@@ -8,23 +8,24 @@
 const state = {
 	index: 0,
 	validated: Array(QUESTIONS.length).fill(false),
-	answers: Array(QUESTIONS.length).fill(null), // single: number | null ; multi: number[] | null ; select: number|null ; multiselect: number[]|null ; toggle: 0|1|null ; range: number|null ; ranking: number[]|null ; image: number|null
+	answers: Array(QUESTIONS.length).fill(null),
 	pointsEarned: Array(QUESTIONS.length).fill(0),
 	score: 0,
 };
 
-async function saveState() {
+async function saveState(isFinished = false) {
     try {
+        const validatedCount = state.validated.filter(v => v).length;
+        const progress = QUESTIONS.length > 0 ? Math.round((validatedCount / QUESTIONS.length) * 100) : 0;
+
         await fetch('api/progress.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 quiz_id: QUIZ_ID,
                 score: state.score,
-                progress: Math.round((state.validated.filter(v => v).length / QUESTIONS.length) * 100),
-                // To resume quiz, we need the full state. Let's adapt the API and DB for this.
-                // For now, let's just save score and progress percentage.
-                // The full state persistence will be added in a later step.
+                progress: progress,
+                quiz_state: state,
             }),
         });
     } catch (e) {
@@ -32,23 +33,19 @@ async function saveState() {
     }
 }
 
-
 async function loadState() {
     try {
         const response = await fetch(`api/progress.php?quiz_id=${QUIZ_ID}`);
         if (response.ok) {
-            const savedState = await response.json();
-            if (savedState) {
-                // For now, we only load the score as we are not storing the full state yet.
-                // This will be improved.
-                // Object.assign(state, savedState);
+            const savedProgress = await response.json();
+            if (savedProgress && savedProgress.quiz_state) {
+                Object.assign(state, savedProgress.quiz_state);
             }
         }
     } catch (e) {
         console.error("Impossible de charger l'état", e);
     }
 }
-
 
 const els = {
 	progressLabel: document.getElementById("progress-label"),
@@ -134,10 +131,11 @@ function renderQuestion() {
 	const i = state.index;
 	const q = QUESTIONS[i];
 
+    els.scoreLabel.textContent = `Score : ${state.score}`;
 	els.progressLabel.textContent = `Question ${i + 1} / ${
 		QUESTIONS.length
 	}`;
-	const pct = Math.max(5, Math.round((i / QUESTIONS.length) * 100));
+	const pct = Math.max(5, Math.round(((i + 1) / QUESTIONS.length) * 100));
 	els.progressBar.style.width = `${pct}%`;
 
 	els.theme.textContent = q.theme;
@@ -561,13 +559,12 @@ function prevQ() {
 
 /* ---------- Finalisation ---------- */
 function finalize() {
-	saveState(); // Save final state
+	saveState(true); // Marquer comme terminé
 
 	const total = TOTAL_MAX;
 	const score = state.score;
 	const pct = Math.round((score / total) * 100);
 
-	// Drapeaux doux (selon questions clés) - ceci est un exemple et peut être personnalisé
 	const flags = [];
 	if (QUESTIONS.find(q => q.id === "IA12")) {
 		const bad = (id) => {
@@ -590,7 +587,6 @@ function finalize() {
 			);
 	}
 
-	// Verdict bienveillant - ceci est un exemple et peut être personnalisé
 	let verdict = "";
 	let style = "bg-blue-50 text-blue-900 border-blue-200";
 	if (pct >= 75 && flags.length === 0) {
@@ -621,7 +617,6 @@ function finalize() {
 	els.recos.className = `p-4 rounded-xl border ${style}`;
 	els.recos.textContent = verdict;
 
-	// Récap par question
 	els.recap.innerHTML = "";
 	QUESTIONS.forEach((q, idx) => {
 		const maxP = maxPointsForQuestion(q);
@@ -714,7 +709,10 @@ async function restart() {
     state.score = 0;
     els.scoreLabel.textContent = `Score : 0`;
     els.final.classList.add("hidden");
-    await saveState(); // This will save the reset state to the server
+
+    // Reset state on server
+    await saveState();
+
     renderQuestion();
 }
 

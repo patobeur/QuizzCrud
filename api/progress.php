@@ -21,20 +21,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     if (!$quiz_id) {
         // If no quiz_id, get all progress for the user
-        $stmt = $db->prepare("SELECT quiz_id, progress, score FROM user_progress WHERE user_id = ?");
+        $stmt = $db->prepare("SELECT quiz_id, progress, score, quiz_state FROM user_progress WHERE user_id = ?");
         $stmt->execute([$user_id]);
         $progress = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo json_encode($progress);
     } else {
         // Get progress for a specific quiz
-        $stmt = $db->prepare("SELECT progress, score FROM user_progress WHERE user_id = ? AND quiz_id = ?");
+        $stmt = $db->prepare("SELECT progress, score, quiz_state FROM user_progress WHERE user_id = ? AND quiz_id = ?");
         $stmt->execute([$user_id, $quiz_id]);
         $progress = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($progress) {
+            // Decode the state from JSON
+            $progress['quiz_state'] = $progress['quiz_state'] ? json_decode($progress['quiz_state'], true) : null;
             echo json_encode($progress);
         } else {
-            echo json_encode(['progress' => 0, 'score' => 0]);
+            echo json_encode(null); // Return null if no progress found
         }
     }
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -43,6 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $quiz_id = $data['quiz_id'] ?? null;
     $progress = $data['progress'] ?? 0;
     $score = $data['score'] ?? 0;
+    $quiz_state = isset($data['quiz_state']) ? json_encode($data['quiz_state']) : null;
+
 
     if (!$quiz_id) {
         echo json_encode(['error' => 'Quiz ID is required']);
@@ -56,12 +60,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     if ($stmt->fetch()) {
         // Update existing progress
-        $stmt = $db->prepare("UPDATE user_progress SET progress = ?, score = ? WHERE user_id = ? AND quiz_id = ?");
-        $success = $stmt->execute([$progress, $score, $user_id, $quiz_id]);
+        $stmt = $db->prepare("UPDATE user_progress SET progress = ?, score = ?, quiz_state = ? WHERE user_id = ? AND quiz_id = ?");
+        $success = $stmt->execute([$progress, $score, $quiz_state, $user_id, $quiz_id]);
     } else {
         // Insert new progress
-        $stmt = $db->prepare("INSERT INTO user_progress (user_id, quiz_id, progress, score) VALUES (?, ?, ?, ?)");
-        $success = $stmt->execute([$user_id, $quiz_id, $progress, $score]);
+        $stmt = $db->prepare("INSERT INTO user_progress (user_id, quiz_id, progress, score, quiz_state) VALUES (?, ?, ?, ?, ?)");
+        $success = $stmt->execute([$user_id, $quiz_id, $progress, $score, $quiz_state]);
     }
 
     if ($success) {
