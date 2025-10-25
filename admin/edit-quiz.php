@@ -8,6 +8,7 @@
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
     <?php
+    require_once 'auth-check.php';
     include '../header.php';
     // Charger la configuration pour les niveaux et thèmes
     $config_content = file_get_contents(__DIR__ . '/../config.json');

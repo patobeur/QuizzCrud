@@ -7,14 +7,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
-    <?php include '../header.php'; ?>
+    <?php
+    require_once 'auth-check.php';
+    include '../header.php';
+    ?>
     <div class="max-w-5xl mx-auto p-4 md:p-8 w-full">
-        <header class="mb-8 md:mb-10 flex justify-between items-center">
-            <h1 class="text-2xl md:text-4xl font-bold">Gestion des Quizz</h1>
+        <header class="mb-8 md:mb-10">
+            <h1 class="text-2xl md:text-4xl font-bold">Tableau de Bord Administrateur</h1>
+        </header>
+
+        <nav class="mb-8">
+            <ul class="flex border-b">
+                <li class="-mb-px mr-1">
+                    <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-indigo-700 font-semibold" href="/admin/index.php">Gestion des Quizz</a>
+                </li>
+                <li class="mr-1">
+                    <a class="bg-gray-200 inline-block py-2 px-4 text-gray-500 hover:text-indigo-800 font-semibold" href="/admin/users.php">Gestion des Utilisateurs</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl md:text-2xl font-semibold">Quizz Existants</h2>
             <a href="/admin/edit-quiz.php" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
                 Créer un quiz
             </a>
-        </header>
+        </div>
 
         <section class="bg-white rounded-2xl shadow p-5 md:p-6">
             <h2 class="text-xl md:text-2xl font-semibold mb-4">Quizz Existants</h2>

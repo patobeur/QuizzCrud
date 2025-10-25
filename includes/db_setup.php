@@ -15,9 +15,17 @@ function initialize_database() {
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT NOT NULL UNIQUE,
-            password TEXT NOT NULL
+            password TEXT NOT NULL,
+            role TEXT NOT NULL DEFAULT 'user'
         )";
         $db->exec($sql_users);
+
+        // Check if role column exists and add it if not
+        $stmt = $db->query("PRAGMA table_info(users)");
+        $columns = $stmt->fetchAll(PDO::FETCH_COLUMN, 1);
+        if (!in_array('role', $columns)) {
+            $db->exec("ALTER TABLE users ADD COLUMN role TEXT NOT NULL DEFAULT 'user'");
+        }
 
         // SQL to create the 'user_progress' table
         $sql_user_progress = "

@@ -1,10 +1,5 @@
 <?php
-session_start();
-
-// Basic security check - ensure the user is logged in, and in a real app, you'd check for admin role
-if (!isset($_SESSION['user_id'])) {
-    die('Accès non autorisé.');
-}
+require_once 'auth-check.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $quiz_id = $_POST['quiz_id'] ?: uniqid('quiz_');

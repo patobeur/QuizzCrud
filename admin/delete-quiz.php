@@ -1,27 +1,13 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-    die('Accès non autorisé.');
-}
+require_once 'auth-check.php';
 
 $quiz_id = $_GET['quiz_id'] ?? null;
 
 if ($quiz_id) {
-    $quizzes_dir = __DIR__ . '/../quizzes';
-    $quiz_files = glob($quizzes_dir . '/*.json');
-    $filepath = null;
+    $filename = 'quiz_' . $quiz_id . '.json';
+    $filepath = __DIR__ . '/../quizzes/' . $filename;
 
-    foreach ($quiz_files as $file) {
-        $content = file_get_contents($file);
-        $data = json_decode($content, true);
-        if (isset($data['id']) && $data['id'] === $quiz_id) {
-            $filepath = $file;
-            break;
-        }
-    }
-
-    if ($filepath) {
+    if (file_exists($filepath)) {
         if (unlink($filepath)) {
             header('Location: index.php?status=deleted');
         } else {
