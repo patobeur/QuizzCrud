@@ -25,7 +25,32 @@
             if (!isset($_SESSION['user_id'])) {
                 echo '<p class="text-gray-600">Vous devez être <a href="login.php" class="text-blue-500">connecté</a> pour voir votre progression.</p>';
             } else {
-                // Helper function to load all quiz data
+
+                function maxPointsForQuestion(array $q): int {
+                    $type = $q['selectionType'] ?? 'single';
+                    switch ($type) {
+                        case 'single':
+                        case 'select':
+                        case 'image':
+                        case 'toggle':
+                            if (empty($q['options'])) return 0;
+                            $points = array_map(fn($o) => $o['points'] ?? 0, $q['options']);
+                            return max($points);
+                        case 'multi':
+                        case 'multiselect':
+                            if (empty($q['options'])) return 0;
+                            return array_reduce($q['options'], fn($sum, $o) => $sum + max(0, $o['points'] ?? 0), 0);
+                        case 'range':
+                            if (empty($q['range']['bands'])) return 0;
+                            $points = array_map(fn($b) => $b['points'] ?? 0, $q['range']['bands']);
+                            return max($points);
+                        case 'ranking':
+                            return ($q['ranking']['pointsPerItem'] ?? 1) * count($q['options'] ?? []);
+                        default:
+                            return 0;
+                    }
+                }
+
                 function get_all_quizzes_data() {
                     $quizzes = [];
                     $quiz_files = glob(__DIR__ . '/quizzes/*.json');
@@ -35,10 +60,7 @@
                             $total_score = 0;
                             if (isset($quiz_data['questions'])) {
                                 foreach ($quiz_data['questions'] as $q) {
-                                    if (isset($q['options'])) {
-                                        $points = array_map(function($o) { return $o['points'] ?? 0; }, $q['options']);
-                                        $total_score += max($points);
-                                    }
+                                    $total_score += maxPointsForQuestion($q);
                                 }
                             }
                             $quizzes[$quiz_data['id']] = [
@@ -53,7 +75,6 @@
                 $all_quizzes = get_all_quizzes_data();
                 $db = get_db_connection();
 
-                // Corrected Query: Select only from user_progress
                 $stmt = $db->prepare("SELECT quiz_id, progress, score FROM user_progress WHERE user_id = ?");
                 $stmt->execute([$_SESSION['user_id']]);
                 $progress_data = $stmt->fetchAll(PDO::FETCH_ASSOC);
