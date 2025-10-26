@@ -16,16 +16,7 @@
             <h1 class="text-2xl md:text-4xl font-bold">Tableau de Bord Administrateur</h1>
         </header>
 
-        <nav class="mb-8">
-            <ul class="flex border-b">
-                <li class="-mb-px mr-1">
-                    <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-indigo-700 font-semibold" href="/admin/index.php">Gestion des Quizz</a>
-                </li>
-                <li class="mr-1">
-                    <a class="bg-gray-200 inline-block py-2 px-4 text-gray-500 hover:text-indigo-800 font-semibold" href="/admin/users.php">Gestion des Utilisateurs</a>
-                </li>
-            </ul>
-        </nav>
+        <?php include 'nav.php'; ?>
 
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-xl md:text-2xl font-semibold">Quizz Existants</h2>

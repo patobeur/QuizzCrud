@@ -17,15 +17,20 @@
     $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
     <div class="max-w-5xl mx-auto p-4 md:p-8 w-full">
-        <header class="mb-8 md:mb-10 flex justify-between items-center">
-            <h1 class="text-2xl md:text-4xl font-bold">Gestion des Utilisateurs</h1>
+        <header class="mb-8 md:mb-10">
+            <h1 class="text-2xl md:text-4xl font-bold">Tableau de Bord Administrateur</h1>
+        </header>
+
+        <?php include 'nav.php'; ?>
+
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl md:text-2xl font-semibold">Utilisateurs Enregistrés</h2>
             <a href="edit-user.php" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
                 Ajouter un utilisateur
             </a>
-        </header>
+        </div>
 
         <section class="bg-white rounded-2xl shadow p-5 md:p-6">
-            <h2 class="text-xl md:text-2xl font-semibold mb-4">Utilisateurs Enregistrés</h2>
             <table class="w-full text-left">
                 <thead>
                     <tr>

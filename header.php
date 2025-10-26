@@ -48,9 +48,22 @@ $ref = '234212850';
                     </button>
                     <div id="profile-menu-dropdown" class="absolute hidden mt-2 right-0 w-48 z-10">
                         <div class="bg-white shadow-lg rounded-md">
-                            <a href="progression.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Ma progression</a>
-                            <a href="/admin" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Admin</a>
-                            <a href="logout.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Déconnexion</a>
+                            <a href="/progression.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Ma progression</a>
+                            <?php
+                            // Check if the user is an admin
+                            if (isset($_SESSION['user_id'])) {
+                                require_once 'includes/db_setup.php';
+                                $db = get_db_connection();
+                                $stmt = $db->prepare("SELECT role FROM users WHERE id = ?");
+                                $stmt->execute([$_SESSION['user_id']]);
+                                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                                if ($user && $user['role'] === 'admin') {
+                                    echo '<a href="/admin" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Gestion Quizz</a>';
+                                    echo '<a href="/admin/users.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Gestion Utilisateurs</a>';
+                                }
+                            }
+                            ?>
+                            <a href="/logout.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Déconnexion</a>
                         </div>
                     </div>
                 </div>
