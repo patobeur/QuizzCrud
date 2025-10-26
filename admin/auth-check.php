@@ -19,3 +19,6 @@ if (!$user || $user['role'] !== 'admin') {
     http_response_code(403);
     die('Accès interdit.');
 }
+
+// Check if the user needs to reset their password
+require_once 'check_password_reset.php';

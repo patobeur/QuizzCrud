@@ -16,7 +16,8 @@ function initialize_database() {
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT NOT NULL UNIQUE,
             password TEXT NOT NULL,
-            role TEXT NOT NULL DEFAULT 'user'
+            role TEXT NOT NULL DEFAULT 'user',
+            password_reset_required INTEGER NOT NULL DEFAULT 0
         )";
         $db->exec($sql_users);
 
@@ -25,6 +26,22 @@ function initialize_database() {
         $columns = $stmt->fetchAll(PDO::FETCH_COLUMN, 1);
         if (!in_array('role', $columns)) {
             $db->exec("ALTER TABLE users ADD COLUMN role TEXT NOT NULL DEFAULT 'user'");
+        }
+        if (!in_array('password_reset_required', $columns)) {
+            $db->exec("ALTER TABLE users ADD COLUMN password_reset_required INTEGER NOT NULL DEFAULT 0");
+        }
+
+        // Create a default admin user if no admin exists
+        $stmt = $db->query("SELECT COUNT(*) FROM users WHERE role = 'admin'");
+        if ($stmt->fetchColumn() == 0) {
+            $username = 'admin';
+            $password = 'password';
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $role = 'admin';
+            $password_reset_required = 1;
+
+            $insert_stmt = $db->prepare("INSERT INTO users (username, password, role, password_reset_required) VALUES (?, ?, ?, ?)");
+            $insert_stmt->execute([$username, $hashed_password, $role, $password_reset_required]);
         }
 
         // SQL to create the 'user_progress' table
