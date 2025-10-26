@@ -4,6 +4,6 @@
         <p class="text-center text-sm">© <?php echo date("Y"); ?> QF-Library. Tous droits réservés.</p>
     </div>
 </footer>
-<script src="js/main.js?ref=<?php echo $ref; ?>"></script>
+<script src="/js/main.js?ref=<?php echo $ref; ?>"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,6 +8,7 @@
     <meta name="description" content="Choisissez votre test de positionnement." />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
     <?php
     require_once 'includes/db_setup.php';
@@ -147,7 +149,7 @@
                     $content = file_get_contents($file);
                     $data = json_decode($content, true);
 
-                    if (!$data || !isset($data['id'])) continue;
+                    if (!$data || !isset($data['id']) || ($data['status'] ?? 'draft') !== 'published') continue;
 
                     $quiz_id = $data['id'];
                     $level = htmlspecialchars($data['level'] ?? 'Niveau non défini');
@@ -188,9 +190,20 @@
                             $progress_html = "<span class='absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-2.5 py-1 rounded-full'>{$percentage}%</span>";
                         }
                     }
+                    $tag = (isset($_SESSION['user_id'])) ? 'a href="qcm.php?quiz=' . $quiz_id . '"' : "span";
+                    $tagend = (isset($_SESSION['user_id'])) ? 'a' : "span";
+                    $buttontest = "";
+                    if (isset($_SESSION['user_id'])) {
+                        $buttontest = '
+                        <div class="mt-6">
+                            <span class="inline-flex items-center justify-center px-4 py-2 rounded-xl ' . $level_colors['button_bg'] . ' text-white text-sm ' . $level_colors['button_hover_bg'] . ' transition">
+                                Passer le test
+                            </span>
+                        </div>';
+                    }
 
                     echo <<<HTML
-                    <a href="qcm.php?quiz={$quiz_id}"
+                    <{$tag}"
                        data-quiz-id="{$quiz_id}"
                        class="group relative block bg-white rounded-2xl shadow p-5 md:p-6 border border-transparent {$level_colors['border']} hover:shadow-lg focus:outline-none focus:ring-4 {$level_colors['focus_ring']} transition">
 
@@ -217,12 +230,8 @@
                             </div>
                         </div>
 
-                        <div class="mt-6">
-                            <span class="inline-flex items-center justify-center px-4 py-2 rounded-xl {$level_colors['button_bg']} text-white text-sm {$level_colors['button_hover_bg']} transition">
-                                Passer le test
-                            </span>
-                        </div>
-                    </a>
+                        {$buttontest}
+                    </{$tagend}>
 HTML;
                 }
             }
@@ -232,4 +241,5 @@ HTML;
     </div>
     <?php include 'footer.php'; ?>
 </body>
+
 </html>

@@ -15,9 +15,34 @@ function initialize_database() {
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT NOT NULL UNIQUE,
-            password TEXT NOT NULL
+            password TEXT NOT NULL,
+            role TEXT NOT NULL DEFAULT 'user',
+            password_reset_required INTEGER NOT NULL DEFAULT 0
         )";
         $db->exec($sql_users);
+
+        // Check if role column exists and add it if not
+        $stmt = $db->query("PRAGMA table_info(users)");
+        $columns = $stmt->fetchAll(PDO::FETCH_COLUMN, 1);
+        if (!in_array('role', $columns)) {
+            $db->exec("ALTER TABLE users ADD COLUMN role TEXT NOT NULL DEFAULT 'user'");
+        }
+        if (!in_array('password_reset_required', $columns)) {
+            $db->exec("ALTER TABLE users ADD COLUMN password_reset_required INTEGER NOT NULL DEFAULT 0");
+        }
+
+        // Create a default admin user if no admin exists
+        $stmt = $db->query("SELECT COUNT(*) FROM users WHERE role = 'admin'");
+        if ($stmt->fetchColumn() == 0) {
+            $username = 'admin';
+            $password = 'password';
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $role = 'admin';
+            $password_reset_required = 1;
+
+            $insert_stmt = $db->prepare("INSERT INTO users (username, password, role, password_reset_required) VALUES (?, ?, ?, ?)");
+            $insert_stmt->execute([$username, $hashed_password, $role, $password_reset_required]);
+        }
 
         // SQL to create the 'user_progress' table
         $sql_user_progress = "
@@ -54,15 +79,20 @@ function initialize_database() {
 // Automatically initialize the database when this file is included
 initialize_database();
 
-// Function to get a database connection
+// Function to get a database connection (Singleton pattern)
 function get_db_connection() {
-    try {
-        $db = new PDO('sqlite:' . DB_PATH);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $db;
-    } catch (PDOException $e) {
-        // In a real application, you might want to log this error
-        // instead of displaying it to the user.
-        die("Database connection failed: " . $e->getMessage());
+    static $db = null;
+
+    if ($db === null) {
+        try {
+            $db = new PDO('sqlite:' . DB_PATH);
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            // In a real application, you might want to log this error
+            // instead of displaying it to the user.
+            die("Database connection failed: " . $e->getMessage());
+        }
     }
+
+    return $db;
 }
