@@ -23,6 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $db->prepare("UPDATE users SET username = ?, role = ? WHERE id = ?");
             $stmt->execute([$username, $role, $user_id]);
         }
+
+        // Si l'utilisateur mis à jour est l'utilisateur actuel, mettez à jour la session
+        if (isset($_SESSION['user_id']) && $user_id == $_SESSION['user_id']) {
+            $_SESSION['username'] = $username;
+        }
     }
 
     header('Location: users.php?status=success');

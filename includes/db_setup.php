@@ -79,15 +79,20 @@ function initialize_database() {
 // Automatically initialize the database when this file is included
 initialize_database();
 
-// Function to get a database connection
+// Function to get a database connection (Singleton pattern)
 function get_db_connection() {
-    try {
-        $db = new PDO('sqlite:' . DB_PATH);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $db;
-    } catch (PDOException $e) {
-        // In a real application, you might want to log this error
-        // instead of displaying it to the user.
-        die("Database connection failed: " . $e->getMessage());
+    static $db = null;
+
+    if ($db === null) {
+        try {
+            $db = new PDO('sqlite:' . DB_PATH);
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            // In a real application, you might want to log this error
+            // instead of displaying it to the user.
+            die("Database connection failed: " . $e->getMessage());
+        }
     }
+
+    return $db;
 }
