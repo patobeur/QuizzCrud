@@ -3,6 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 $name = 'Quizz Crud';
+$ref = ''; // Initialisation de $ref
 ?><header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-4">
@@ -20,6 +21,7 @@ $name = 'Quizz Crud';
         </div>
         <div id="nav-links" class="hidden lg:flex items-center space-x-6">
             <a href="/les-quizz.php" class="text-gray-700 hover:text-indigo-600 transition">Les Quizz</a>
+            <a href="/les-tutoriels.php" class="text-gray-700 hover:text-indigo-600 transition">Tutoriels</a>
             <a href="/progression.php" class="text-gray-700 hover:text-indigo-600 transition">Ma progression</a>
             <div class="relative">
                 <button id="tests-menu-button" class="text-gray-700 hover:text-indigo-600 transition flex items-center">

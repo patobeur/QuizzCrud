@@ -1,0 +1,23 @@
+{
+  "categories": [
+    {
+      "nom": "Excel",
+      "tutoriels": [
+        {
+          "id": "excel_index_equiv",
+          "titre": "Excel PC / fonction : index et equiv",
+          "sous_categorie": "INDEX et EQUIV",
+          "fichier": "excel_index_equiv.php"
+        }
+      ]
+    },
+    {
+      "nom": "Word",
+      "tutoriels": []
+    },
+    {
+      "nom": "ChatGPT",
+      "tutoriels": []
+    }
+  ]
+}
