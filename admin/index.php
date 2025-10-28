@@ -67,7 +67,7 @@
                                 <td class="p-2">
                                     <a href="/admin/edit-quiz.php?quiz_id={$quiz_id}" class="text-indigo-600 hover:underline">Modifier</a>
                                     <a href="/admin/{$action_link}" class="text-blue-600 hover:underline ml-4">{$action_text}</a>
-                                    <a href="/admin/delete-quiz.php?quiz_id={$quiz_id}" class="text-red-600 hover:underline ml-4">Supprimer</a>
+                                    <a href="/admin/delete-quiz.php?quiz_id={$quiz_id}" class="text-red-600 hover:underline ml-4" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce quiz ?');">Supprimer</a>
                                 </td>
                             </tr>
 HTML;
