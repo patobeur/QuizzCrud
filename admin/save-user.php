@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $role = $_POST['role'];
     $password = $_POST['password'];
+    $current_user_id = $_SESSION['user_id'];
 
     $db = get_db_connection();
 
@@ -15,6 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $db->prepare("INSERT INTO users (username, password, role) VALUES (?, ?, ?)");
         $stmt->execute([$username, $hashed_password, $role]);
     } else { // Update existing user
+        // Prevent admin from changing their own role
+        if ($user_id == $current_user_id) {
+            $role = 'admin'; // Force role to admin
+        }
+
         if (!empty($password)) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $stmt = $db->prepare("UPDATE users SET username = ?, password = ?, role = ? WHERE id = ?");
