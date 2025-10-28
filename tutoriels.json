@@ -1,0 +1,30 @@
+{
+  "categories": [
+    {
+      "nom": "Excel",
+      "tutoriels": [
+        {
+          "id": "excel_index_equiv",
+          "titre": "Excel PC / fonction : index et equiv",
+          "sous_categorie": "INDEX et EQUIV",
+          "fichier": "excel_index_equiv.php"
+        }
+      ]
+    },
+    {
+      "nom": "Word",
+      "tutoriels": []
+    },
+    {
+      "nom": "IA",
+      "tutoriels": [
+        {
+          "id": "ia_gemini_decouverte",
+          "titre": "Gemini - découverte",
+          "sous_categorie": "Gemini",
+          "fichier": "ia_gemini_decouverte.php"
+        }
+      ]
+    }
+  ]
+}
