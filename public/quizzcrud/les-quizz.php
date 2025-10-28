@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+    <base href="/quizzcrud/">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portail des tests de positionnement</title>
@@ -11,7 +12,7 @@
 
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
     <?php
-    require_once 'includes/db_setup.php';
+    require_once __DIR__ . '/../../private_quizzcrud/includes/db_setup.php';
     include 'header.php';
 
     // Fetch user progress if logged in
@@ -42,7 +43,7 @@
         <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <?php
             // Charger la configuration
-            $config_content = file_get_contents(__DIR__ . '/config.json');
+            $config_content = file_get_contents(__DIR__ . '/../../private_quizzcrud/config.json');
             $config = json_decode($config_content, true);
 
             // Fonction pour mapper un nom de couleur simple à un ensemble de classes Tailwind CSS
@@ -139,7 +140,7 @@
                 return $color_styles[$color_name] ?? $color_styles['gray'];
             }
 
-            $quizzes_dir = __DIR__ . '/quizzes';
+            $quizzes_dir = __DIR__ . '/../../private_quizzcrud/quizzes';
             $quiz_files = glob($quizzes_dir . '/*.json');
 
             if (empty($quiz_files)) {

@@ -4,11 +4,11 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /login.php');
+    header('Location: /quizzcrud/login.php');
     exit;
 }
 
-require_once __DIR__ . '/../includes/db_setup.php';
+require_once __DIR__ . '/../../../private_quizzcrud/includes/db_setup.php';
 
 $db = get_db_connection();
 $stmt = $db->prepare("SELECT role FROM users WHERE id = ?");

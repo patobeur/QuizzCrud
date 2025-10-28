@@ -1,7 +1,7 @@
 <?php
 // register.php
 session_start();
-require_once 'includes/db_setup.php';
+require_once __DIR__ . '/../../private_quizzcrud/includes/db_setup.php';
 
 $error = '';
 $success = '';
@@ -34,8 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <base href="/quizzcrud/">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>Inscription - QCM</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>

@@ -18,7 +18,7 @@ async function saveState(isFinished = false) {
         const validatedCount = state.validated.filter(v => v).length;
         const progress = QUESTIONS.length > 0 ? Math.round((validatedCount / QUESTIONS.length) * 100) : 0;
 
-        await fetch('api/progress.php', {
+        await fetch('/quizzcrud/api/progress.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -35,7 +35,7 @@ async function saveState(isFinished = false) {
 
 async function loadState() {
     try {
-        const response = await fetch(`api/progress.php?quiz_id=${QUIZ_ID}`);
+        const response = await fetch(`/quizzcrud/api/progress.php?quiz_id=${QUIZ_ID}`);
         if (response.ok) {
             const savedProgress = await response.json();
             if (savedProgress && savedProgress.quiz_state) {

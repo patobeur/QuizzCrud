@@ -9,7 +9,7 @@
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
     <?php
-    require_once 'includes/db_setup.php';
+    require_once __DIR__ . '/../../private_quizzcrud/includes/db_setup.php';
     include 'header.php';
     ?>
     <div class="max-w-5xl mx-auto p-4 md:p-8 w-full">
@@ -53,7 +53,7 @@
 
                 function get_all_quizzes_data() {
                     $quizzes = [];
-                    $quiz_files = glob(__DIR__ . '/quizzes/*.json');
+                    $quiz_files = glob(__DIR__ . '/../../private_quizzcrud/quizzes/*.json');
                     foreach ($quiz_files as $file) {
                         $quiz_data = json_decode(file_get_contents($file), true);
                         if ($quiz_data && isset($quiz_data['id'])) {

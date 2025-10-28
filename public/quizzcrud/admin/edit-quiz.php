@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <base href="/quizzcrud/">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin - Édition de Quiz</title>
@@ -8,10 +9,10 @@
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
     <?php
-    require_once 'auth-check.php';
-    include '../header.php';
+    require_once __DIR__ . '/auth-check.php';
+    include __DIR__ . '/../header.php';
     // Charger la configuration pour les niveaux et thèmes
-    $config_content = file_get_contents(__DIR__ . '/../config.json');
+    $config_content = file_get_contents(__DIR__ . '/../../../private_quizzcrud/config.json');
     $config = json_decode($config_content, true);
     $levels = array_keys($config['levels']);
     $themes = array_keys($config['themes']);
@@ -22,7 +23,7 @@
 
     if ($quiz_id) {
         $is_editing = true;
-        $quizzes_dir = __DIR__ . '/../quizzes';
+        $quizzes_dir = __DIR__ . '/../../../private_quizzcrud/quizzes';
         $quiz_files = glob($quizzes_dir . '/*.json');
         foreach ($quiz_files as $file) {
             $content = file_get_contents($file);

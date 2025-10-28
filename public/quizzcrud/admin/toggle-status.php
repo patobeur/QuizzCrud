@@ -1,10 +1,10 @@
 <?php
-require_once 'auth-check.php';
+require_once __DIR__ . '/auth-check.php';
 
 $quiz_id = $_GET['quiz_id'] ?? null;
 
 if ($quiz_id) {
-    $quizzes_dir = __DIR__ . '/../quizzes';
+    $quizzes_dir = __DIR__ . '/../../../private_quizzcrud/quizzes';
     $quiz_files = glob($quizzes_dir . '/*.json');
 
     foreach ($quiz_files as $filepath) {

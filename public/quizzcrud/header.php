@@ -7,7 +7,7 @@ $ref = ''; // Initialisation de $ref
 ?><header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-4">
-            <a title="<?= $name; ?>" href="/" class="flex items-center space-x-2">
+            <a title="<?= $name; ?>" href="/quizzcrud/" class="flex items-center space-x-2">
                 <svg alt="<?= $name; ?> Logo" class="h-8 w-8 rounded-sm" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -20,9 +20,9 @@ $ref = ''; // Initialisation de $ref
             </a>
         </div>
         <div id="nav-links" class="hidden lg:flex items-center space-x-6">
-            <a href="/les-quizz.php" class="text-gray-700 hover:text-indigo-600 transition">Les Quizz</a>
-            <a href="/les-tutoriels.php" class="text-gray-700 hover:text-indigo-600 transition">Tutoriels</a>
-            <a href="/progression.php" class="text-gray-700 hover:text-indigo-600 transition">Ma progression</a>
+            <a href="/quizzcrud/les-quizz.php" class="text-gray-700 hover:text-indigo-600 transition">Les Quizz</a>
+            <a href="/quizzcrud/les-tutoriels.php" class="text-gray-700 hover:text-indigo-600 transition">Tutoriels</a>
+            <a href="/quizzcrud/progression.php" class="text-gray-700 hover:text-indigo-600 transition">Ma progression</a>
             <div class="relative">
                 <button id="tests-menu-button" class="text-gray-700 hover:text-indigo-600 transition flex items-center">
                     <span>Tests</span>
@@ -50,22 +50,22 @@ $ref = ''; // Initialisation de $ref
                     </button>
                     <div id="profile-menu-dropdown" class="absolute hidden mt-2 right-0 w-48 z-10">
                         <div class="bg-white shadow-lg rounded-md">
-                            <a href="/progression.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Ma progression</a>
+                            <a href="/quizzcrud/progression.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Ma progression</a>
                             <?php
                             // Check if the user is an admin
                             if (isset($_SESSION['user_id'])) {
-                                require_once 'includes/db_setup.php';
+                                require_once __DIR__ . '/../../private_quizzcrud/includes/db_setup.php';
                                 $db = get_db_connection();
                                 $stmt = $db->prepare("SELECT role FROM users WHERE id = ?");
                                 $stmt->execute([$_SESSION['user_id']]);
                                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
                                 if ($user && $user['role'] === 'admin') {
-                                    echo '<a href="/admin" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Gestion Quizz</a>';
-                                    echo '<a href="/admin/users.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Gestion Utilisateurs</a>';
+                                    echo '<a href="/quizzcrud/admin" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Gestion Quizz</a>';
+                                    echo '<a href="/quizzcrud/admin/users.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Gestion Utilisateurs</a>';
                                 }
                             }
                             ?>
-                            <a href="/logout.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Déconnexion</a>
+                            <a href="/quizzcrud/logout.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Déconnexion</a>
                         </div>
                     </div>
                 </div>

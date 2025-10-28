@@ -51,8 +51,8 @@
         <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Sommaire</h2>
         <nav class="toc text-sm space-y-1" id="tocLinks"></nav>
         <div class="mt-4 flex flex-col gap-2">
-            <a href="/tutoriels/downloads/gemini-cheatsheet.pdf" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger la cheatsheet (PDF)</a>
-            <a href="/tutoriels/downloads/gemini-prompts-exemples.zip" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Pack d’exemples (ZIP)</a>
+            <a href="tutoriels/downloads/gemini-cheatsheet.pdf" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger la cheatsheet (PDF)</a>
+            <a href="tutoriels/downloads/gemini-prompts-exemples.zip" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Pack d’exemples (ZIP)</a>
         </div>
     </aside>
 
@@ -67,7 +67,7 @@
                     la zone de prompt au milieu, et à gauche l’accès aux conversations récentes. Un bouton <em>micro</em> permet de dicter un prompt.
                 </p>
                 <figure class="mt-4">
-                    <img src="/tutoriels/gemini/img/accueil.png" alt="Accueil Gemini web : champ de prompt, sélecteur de modèle, actions" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
+                    <img src="tutoriels/gemini/img/accueil.png" alt="Accueil Gemini web : champ de prompt, sélecteur de modèle, actions" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
                     <figcaption class="text-xs text-slate-500 dark:text-slate-400 mt-1">(Capture) Page d’accueil de Gemini web (ex. “Bonjour”).</figcaption>
                 </figure>
             </article>
@@ -101,7 +101,7 @@
                     <li>Essaye une **variante** : <span class="code bg-slate-100 dark:bg-slate-800 px-1 rounded">Génère une vignette 1000×1000 adaptée à une fiche e-commerce.</span></li>
                 </ol>
                 <figure class="mt-4">
-                    <img src="/tutoriels/gemini/img/upload_image.png" alt="Bouton Ajouter des fichiers dans la zone de prompt" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
+                    <img src="tutoriels/gemini/img/upload_image.png" alt="Bouton Ajouter des fichiers dans la zone de prompt" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
                     <figcaption class="text-xs text-slate-500 dark:text-slate-400 mt-1">(Capture) Ajout d’image dans Gemini web.</figcaption>
                 </figure>
             </article>
@@ -115,7 +115,7 @@
                     <li>Variante : <span class="code bg-slate-100 dark:bg-slate-800 px-1 rounded">À quel moment on parle de &lt;concept&gt; ? Donne le timestamp exact et un extrait.</span></li>
                 </ol>
                 <figure class="mt-4">
-                    <img src="/tutoriels/gemini/img/analyse_video.png" alt="Analyse vidéo dans Gemini web" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
+                    <img src="tutoriels/gemini/img/analyse_video.png" alt="Analyse vidéo dans Gemini web" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
                     <figcaption class="text-xs text-slate-500 dark:text-slate-400 mt-1">(Capture) Chargement/Analyse d’une vidéo.</figcaption>
                 </figure>
             </article>
@@ -142,53 +142,53 @@
                 <h2 class="text-lg font-bold">Annexes — Galerie d’images (Gemini)</h2>
                 <p class="text-sm text-slate-600 dark:text-slate-400">Toutes les captures évoquées dans le tuto, regroupées ici. Remplace les <code class="code">src</code> par tes propres fichiers si besoin.</p>
                 <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/accueil.png" alt="Accueil Gemini web" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/accueil.png" alt="Accueil Gemini web" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs text-slate-500 dark:text-slate-400 mt-1">Accueil</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/select_modele.png" alt="Sélecteur de modèle" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/select_modele.png" alt="Sélecteur de modèle" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Sélecteur de modèle</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/nouvelle_conversation.png" alt="Nouvelle conversation" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/nouvelle_conversation.png" alt="Nouvelle conversation" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Nouvelle conversation</figcaption>
                     </figure>
 
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/prompt_vague.png" alt="Prompt vague" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/prompt_vague.png" alt="Prompt vague" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Prompt vague</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/prompt_cadre.png" alt="Prompt cadré" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/prompt_cadre.png" alt="Prompt cadré" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Prompt cadré</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/historique.png" alt="Historique de conversation" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/historique.png" alt="Historique de conversation" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Historique</figcaption>
                     </figure>
 
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/upload_image.png" alt="Upload image" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/upload_image.png" alt="Upload image" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Upload image</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/avant.png" alt="Avant retouche" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/avant.png" alt="Avant retouche" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Avant retouche</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/apres.png" alt="Après retouche" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/apres.png" alt="Après retouche" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Après retouche</figcaption>
                     </figure>
 
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/ocr.png" alt="OCR depuis image" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/ocr.png" alt="OCR depuis image" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">OCR sur image</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/analyse_video.png" alt="Analyse vidéo" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/analyse_video.png" alt="Analyse vidéo" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Analyse vidéo</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/youtube_link.png" alt="Lien YouTube" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/youtube_link.png" alt="Lien YouTube" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Lien YouTube</figcaption>
                     </figure>
 
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/chapitres.png" alt="Chapitres et timecodes" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/chapitres.png" alt="Chapitres et timecodes" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Chapitres & timecodes</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/deep_research.png" alt="Deep Research" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/deep_research.png" alt="Deep Research" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Deep Research</figcaption>
                     </figure>
-                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="/tutoriels/gemini/img/export_docs.png" alt="Exporter vers Google Docs" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
+                    <figure class="bg-white/40 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800"><img src="tutoriels/gemini/img/export_docs.png" alt="Exporter vers Google Docs" class="w-sm rounded-lg border border-slate-200 dark:border-slate-800" />
                         <figcaption class="text-xs">Export Google Docs</figcaption>
                     </figure>
                 </div>

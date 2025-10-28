@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <base href="/quizzcrud/">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin - Édition d'Utilisateur</title>
@@ -8,9 +9,9 @@
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
     <?php
-    require_once 'auth-check.php';
-    include '../header.php';
-    require_once '../includes/db_setup.php';
+    require_once __DIR__ . '/auth-check.php';
+    include __DIR__ . '/../header.php';
+    require_once __DIR__ . '/../../../private_quizzcrud/includes/db_setup.php';
 
     $user_data = [];
     $user_id = $_GET['user_id'] ?? null;

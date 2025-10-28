@@ -12,7 +12,7 @@ $user_check = $stmt_check->fetch(PDO::FETCH_ASSOC);
 if ($user_check && $user_check['password_reset_required'] == 1) {
     // Redirect to the password reset page if the current page isn't already the reset page
     if (basename($_SERVER['PHP_SELF']) !== 'force_password_reset.php') {
-        header('Location: /admin/force_password_reset.php');
+        header('Location: /quizzcrud/admin/force_password_reset.php');
         exit;
     }
 }

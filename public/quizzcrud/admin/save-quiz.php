@@ -1,5 +1,5 @@
 <?php
-require_once 'auth-check.php';
+require_once __DIR__ . '/auth-check.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $original_quiz_id = $_POST['quiz_id'] ?? null;
@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // If we are editing an existing quiz, find and delete the old file
     if ($original_quiz_id) {
-        $quizzes_dir = __DIR__ . '/../quizzes';
+        $quizzes_dir = __DIR__ . '/../../../private_quizzcrud/quizzes';
         $quiz_files = glob($quizzes_dir . '/*.json');
 
         foreach ($quiz_files as $filepath) {
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     $filename = 'quiz_' . $quiz_id . '.json';
-    $filepath = __DIR__ . '/../quizzes/' . $filename;
+    $filepath = __DIR__ . '/../../../private_quizzcrud/quizzes/' . $filename;
 
 
     if (file_put_contents($filepath, json_encode($quiz_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE))) {

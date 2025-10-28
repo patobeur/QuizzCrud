@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <base href="/quizzcrud/">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portail des tests de positionnement</title>
@@ -9,7 +10,7 @@
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
     <?php
-    require_once 'includes/db_setup.php';
+    require_once __DIR__ . '/../../private_quizzcrud/includes/db_setup.php';
     include 'header.php';
     ?>
     <div class="max-w-5xl mx-auto p-4 md:p-8 w-full">

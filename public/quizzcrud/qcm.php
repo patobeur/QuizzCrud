@@ -1,6 +1,6 @@
 <?php
 // 1. Charger la configuration
-$config_content = file_get_contents(__DIR__ . '/config.json');
+$config_content = file_get_contents(__DIR__ . '/../../private_quizzcrud/config.json');
 $config = json_decode($config_content, true);
 
 // 2. Valider le paramètre 'quiz'
@@ -10,7 +10,7 @@ if (!$quiz_id) {
 }
 
 // 3. Trouver le fichier JSON basé sur l'ID
-$quizzes_dir = __DIR__ . '/quizzes';
+$quizzes_dir = __DIR__ . '/../../private_quizzcrud/quizzes';
 $quiz_files = glob($quizzes_dir . '/*.json');
 $quiz_file = null;
 $quiz_data = null;
@@ -57,6 +57,7 @@ $colors = $color_styles[$level_color_name] ?? $color_styles['gray'];
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <base href="/quizzcrud/">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title><?php echo $title; ?></title>

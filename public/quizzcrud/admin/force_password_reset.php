@@ -1,11 +1,11 @@
 <?php
 session_start();
-require_once '../includes/db_setup.php';
+require_once __DIR__ . '/../../../private_quizzcrud/includes/db_setup.php';
 
 $error = '';
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /login.php');
+    header('Location: /quizzcrud/login.php');
     exit;
 }
 
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $db = get_db_connection();
         $stmt = $db->prepare("UPDATE users SET password = ?, password_reset_required = 0 WHERE id = ?");
         $stmt->execute([$hashed_password, $_SESSION['user_id']]);
-        header('Location: /admin/index.php');
+        header('Location: /quizzcrud/admin/index.php');
         exit;
     }
 }
@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <base href="/quizzcrud/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changement de mot de passe requis</title>

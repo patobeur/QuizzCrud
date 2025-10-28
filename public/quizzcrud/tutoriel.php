@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/auth_check.php';
+require_once __DIR__ . '/../../private_quizzcrud/includes/auth_check.php';
 
 // --- Data Loading ---
 $tutoriel_id = $_GET['id'] ?? null;
@@ -8,7 +8,7 @@ if (!$tutoriel_id) {
     exit;
 }
 
-$tutoriels_data = json_decode(file_get_contents('tutoriels.json'), true);
+$tutoriels_data = json_decode(file_get_contents(__DIR__ . '/../../private_quizzcrud/tutoriels.json'), true);
 $tutoriel_details = null;
 $categorie_nom = null;
 
@@ -34,6 +34,7 @@ ob_start();
 <!DOCTYPE html>
 <html lang="fr" class="h-full">
 <head>
+    <base href="/quizzcrud/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo isset($pageTitle) ? htmlspecialchars($pageTitle) : 'Tutoriel'; ?></title>
@@ -51,7 +52,7 @@ require_once 'header.php';
     <nav class="text-sm mb-4" aria-label="Breadcrumb">
         <ol class="list-none p-0 inline-flex">
             <li class="flex items-center">
-                <a href="/les-tutoriels.php" class="text-indigo-600 hover:text-indigo-800">Tutoriels</a>
+                <a href="les-tutoriels.php" class="text-indigo-600 hover:text-indigo-800">Tutoriels</a>
             </li>
             <li class="flex items-center mx-2">
                 <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
@@ -70,7 +71,7 @@ require_once 'header.php';
 
     <article>
         <?php
-        $tutoriel_file_path = 'tutoriels/' . $tutoriel_details['fichier'];
+        $tutoriel_file_path = __DIR__ . '/tutoriels/' . $tutoriel_details['fichier'];
         if (file_exists($tutoriel_file_path)) {
             include $tutoriel_file_path;
         } else {

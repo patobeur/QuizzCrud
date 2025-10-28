@@ -1,6 +1,6 @@
 <?php
-require_once 'auth-check.php';
-require_once '../includes/db_setup.php';
+require_once __DIR__ . '/auth-check.php';
+require_once __DIR__ . '/../../../private_quizzcrud/includes/db_setup.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_POST['user_id'];

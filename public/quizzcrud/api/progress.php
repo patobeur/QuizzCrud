@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-require_once '../includes/db_setup.php';
+require_once __DIR__ . '/../../../private_quizzcrud/includes/db_setup.php';
 
 $user_id = $_SESSION['user_id'];
 $db = get_db_connection();

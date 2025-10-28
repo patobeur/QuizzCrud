@@ -49,9 +49,9 @@
     <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Sommaire</h2>
     <nav class="toc text-sm space-y-1" id="tocLinks"></nav>
     <div class="mt-4 flex flex-col gap-2">
-      <a target="_blank" href="/tutoriels/downloads/index_equiv_exercices.xlsx" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger exercices (Excel)</a>
-      <a target="_blank" href="/tutoriels/downloads/index_equiv_correction.xlsx" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger correction (Excel)</a>
-      <a target="_blank" href="/tutoriels/downloads/index_equiv_exercices.pdf" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger support (Excel)</a>
+      <a target="_blank" href="tutoriels/downloads/index_equiv_exercices.xlsx" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger exercices (Excel)</a>
+      <a target="_blank" href="tutoriels/downloads/index_equiv_correction.xlsx" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger correction (Excel)</a>
+      <a target="_blank" href="tutoriels/downloads/index_equiv_exercices.pdf" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger support (Excel)</a>
     </div>
   </aside>
 
@@ -65,7 +65,7 @@
         <p class="mt-2">Imagine un <strong>tableau à double entrée</strong> : en lignes, des <strong>produits</strong> (A2:A6) ; en colonnes, des <strong>trimestres</strong> T1–T3 (B1:D1). On veut pouvoir <strong>pointer n’importe quelle case</strong> sans la souris, uniquement avec ses coordonnées (ligne/colonne). C’est exactement ce que fait <strong>INDEX</strong> : on lui donne une <em>matrice</em>, un <em>numéro de ligne</em> et, si besoin, un <em>numéro de colonne</em>, et il renvoie la <strong>valeur</strong>.</p>
         <!-- Image placeholder -->
         <figure class="mt-4">
-          <img src="/tutoriels/img/000001.png" alt="Capture tableau Produits x T1..T3" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
+          <img src="tutoriels/img/000001.png" alt="Capture tableau Produits x T1..T3" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
           <figcaption class="text-xs text-slate-500 dark:text-slate-400 mt-1">(Capture) Tableau Produits × Trimestres.</figcaption>
         </figure>
       </article>
@@ -80,7 +80,7 @@
           <p>Si la matrice est <strong>une seule colonne</strong>, on n’indique pas de colonne dans INDEX.</p>
           <!-- Diagram placeholder -->
           <figure class="mt-3">
-            <img src="/tutoriels/img/000002.png" alt="Diagramme indices dans la matrice" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
+            <img src="tutoriels/img/000002.png" alt="Diagramme indices dans la matrice" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
             <figcaption class="text-xs text-slate-500 dark:text-slate-400 mt-1">(Diagramme) Numérotation relative des lignes/colonnes dans la matrice.</figcaption>
           </figure>
         </div>
@@ -138,7 +138,7 @@
         <h2 class="text-lg font-bold">1) Mise en situation</h2>
         <p class="mt-2">On dispose de listes et de tables (noms, codes, seuils…). <strong>EQUIV</strong> sert à retrouver la <strong>POSITION</strong> d’un élément dans une <strong>plage</strong> (1, 2, 3, …). Ensuite on combine avec <strong>INDEX</strong> pour renvoyer la valeur associée.</p>
         <figure class="mt-4">
-          <img src="/tutoriels/img/000003.png" alt="Capture liste Fruits et Seuils" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
+          <img src="tutoriels/img/000003.png" alt="Capture liste Fruits et Seuils" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
           <figcaption class="text-xs text-slate-500 dark:text-slate-400 mt-1">(Capture) Liste des fruits & seuils de remise.</figcaption>
         </figure>
       </article>
@@ -209,7 +209,7 @@
         <h2 class="text-lg font-bold">1) Mise en situation</h2>
         <p class="mt-2">On veut des recherches <strong>flexibles</strong> : par <strong>nom de produit</strong>, par <strong>code</strong>, ou à l’<strong>intersection</strong> d’un <strong>commercial</strong> et d’un <strong>trimestre</strong>. <strong>EQUIV</strong> trouve la <strong>position</strong>, <strong>INDEX</strong> renvoie la <strong>valeur</strong>.</p>
         <figure class="mt-4">
-          <img src="/tutoriels/img/000004.png" alt="Capture liste de prix et matrice commerciale" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
+          <img src="tutoriels/img/000004.png" alt="Capture liste de prix et matrice commerciale" class="w-sm rounded-xl border border-slate-200 dark:border-slate-800" />
           <figcaption class="text-xs text-slate-500 dark:text-slate-400 mt-1">(Capture) Liste de prix & matrice commerciale.</figcaption>
         </figure>
       </article>

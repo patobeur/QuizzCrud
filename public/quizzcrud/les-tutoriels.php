@@ -1,12 +1,13 @@
 <?php
 $pageTitle = "Liste des Tutoriels";
-require_once 'includes/auth_check.php';
+require_once __DIR__ . '/../../private_quizzcrud/includes/auth_check.php';
 // We need to buffer the output to set headers
 ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr" class="h-full">
 <head>
+    <base href="/quizzcrud/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo isset($pageTitle) ? htmlspecialchars($pageTitle) : 'Tutoriels'; ?></title>
@@ -17,7 +18,7 @@ ob_start();
 // Now that the head is defined, we can include the header
 require_once 'header.php';
 
-$tutoriels_data = json_decode(file_get_contents('tutoriels.json'), true);
+$tutoriels_data = json_decode(file_get_contents(__DIR__ . '/../../private_quizzcrud/tutoriels.json'), true);
 $categories = $tutoriels_data['categories'];
 ?>
 
