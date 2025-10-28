@@ -1,378 +1,534 @@
 {
-	"id": "ia_grand_debutant",
-	"title": "Test de positionnement – IA générative (Débutant(e))",
-	"level": "Débutant",
-	"time": "≈ 5–10 min",
-	"main_title": "IA générative",
-	"card_description": "Interface, création/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression.",
-	"features": [
-		"20 questions (radio & checkbox)",
-		"Points par réponse & feedback personnalisé",
-		"Pertinence : valider les essentiels avant d’aller plus loin"
-	],
-	"themes": [],
-	"description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
-	"questions": [
-		{
-			"id": "TDB01",
-			"theme": "Découverte",
-			"question": "Avez-vous au moins un compte sur un service d’IA (ex. ChatGPT, Copilot) ?",
-			"selectionType": "toggle",
-			"options": [
-				{ "label": "Non", "points": 1 },
-				{ "label": "Oui", "points": 2 }
-			],
-			"feedback_correct": "Parfait ! Vous pourrez pratiquer immédiatement.",
-			"feedback_partial": "Super, première étape déjà franchie.",
-			"feedback_incorrect": "Aucun souci : on vous guidera pour créer un accès.",
-			"relevance": "Situe votre point de départ pour l’accès aux outils."
-		},
-		{
-			"id": "TDB02",
-			"theme": "Découverte",
-			"question": "Un chatbot d’IA sert principalement à…",
-			"selectionType": "single",
-			"options": [
-				{
-					"label": "Répondre à des consignes en langage naturel",
-					"points": 4
-				},
-				{ "label": "Remplacer totalement les humains", "points": 0 },
-				{ "label": "Installer des logiciels", "points": 0 }
-			],
-			"feedback_correct": "Exact : on lui parle, il répond à partir de votre consigne.",
-			"feedback_partial": "On vise une interaction en langage naturel.",
-			"feedback_incorrect": "Un chatbot ne remplace pas un humain ni n’installe des applis.",
-			"relevance": "Clarifie l’objectif de base d’un assistant IA."
-		},
-		{
-			"id": "TDB03",
-			"theme": "Découverte",
-			"question": "Choisissez l’exemple de consigne (prompt) le plus clair pour débuter :",
-			"selectionType": "image",
-			"options": [
-				{
-					"label": "« Résume ce texte en 2 puces »",
-					"points": 4,
-					"emoji": "🔹"
-				},
-				{ "label": "« Fais au mieux stp »", "points": 0, "emoji": "🤷" },
-				{
-					"label": "« Écris tout ce qui te vient »",
-					"points": 1,
-					"emoji": "🌀"
-				}
-			],
-			"feedback_correct": "Très bien : demande précise + format attendu.",
-			"feedback_partial": "Plus c’est vague, plus la réponse sera aléatoire.",
-			"feedback_incorrect": "Soyez précis sur l’objectif et le format.",
-			"relevance": "Montre l’importance d’un prompt simple et cadré."
-		},
-		{
-			"id": "TDB04",
-			"theme": "Découverte",
-			"question": "Où écrit-on le prompt dans un chatbot ?",
-			"selectionType": "select",
-			"options": [
-				{
-					"label": "Dans la zone de saisie (champ de message)",
-					"points": 4
-				},
-				{
-					"label": "Dans la barre d’état en bas de Windows",
-					"points": 0
-				},
-				{ "label": "Dans les paramètres du navigateur", "points": 0 }
-			],
-			"feedback_correct": "Oui : le prompt se tape dans le champ de message du chat.",
-			"feedback_partial": "C’est bien la zone de saisie du chat qu’on utilise.",
-			"feedback_incorrect": "On ne passe pas par la barre d’état ou les paramètres.",
-			"relevance": "Assure un repère d’interface très concret."
-		},
-		{
-			"id": "TDB05",
-			"theme": "Sécurité",
-			"question": "Évitez de coller dans un chatbot (plusieurs réponses possibles) :",
-			"selectionType": "multi",
-			"options": [
-				{ "label": "Mots de passe", "points": 3 },
-				{ "label": "N° de carte bancaire", "points": 3 },
-				{
-					"label": "Données personnelles identifiables (ex. NIR)",
-					"points": 3
-				},
-				{ "label": "Horaire de déjeuner", "points": 0 }
-			],
-			"feedback_correct": "Parfait : pas de secrets ni d’infos sensibles.",
-			"feedback_partial": "Bien. Soyez rigoureux sur les données sensibles.",
-			"feedback_incorrect": "Protégez vos informations : pas de secrets/confidentiel.",
-			"relevance": "Ancre un réflexe de confidentialité simple."
-		},
-		{
-			"id": "TDB06",
-			"theme": "Sécurité",
-			"question": "Demander une action illégale à l’IA, c’est…",
-			"selectionType": "toggle",
-			"options": [
-				{ "label": "Acceptable", "points": 0 },
-				{ "label": "Interdit", "points": 4 }
-			],
-			"feedback_correct": "Exact : c’est proscrit et contraire à l’éthique.",
-			"feedback_partial": "La bonne réponse : « Interdit ». ",
-			"feedback_incorrect": "C’est interdit et dangereux.",
-			"relevance": "Rappelle une limite non négociable."
-		},
-		{
-			"id": "TDB07",
-			"theme": "Sécurité",
-			"question": "Bonnes pratiques de confidentialité (plusieurs réponses possibles) :",
-			"selectionType": "multi",
-			"options": [
-				{ "label": "Anonymiser les données si besoin", "points": 2 },
-				{
-					"label": "Vérifier les paramètres de conservation des chats",
-					"points": 2
-				},
-				{
-					"label": "Partager des secrets internes pour de meilleures réponses",
-					"points": 0
-				},
-				{
-					"label": "Limiter l’extrait collé au strict nécessaire",
-					"points": 2
-				}
-			],
-			"feedback_correct": "Très bien : anonymisez, paramétrez, limitez le contenu collé.",
-			"feedback_partial": "Bien. Ajoutez l’anonymisation et la parcimonie.",
-			"feedback_incorrect": "Réduisez ce que vous collez et anonymisez au besoin.",
-			"relevance": "Hygiène de base pour travailler sereinement."
-		},
-		{
-			"id": "TDB08",
-			"theme": "Sécurité",
-			"question": "Quand citer des sources ?",
-			"selectionType": "single",
-			"options": [
-				{
-					"label": "Quand on partage des infos factuelles issues/validées via l’IA",
-					"points": 4
-				},
-				{ "label": "Jamais", "points": 0 },
-				{ "label": "Uniquement pour des images", "points": 1 }
-			],
-			"feedback_correct": "Exact : sourcer et vérifier les faits est souhaitable.",
-			"feedback_partial": "Mieux vaut sourcer les contenus factuels.",
-			"feedback_incorrect": "Pensez à citer et vérifier.",
-			"relevance": "Encourage un usage responsable."
-		},
-		{
-			"id": "TDB09",
-			"theme": "Sécurité",
-			"question": "Si l’IA propose une réponse médicale sérieuse, je…",
-			"selectionType": "single",
-			"options": [
-				{ "label": "Consulte un professionnel de santé", "points": 4 },
-				{ "label": "Applique sans vérifier", "points": 0 },
-				{ "label": "Demande à un ami", "points": 1 }
-			],
-			"feedback_correct": "Parfait : l’avis d’un pro est indispensable.",
-			"feedback_partial": "Un pro reste la bonne référence.",
-			"feedback_incorrect": "Ne pas appliquer sans avis médical.",
-			"relevance": "Distingue usages ludiques vs décisions critiques."
-		},
-		{
-			"id": "TDB10",
-			"theme": "Prompts",
-			"question": "Ce qui aide un prompt simple (plusieurs réponses possibles) :",
-			"selectionType": "multi",
-			"options": [
-				{ "label": "Dire l’objectif en une phrase", "points": 2 },
-				{
-					"label": "Préciser le format de sortie (ex. 3 puces)",
-					"points": 2
-				},
-				{
-					"label": "Indiquer le public/ton (ex. débutant, neutre)",
-					"points": 2
-				},
-				{ "label": "Rester volontairement vague", "points": 0 }
-			],
-			"feedback_correct": "Excellent : objectif, format, ton = réponses plus utiles.",
-			"feedback_partial": "Bien. Soyez un peu plus précis pour gagner en qualité.",
-			"feedback_incorrect": "Plus de clarté → meilleures réponses.",
-			"relevance": "Pose une structure minimaliste et efficace."
-		},
-		{
-			"id": "TDB11",
-			"theme": "Prompts",
-			"question": "À quel point vous êtes à l’aise pour expliquer ce que vous voulez à l’IA ?",
-			"selectionType": "range",
-			"range": {
-				"min": 0,
-				"max": 10,
-				"step": 1,
-				"bands": [
-					{ "min": 0, "max": 3, "points": 1 },
-					{ "min": 4, "max": 7, "points": 2 },
-					{ "min": 8, "max": 10, "points": 3 }
-				]
-			},
-			"options": [],
-			"feedback_correct": "Génial ! Vous pourrez aller vite.",
-			"feedback_partial": "Parfait pour commencer : on progressera par petits pas.",
-			"feedback_incorrect": "Pas grave : on vous donnera des modèles de prompts.",
-			"relevance": "Mesure votre confort pour guider la machine."
-		},
-		{
-			"id": "TDB12",
-			"theme": "Prompts",
-			"question": "Ordonnez ces étapes (glisser-déposer) :",
-			"selectionType": "ranking",
-			"options": [
-				{ "label": "Dire l’objectif" },
-				{ "label": "Donner un peu de contexte" },
-				{ "label": "Préciser le format de sortie" },
-				{ "label": "Relire puis envoyer" }
-			],
-			"ranking": { "correctOrder": [0, 1, 2, 3], "pointsPerItem": 1 },
-			"feedback_correct": "Top : objectif → contexte → format → envoi.",
-			"feedback_partial": "Bonne logique globale, peaufinez l’ordre exact.",
-			"feedback_incorrect": "Astuce : objectif, contexte, format, puis envoi.",
-			"relevance": "Crée un automatisme simple de rédaction de prompt."
-		},
-		{
-			"id": "TDB13",
-			"theme": "Prompts",
-			"question": "Pour « Résume en 2 puces », quel rendu convient ?",
-			"selectionType": "image",
-			"options": [
-				{ "label": "• Idée 1 • Idée 2", "points": 4, "emoji": "🔹" },
-				{ "label": "Un paragraphe continu", "points": 0, "emoji": "📄" },
-				{ "label": "Une liste de 10 puces", "points": 1, "emoji": "📋" }
-			],
-			"feedback_correct": "Exact : deux puces, concises et lisibles.",
-			"feedback_partial": "Visez vraiment 2 puces, pas plus.",
-			"feedback_incorrect": "Demande = 2 puces ; pas un pavé.",
-			"relevance": "Aligne sortie et format demandé."
-		},
-		{
-			"id": "TDB14",
-			"theme": "Prompts",
-			"question": "Obtenir une traduction simple, c’est plutôt…",
-			"selectionType": "select",
-			"options": [
-				{
-					"label": "Écrire « Traduis en français : » + le texte",
-					"points": 4
-				},
-				{ "label": "Coller le texte sans rien dire", "points": 0 },
-				{ "label": "Demander un roman", "points": 0 }
-			],
-			"feedback_correct": "Oui : formule explicite et directe.",
-			"feedback_partial": "Soyez explicite pour une meilleure sortie.",
-			"feedback_incorrect": "Dites clairement « Traduis… ».",
-			"relevance": "Encourage des requêtes claires et courtes."
-		},
-		{
-			"id": "TDB15",
-			"theme": "Usages",
-			"question": "Usages adaptés pour débuter (plusieurs réponses possibles) :",
-			"selectionType": "multiselect",
-			"options": [
-				{ "label": "Brainstorming / trouver des idées", "points": 2 },
-				{ "label": "Reformulation / correction rapide", "points": 2 },
-				{ "label": "Traduction simple", "points": 2 },
-				{ "label": "Faire mes devoirs à ma place", "points": 0 }
-			],
-			"feedback_correct": "Très bien : commencez par des usages simples et guidés.",
-			"feedback_partial": "Bien. Évitez les usages non-éthiques.",
-			"feedback_incorrect": "Privilégiez idées, reformulation, traduction simple.",
-			"relevance": "Cadre des cas d’usage raisonnables."
-		},
-		{
-			"id": "TDB16",
-			"theme": "Usages",
-			"question": "Le bon niveau d’attente vis-à-vis d’un chatbot, c’est…",
-			"selectionType": "single",
-			"options": [
-				{
-					"label": "De l’aide, des idées, des ébauches (pas la vérité absolue)",
-					"points": 4
-				},
-				{ "label": "Des réponses officielles garanties", "points": 0 },
-				{ "label": "Une boule de cristal", "points": 0 }
-			],
-			"feedback_correct": "Exact : l’IA propose des pistes, à valider.",
-			"feedback_partial": "L’IA aide, mais n’est pas une vérité officielle.",
-			"feedback_incorrect": "Évitez d’attendre une garantie absolue.",
-			"relevance": "Ajuste les attentes pour éviter les déceptions."
-		},
-		{
-			"id": "TDB17",
-			"theme": "Usages",
-			"question": "Formats faciles à réutiliser (plusieurs réponses possibles) :",
-			"selectionType": "multi",
-			"options": [
-				{ "label": "Liste à puces", "points": 2 },
-				{ "label": "Tableau simple", "points": 2 },
-				{ "label": "JSON simple", "points": 2 },
-				{ "label": "PDF très stylé", "points": 0 }
-			],
-			"feedback_correct": "Parfait : listes, tableaux, JSON sont pratiques.",
-			"feedback_partial": "Bien. Privilégiez des formats simples.",
-			"feedback_incorrect": "Visez des sorties faciles à copier/coller.",
-			"relevance": "Facilite l’intégration dans vos outils."
-		},
-		{
-			"id": "TDB18",
-			"theme": "Usages",
-			"question": "La « température » contrôle surtout…",
-			"selectionType": "single",
-			"options": [
-				{
-					"label": "La créativité/variabilité des réponses",
-					"points": 4
-				},
-				{ "label": "La vitesse de votre connexion", "points": 0 },
-				{
-					"label": "Le téléchargement de données d’entraînement",
-					"points": 0
-				}
-			],
-			"feedback_correct": "Oui : plus haut = plus créatif/varié (moins prévisible).",
-			"feedback_partial": "C’est un réglage qui joue sur la variabilité.",
-			"feedback_incorrect": "La température ne concerne ni réseau ni entraînement.",
-			"relevance": "Donne un repère sur un paramètre fréquent."
-		},
-		{
-			"id": "TDB19",
-			"theme": "Vérification",
-			"question": "Vérifier une info donnée par l’IA (plusieurs réponses possibles) :",
-			"selectionType": "multi",
-			"options": [
-				{ "label": "Chercher des sources fiables", "points": 2 },
-				{ "label": "Recouper avec plusieurs sites", "points": 2 },
-				{ "label": "Tester soi-même quand c’est possible", "points": 2 },
-				{ "label": "Copier-coller sans vérifier", "points": 0 }
-			],
-			"feedback_correct": "Excellent : sourcer, recouper, tester.",
-			"feedback_partial": "Bien. Ajoutez du recoupement/test si possible.",
-			"feedback_incorrect": "Toujours vérifier avant de diffuser.",
-			"relevance": "Installe une hygiène de vérification douce."
-		},
-		{
-			"id": "TDB20",
-			"theme": "Attitude",
-			"question": "Êtes-vous prêt·e à reformuler/relancer si la 1re réponse ne convient pas ?",
-			"selectionType": "toggle",
-			"options": [
-				{ "label": "Non", "points": 1 },
-				{ "label": "Oui", "points": 3 }
-			],
-			"feedback_correct": "Super : la reformulation débloque souvent la situation.",
-			"feedback_partial": "C’est la bonne posture pour progresser vite.",
-			"feedback_incorrect": "Relancer aide à obtenir mieux, pas à pas.",
-			"relevance": "Favorise une pratique décomplexée et efficace."
-		}
-	]
+    "id": "ia_grand_debutant",
+    "title": "Test de positionnement – IA générative (Débutant(e))",
+    "level": "Débutant",
+    "time": "≈ 5–10 min",
+    "main_title": "IA générative",
+    "card_description": "Interface, création\/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression.",
+    "features": [
+        "20 questions (radio & checkbox)",
+        "Points par réponse & feedback personnalisé",
+        "Pertinence : valider les essentiels avant d’aller plus loin"
+    ],
+    "themes": [],
+    "description": "20 questions. Répondez, cliquez sur <strong>Valider<\/strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant<\/strong>.",
+    "questions": [
+        {
+            "id": "TDB01",
+            "theme": "Découverte",
+            "question": "Avez-vous au moins un compte sur un service d’IA (ex. ChatGPT, Copilot) ?",
+            "selectionType": "toggle",
+            "options": [
+                {
+                    "label": "Non",
+                    "points": 1
+                },
+                {
+                    "label": "Oui",
+                    "points": 2
+                }
+            ],
+            "feedback_correct": "Parfait ! Vous pourrez pratiquer immédiatement.",
+            "feedback_partial": "Super, première étape déjà franchie.",
+            "feedback_incorrect": "Aucun souci : on vous guidera pour créer un accès.",
+            "relevance": "Situe votre point de départ pour l’accès aux outils."
+        },
+        {
+            "id": "TDB02",
+            "theme": "Découverte",
+            "question": "Un chatbot d’IA sert principalement à…",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Répondre à des consignes en langage naturel",
+                    "points": 4
+                },
+                {
+                    "label": "Remplacer totalement les humains",
+                    "points": 0
+                },
+                {
+                    "label": "Installer des logiciels",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Exact : on lui parle, il répond à partir de votre consigne.",
+            "feedback_partial": "On vise une interaction en langage naturel.",
+            "feedback_incorrect": "Un chatbot ne remplace pas un humain ni n’installe des applis.",
+            "relevance": "Clarifie l’objectif de base d’un assistant IA."
+        },
+        {
+            "id": "TDB03",
+            "theme": "Découverte",
+            "question": "Choisissez l’exemple de consigne (prompt) le plus clair pour débuter :",
+            "selectionType": "image",
+            "options": [
+                {
+                    "label": "« Résume ce texte en 2 puces »",
+                    "points": 4,
+                    "emoji": "🔹"
+                },
+                {
+                    "label": "« Fais au mieux stp »",
+                    "points": 0,
+                    "emoji": "🤷"
+                },
+                {
+                    "label": "« Écris tout ce qui te vient »",
+                    "points": 1,
+                    "emoji": "🌀"
+                }
+            ],
+            "feedback_correct": "Très bien : demande précise + format attendu.",
+            "feedback_partial": "Plus c’est vague, plus la réponse sera aléatoire.",
+            "feedback_incorrect": "Soyez précis sur l’objectif et le format.",
+            "relevance": "Montre l’importance d’un prompt simple et cadré."
+        },
+        {
+            "id": "TDB04",
+            "theme": "Découverte",
+            "question": "Où écrit-on le prompt dans un chatbot ?",
+            "selectionType": "select",
+            "options": [
+                {
+                    "label": "Dans la zone de saisie (champ de message)",
+                    "points": 4
+                },
+                {
+                    "label": "Dans la barre d’état en bas de Windows",
+                    "points": 0
+                },
+                {
+                    "label": "Dans les paramètres du navigateur",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Oui : le prompt se tape dans le champ de message du chat.",
+            "feedback_partial": "C’est bien la zone de saisie du chat qu’on utilise.",
+            "feedback_incorrect": "On ne passe pas par la barre d’état ou les paramètres.",
+            "relevance": "Assure un repère d’interface très concret."
+        },
+        {
+            "id": "TDB05",
+            "theme": "Sécurité",
+            "question": "Évitez de coller dans un chatbot (plusieurs réponses possibles) :",
+            "selectionType": "multi",
+            "options": [
+                {
+                    "label": "Mots de passe",
+                    "points": 3
+                },
+                {
+                    "label": "N° de carte bancaire",
+                    "points": 3
+                },
+                {
+                    "label": "Données personnelles identifiables (ex. NIR)",
+                    "points": 3
+                },
+                {
+                    "label": "Horaire de déjeuner",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Parfait : pas de secrets ni d’infos sensibles.",
+            "feedback_partial": "Bien. Soyez rigoureux sur les données sensibles.",
+            "feedback_incorrect": "Protégez vos informations : pas de secrets\/confidentiel.",
+            "relevance": "Ancre un réflexe de confidentialité simple."
+        },
+        {
+            "id": "TDB06",
+            "theme": "Sécurité",
+            "question": "Demander une action illégale à l’IA, c’est…",
+            "selectionType": "toggle",
+            "options": [
+                {
+                    "label": "Acceptable",
+                    "points": 0
+                },
+                {
+                    "label": "Interdit",
+                    "points": 4
+                }
+            ],
+            "feedback_correct": "Exact : c’est proscrit et contraire à l’éthique.",
+            "feedback_partial": "La bonne réponse : « Interdit ». ",
+            "feedback_incorrect": "C’est interdit et dangereux.",
+            "relevance": "Rappelle une limite non négociable."
+        },
+        {
+            "id": "TDB07",
+            "theme": "Sécurité",
+            "question": "Bonnes pratiques de confidentialité (plusieurs réponses possibles) :",
+            "selectionType": "multi",
+            "options": [
+                {
+                    "label": "Anonymiser les données si besoin",
+                    "points": 2
+                },
+                {
+                    "label": "Vérifier les paramètres de conservation des chats",
+                    "points": 2
+                },
+                {
+                    "label": "Partager des secrets internes pour de meilleures réponses",
+                    "points": 0
+                },
+                {
+                    "label": "Limiter l’extrait collé au strict nécessaire",
+                    "points": 2
+                }
+            ],
+            "feedback_correct": "Très bien : anonymisez, paramétrez, limitez le contenu collé.",
+            "feedback_partial": "Bien. Ajoutez l’anonymisation et la parcimonie.",
+            "feedback_incorrect": "Réduisez ce que vous collez et anonymisez au besoin.",
+            "relevance": "Hygiène de base pour travailler sereinement."
+        },
+        {
+            "id": "TDB08",
+            "theme": "Sécurité",
+            "question": "Quand citer des sources ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Quand on partage des infos factuelles issues\/validées via l’IA",
+                    "points": 4
+                },
+                {
+                    "label": "Jamais",
+                    "points": 0
+                },
+                {
+                    "label": "Uniquement pour des images",
+                    "points": 1
+                }
+            ],
+            "feedback_correct": "Exact : sourcer et vérifier les faits est souhaitable.",
+            "feedback_partial": "Mieux vaut sourcer les contenus factuels.",
+            "feedback_incorrect": "Pensez à citer et vérifier.",
+            "relevance": "Encourage un usage responsable."
+        },
+        {
+            "id": "TDB09",
+            "theme": "Sécurité",
+            "question": "Si l’IA propose une réponse médicale sérieuse, je…",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Consulte un professionnel de santé",
+                    "points": 4
+                },
+                {
+                    "label": "Applique sans vérifier",
+                    "points": 0
+                },
+                {
+                    "label": "Demande à un ami",
+                    "points": 1
+                }
+            ],
+            "feedback_correct": "Parfait : l’avis d’un pro est indispensable.",
+            "feedback_partial": "Un pro reste la bonne référence.",
+            "feedback_incorrect": "Ne pas appliquer sans avis médical.",
+            "relevance": "Distingue usages ludiques vs décisions critiques."
+        },
+        {
+            "id": "TDB10",
+            "theme": "Prompts",
+            "question": "Ce qui aide un prompt simple (plusieurs réponses possibles) :",
+            "selectionType": "multi",
+            "options": [
+                {
+                    "label": "Dire l’objectif en une phrase",
+                    "points": 2
+                },
+                {
+                    "label": "Préciser le format de sortie (ex. 3 puces)",
+                    "points": 2
+                },
+                {
+                    "label": "Indiquer le public\/ton (ex. débutant, neutre)",
+                    "points": 2
+                },
+                {
+                    "label": "Rester volontairement vague",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Excellent : objectif, format, ton = réponses plus utiles.",
+            "feedback_partial": "Bien. Soyez un peu plus précis pour gagner en qualité.",
+            "feedback_incorrect": "Plus de clarté → meilleures réponses.",
+            "relevance": "Pose une structure minimaliste et efficace."
+        },
+        {
+            "id": "TDB11",
+            "theme": "Prompts",
+            "question": "À quel point vous êtes à l’aise pour expliquer ce que vous voulez à l’IA ?",
+            "selectionType": "range",
+            "range": {
+                "min": 0,
+                "max": 10,
+                "step": 1,
+                "bands": [
+                    {
+                        "min": 0,
+                        "max": 3,
+                        "points": 1
+                    },
+                    {
+                        "min": 4,
+                        "max": 7,
+                        "points": 2
+                    },
+                    {
+                        "min": 8,
+                        "max": 10,
+                        "points": 3
+                    }
+                ]
+            },
+            "options": [],
+            "feedback_correct": "Génial ! Vous pourrez aller vite.",
+            "feedback_partial": "Parfait pour commencer : on progressera par petits pas.",
+            "feedback_incorrect": "Pas grave : on vous donnera des modèles de prompts.",
+            "relevance": "Mesure votre confort pour guider la machine."
+        },
+        {
+            "id": "TDB12",
+            "theme": "Prompts",
+            "question": "Ordonnez ces étapes (glisser-déposer) :",
+            "selectionType": "ranking",
+            "options": [
+                {
+                    "label": "Dire l’objectif"
+                },
+                {
+                    "label": "Donner un peu de contexte"
+                },
+                {
+                    "label": "Préciser le format de sortie"
+                },
+                {
+                    "label": "Relire puis envoyer"
+                }
+            ],
+            "ranking": {
+                "correctOrder": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "pointsPerItem": 1
+            },
+            "feedback_correct": "Top : objectif → contexte → format → envoi.",
+            "feedback_partial": "Bonne logique globale, peaufinez l’ordre exact.",
+            "feedback_incorrect": "Astuce : objectif, contexte, format, puis envoi.",
+            "relevance": "Crée un automatisme simple de rédaction de prompt."
+        },
+        {
+            "id": "TDB13",
+            "theme": "Prompts",
+            "question": "Pour « Résume en 2 puces », quel rendu convient ?",
+            "selectionType": "image",
+            "options": [
+                {
+                    "label": "• Idée 1 • Idée 2",
+                    "points": 4,
+                    "emoji": "🔹"
+                },
+                {
+                    "label": "Un paragraphe continu",
+                    "points": 0,
+                    "emoji": "📄"
+                },
+                {
+                    "label": "Une liste de 10 puces",
+                    "points": 1,
+                    "emoji": "📋"
+                }
+            ],
+            "feedback_correct": "Exact : deux puces, concises et lisibles.",
+            "feedback_partial": "Visez vraiment 2 puces, pas plus.",
+            "feedback_incorrect": "Demande = 2 puces ; pas un pavé.",
+            "relevance": "Aligne sortie et format demandé."
+        },
+        {
+            "id": "TDB14",
+            "theme": "Prompts",
+            "question": "Obtenir une traduction simple, c’est plutôt…",
+            "selectionType": "select",
+            "options": [
+                {
+                    "label": "Écrire « Traduis en français : » + le texte",
+                    "points": 4
+                },
+                {
+                    "label": "Coller le texte sans rien dire",
+                    "points": 0
+                },
+                {
+                    "label": "Demander un roman",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Oui : formule explicite et directe.",
+            "feedback_partial": "Soyez explicite pour une meilleure sortie.",
+            "feedback_incorrect": "Dites clairement « Traduis… ».",
+            "relevance": "Encourage des requêtes claires et courtes."
+        },
+        {
+            "id": "TDB15",
+            "theme": "Usages",
+            "question": "Usages adaptés pour débuter (plusieurs réponses possibles) :",
+            "selectionType": "multiselect",
+            "options": [
+                {
+                    "label": "Brainstorming \/ trouver des idées",
+                    "points": 2
+                },
+                {
+                    "label": "Reformulation \/ correction rapide",
+                    "points": 2
+                },
+                {
+                    "label": "Traduction simple",
+                    "points": 2
+                },
+                {
+                    "label": "Faire mes devoirs à ma place",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Très bien : commencez par des usages simples et guidés.",
+            "feedback_partial": "Bien. Évitez les usages non-éthiques.",
+            "feedback_incorrect": "Privilégiez idées, reformulation, traduction simple.",
+            "relevance": "Cadre des cas d’usage raisonnables."
+        },
+        {
+            "id": "TDB16",
+            "theme": "Usages",
+            "question": "Le bon niveau d’attente vis-à-vis d’un chatbot, c’est…",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "De l’aide, des idées, des ébauches (pas la vérité absolue)",
+                    "points": 4
+                },
+                {
+                    "label": "Des réponses officielles garanties",
+                    "points": 0
+                },
+                {
+                    "label": "Une boule de cristal",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Exact : l’IA propose des pistes, à valider.",
+            "feedback_partial": "L’IA aide, mais n’est pas une vérité officielle.",
+            "feedback_incorrect": "Évitez d’attendre une garantie absolue.",
+            "relevance": "Ajuste les attentes pour éviter les déceptions."
+        },
+        {
+            "id": "TDB17",
+            "theme": "Usages",
+            "question": "Formats faciles à réutiliser (plusieurs réponses possibles) :",
+            "selectionType": "multi",
+            "options": [
+                {
+                    "label": "Liste à puces",
+                    "points": 2
+                },
+                {
+                    "label": "Tableau simple",
+                    "points": 2
+                },
+                {
+                    "label": "JSON simple",
+                    "points": 2
+                },
+                {
+                    "label": "PDF très stylé",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Parfait : listes, tableaux, JSON sont pratiques.",
+            "feedback_partial": "Bien. Privilégiez des formats simples.",
+            "feedback_incorrect": "Visez des sorties faciles à copier\/coller.",
+            "relevance": "Facilite l’intégration dans vos outils."
+        },
+        {
+            "id": "TDB18",
+            "theme": "Usages",
+            "question": "La « température » contrôle surtout…",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "La créativité\/variabilité des réponses",
+                    "points": 4
+                },
+                {
+                    "label": "La vitesse de votre connexion",
+                    "points": 0
+                },
+                {
+                    "label": "Le téléchargement de données d’entraînement",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Oui : plus haut = plus créatif\/varié (moins prévisible).",
+            "feedback_partial": "C’est un réglage qui joue sur la variabilité.",
+            "feedback_incorrect": "La température ne concerne ni réseau ni entraînement.",
+            "relevance": "Donne un repère sur un paramètre fréquent."
+        },
+        {
+            "id": "TDB19",
+            "theme": "Vérification",
+            "question": "Vérifier une info donnée par l’IA (plusieurs réponses possibles) :",
+            "selectionType": "multi",
+            "options": [
+                {
+                    "label": "Chercher des sources fiables",
+                    "points": 2
+                },
+                {
+                    "label": "Recouper avec plusieurs sites",
+                    "points": 2
+                },
+                {
+                    "label": "Tester soi-même quand c’est possible",
+                    "points": 2
+                },
+                {
+                    "label": "Copier-coller sans vérifier",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Excellent : sourcer, recouper, tester.",
+            "feedback_partial": "Bien. Ajoutez du recoupement\/test si possible.",
+            "feedback_incorrect": "Toujours vérifier avant de diffuser.",
+            "relevance": "Installe une hygiène de vérification douce."
+        },
+        {
+            "id": "TDB20",
+            "theme": "Attitude",
+            "question": "Êtes-vous prêt·e à reformuler\/relancer si la 1re réponse ne convient pas ?",
+            "selectionType": "toggle",
+            "options": [
+                {
+                    "label": "Non",
+                    "points": 1
+                },
+                {
+                    "label": "Oui",
+                    "points": 3
+                }
+            ],
+            "feedback_correct": "Super : la reformulation débloque souvent la situation.",
+            "feedback_partial": "C’est la bonne posture pour progresser vite.",
+            "feedback_incorrect": "Relancer aide à obtenir mieux, pas à pas.",
+            "relevance": "Favorise une pratique décomplexée et efficace."
+        }
+    ],
+    "status": "published"
 }

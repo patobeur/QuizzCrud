@@ -1,371 +1,502 @@
 {
-  "id": "ia_avance",
-  "title": "Test de positionnement - IA avancé",
-  "level": "Avancé",
-  "time": "≈ 15–20 min",
-  "main_title": "Prompting & cas d’usages avancés",
-  "card_description": "Maîtrise des stratégies de prompting (few-shot, ReAct), analyse de documents, génération de code, création d’images, automatisation.",
-  "features": [
-    "20 questions (radio & checkbox)",
-    "Points par réponse & feedback personnalisé",
-    "Pertinence : évaluer l’aptitude à suivre une formation de 21 h"
-  ],
-  "themes": ["Prompting", "Code", "Images"],
-  "description": "20 questions. Répondez, cliquez sur <strong>Valider</strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant</strong>.",
-  "questions": [
-    {
-      "id": "Q1",
-      "theme": "Prompting avancé",
-      "question": "Quelle technique consiste à inclure des exemples dans le prompt pour guider l’IA ?",
-      "selectionType": "single",
-      "options": [
-        { "label": "Few-shot prompting", "points": 5 },
-        { "label": "Zero-shot prompting", "points": 1 },
-        { "label": "Chain-of-thought", "points": 2 }
-      ],
-      "feedback_correct": "Exact, le few-shot prompting est très efficace pour des tâches complexes.",
-      "feedback_partial": "Le few-shot est plus précis, car il fournit des exemples concrets.",
-      "feedback_incorrect": "C'est le few-shot prompting. Le zero-shot ne donne aucun exemple.",
-      "relevance": "Maîtriser le few-shot ouvre la porte à des résultats bien plus précis et contrôlés."
-    },
-    {
-      "id": "Q2",
-      "theme": "Prompting avancé",
-      "question": "À quoi sert la technique ReAct (Reasoning and Acting) ?",
-      "selectionType": "single",
-      "options": [
+    "id": "ia_avance",
+    "title": "Test de positionnement - IA avancé",
+    "level": "Avancé",
+    "time": "≈ 15–20 min",
+    "main_title": "Prompting & cas d’usages avancés",
+    "card_description": "Maîtrise des stratégies de prompting (few-shot, ReAct), analyse de documents, génération de code, création d’images, automatisation.",
+    "features": [
+        "20 questions (radio & checkbox)",
+        "Points par réponse & feedback personnalisé",
+        "Pertinence : évaluer l’aptitude à suivre une formation de 21 h"
+    ],
+    "themes": [
+        "Prompting",
+        "Code",
+        "Images"
+    ],
+    "description": "20 questions. Répondez, cliquez sur <strong>Valider<\/strong> pour verrouiller votre réponse et voir le feedback, puis <strong>Suivant<\/strong>.",
+    "questions": [
         {
-          "label": "Décomposer un problème, agir, et observer pour ajuster",
-          "points": 5
+            "id": "Q1",
+            "theme": "Prompting avancé",
+            "question": "Quelle technique consiste à inclure des exemples dans le prompt pour guider l’IA ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Few-shot prompting",
+                    "points": 5
+                },
+                {
+                    "label": "Zero-shot prompting",
+                    "points": 1
+                },
+                {
+                    "label": "Chain-of-thought",
+                    "points": 2
+                }
+            ],
+            "feedback_correct": "Exact, le few-shot prompting est très efficace pour des tâches complexes.",
+            "feedback_partial": "Le few-shot est plus précis, car il fournit des exemples concrets.",
+            "feedback_incorrect": "C'est le few-shot prompting. Le zero-shot ne donne aucun exemple.",
+            "relevance": "Maîtriser le few-shot ouvre la porte à des résultats bien plus précis et contrôlés."
         },
-        { "label": "Réécrire un prompt automatiquement", "points": 1 },
-        { "label": "Créer des images photoréalistes", "points": 0 }
-      ],
-      "feedback_correct": "Parfait, ReAct permet à l'IA de 'réfléchir' à voix haute pour résoudre des problèmes complexes.",
-      "feedback_partial": "ReAct est une méthode de raisonnement pas à pas, pas de réécriture.",
-      "feedback_incorrect": "ReAct est une technique de raisonnement, pas de génération d'images.",
-      "relevance": "ReAct est une passerelle vers l'automatisation de tâches complexes avec l'IA."
-    },
-    {
-      "id": "Q3",
-      "theme": "Prompting avancé",
-      "question": "Pour analyser un rapport de 50 pages, quelle est la meilleure approche ?",
-      "selectionType": "single",
-      "options": [
         {
-          "label": "Uploader le document et poser des questions ciblées",
-          "points": 5
+            "id": "Q2",
+            "theme": "Prompting avancé",
+            "question": "À quoi sert la technique ReAct (Reasoning and Acting) ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Décomposer un problème, agir, et observer pour ajuster",
+                    "points": 5
+                },
+                {
+                    "label": "Réécrire un prompt automatiquement",
+                    "points": 1
+                },
+                {
+                    "label": "Créer des images photoréalistes",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Parfait, ReAct permet à l'IA de 'réfléchir' à voix haute pour résoudre des problèmes complexes.",
+            "feedback_partial": "ReAct est une méthode de raisonnement pas à pas, pas de réécriture.",
+            "feedback_incorrect": "ReAct est une technique de raisonnement, pas de génération d'images.",
+            "relevance": "ReAct est une passerelle vers l'automatisation de tâches complexes avec l'IA."
         },
-        { "label": "Copier-coller tout le texte dans le prompt", "points": 1 },
         {
-          "label": "Demander à l'IA de le trouver sur Internet",
-          "points": 0
+            "id": "Q3",
+            "theme": "Prompting avancé",
+            "question": "Pour analyser un rapport de 50 pages, quelle est la meilleure approche ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Uploader le document et poser des questions ciblées",
+                    "points": 5
+                },
+                {
+                    "label": "Copier-coller tout le texte dans le prompt",
+                    "points": 1
+                },
+                {
+                    "label": "Demander à l'IA de le trouver sur Internet",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Oui, l'upload est la méthode la plus fiable et efficace pour les documents longs.",
+            "feedback_partial": "Le copier-coller risque de dépasser la limite de contexte de l'IA.",
+            "feedback_incorrect": "L'IA ne peut pas deviner le contenu d'un fichier privé.",
+            "relevance": "Savoir interagir avec des documents est une compétence clé pour l'analyse de données."
+        },
+        {
+            "id": "Q4",
+            "theme": "Prompting avancé",
+            "question": "Comment contraindre une IA à générer une réponse dans un format JSON spécifique ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Fournir la structure JSON attendue dans le prompt",
+                    "points": 5
+                },
+                {
+                    "label": "Lui dire 'Réponds en JSON'",
+                    "points": 2
+                },
+                {
+                    "label": "Impossible de garantir le format",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Exact, fournir un exemple de la structure est la méthode la plus robuste.",
+            "feedback_partial": "C'est un bon début, mais sans structure, l'IA peut improviser.",
+            "feedback_incorrect": "Si, on peut fortement influencer le format en donnant des exemples précis.",
+            "relevance": "La maîtrise du formatage de sortie est essentielle pour intégrer l'IA dans des applications."
+        },
+        {
+            "id": "Q5",
+            "theme": "Cas d’usages avancés",
+            "question": "Pour créer un script Python qui automatise une tâche, que doit inclure votre prompt ?",
+            "selectionType": "multi",
+            "options": [
+                {
+                    "label": "Le langage (Python)",
+                    "points": 2
+                },
+                {
+                    "label": "Les bibliothèques à utiliser (ex: pandas)",
+                    "points": 2
+                },
+                {
+                    "label": "Une description claire de la tâche et des données d'entrée\/sortie",
+                    "points": 3
+                }
+            ],
+            "feedback_correct": "Parfait, un prompt complet mène à un code plus fiable et pertinent.",
+            "feedback_partial": "Bien. N'oubliez pas de préciser les bibliothèques pour guider l'IA.",
+            "feedback_incorrect": "Un bon prompt de génération de code doit être très précis sur le contexte et l'objectif.",
+            "relevance": "Savoir briefer une IA pour générer du code est un gain de productivité immense."
+        },
+        {
+            "id": "Q6",
+            "theme": "Cas d’usages avancés",
+            "question": "Quelle IA est spécialisée dans la génération d'images photoréalistes ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Midjourney",
+                    "points": 5
+                },
+                {
+                    "label": "ChatGPT",
+                    "points": 1
+                },
+                {
+                    "label": "Google Gemini",
+                    "points": 1
+                }
+            ],
+            "feedback_correct": "Oui, Midjourney est reconnu pour son rendu photoréaliste de haute qualité.",
+            "feedback_partial": "ChatGPT et Gemini génèrent des images, mais Midjourney est souvent supérieur en photoréalisme.",
+            "feedback_incorrect": "Midjourney est une IA spécialisée dans la génération d'images.",
+            "relevance": "Choisir le bon outil pour la bonne tâche est crucial pour obtenir des résultats de qualité."
+        },
+        {
+            "id": "Q7",
+            "theme": "Cas d’usages avancés",
+            "question": "Pour créer un logo vectoriel, quel format de sortie demanderiez-vous à une IA ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "SVG",
+                    "points": 5
+                },
+                {
+                    "label": "JPG",
+                    "points": 1
+                },
+                {
+                    "label": "PNG",
+                    "points": 1
+                }
+            ],
+            "feedback_correct": "Exact, le SVG est un format vectoriel, idéal pour les logos.",
+            "feedback_partial": "JPG et PNG sont des formats matriciels, moins adaptés pour les logos.",
+            "feedback_incorrect": "Le SVG est le format vectoriel par excellence, scalable sans perte de qualité.",
+            "relevance": "Comprendre les formats de fichiers est essentiel pour des usages professionnels."
+        },
+        {
+            "id": "Q8",
+            "theme": "Cas d’usages avancés",
+            "question": "Comment utiliser une IA pour créer un plan de formation personnalisé ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Lui fournir le niveau, les objectifs et les contraintes de temps",
+                    "points": 5
+                },
+                {
+                    "label": "Lui demander 'Fais-moi un plan de formation'",
+                    "points": 1
+                },
+                {
+                    "label": "L'IA ne peut pas faire ça",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Parfait, un contexte détaillé permet à l'IA de générer un plan sur mesure.",
+            "feedback_partial": "C'est trop vague. Plus vous donnez de détails, meilleur sera le résultat.",
+            "feedback_incorrect": "Si, c'est un excellent cas d'usage pour une IA bien briefée.",
+            "relevance": "L'IA est un outil puissant pour la planification et l'organisation de projets."
+        },
+        {
+            "id": "Q9",
+            "theme": "Limites & éthique",
+            "question": "Qu'est-ce qu'une 'hallucination' pour une IA ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Une réponse factuellement incorrecte mais plausible",
+                    "points": 5
+                },
+                {
+                    "label": "Une erreur de calcul",
+                    "points": 1
+                },
+                {
+                    "label": "Une image qui fait peur",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Exact, les hallucinations sont des 'inventions' de l'IA. Il faut toujours vérifier les faits.",
+            "feedback_partial": "C'est plus subtil qu'une simple erreur de calcul. C'est une invention crédible.",
+            "feedback_incorrect": "Ce n'est pas lié à la peur, mais à la véracité de l'information.",
+            "relevance": "Connaître les limites des IA est fondamental pour une utilisation responsable."
+        },
+        {
+            "id": "Q10",
+            "theme": "Limites & éthique",
+            "question": "Peut-on utiliser des données personnelles (email, nom, etc.) dans un prompt sur une IA publique ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Non, c'est un risque pour la confidentialité",
+                    "points": 5
+                },
+                {
+                    "label": "Oui, sans problème",
+                    "points": 0
+                },
+                {
+                    "label": "Seulement si on a le consentement de la personne",
+                    "points": 2
+                }
+            ],
+            "feedback_correct": "Très juste. Les IA publiques peuvent utiliser les données pour s'entraîner.",
+            "feedback_partial": "Même avec le consentement, le risque de fuite ou de réutilisation existe.",
+            "feedback_incorrect": "C'est une très mauvaise pratique en termes de sécurité et de confidentialité.",
+            "relevance": "La protection des données est une priorité absolue lors de l'utilisation d'outils en ligne."
+        },
+        {
+            "id": "Q11",
+            "theme": "Prompting avancé",
+            "question": "Pour obtenir des réponses plus créatives, quel paramètre de l'IA faut-il augmenter ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "La température",
+                    "points": 5
+                },
+                {
+                    "label": "Le nombre de tokens",
+                    "points": 1
+                },
+                {
+                    "label": "Le 'top-p'",
+                    "points": 2
+                }
+            ],
+            "feedback_correct": "Oui, une température plus élevée augmente le caractère aléatoire et donc la créativité.",
+            "feedback_partial": "Le 'top-p' est un autre moyen de contrôler la créativité, mais la température est le plus courant.",
+            "feedback_incorrect": "Le nombre de tokens définit la longueur de la réponse, pas sa créativité.",
+            "relevance": "Jouer avec les paramètres de l'IA permet d'affiner la nature des réponses."
+        },
+        {
+            "id": "Q12",
+            "theme": "Cas d’usages avancés",
+            "question": "Qu'est-ce que le 'fine-tuning' d'un modèle d'IA ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Ré-entraîner un modèle existant sur des données spécifiques",
+                    "points": 5
+                },
+                {
+                    "label": "Modifier les couleurs d'une image générée",
+                    "points": 0
+                },
+                {
+                    "label": "Corriger une faute de frappe dans un prompt",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Exact, le fine-tuning permet de spécialiser une IA pour une tâche ou un domaine précis.",
+            "feedback_partial": "C'est une opération bien plus complexe qu'une simple correction.",
+            "feedback_incorrect": "Le fine-tuning est un processus d'entraînement, pas de retouche d'image.",
+            "relevance": "Le fine-tuning est la porte d'entrée vers des IA sur-mesure pour les entreprises."
+        },
+        {
+            "id": "Q13",
+            "theme": "Prompting avancé",
+            "question": "Quelle est l'utilité de donner un 'persona' à l'IA (ex: 'Agis comme un expert en marketing') ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Orienter le style et le ton de la réponse",
+                    "points": 5
+                },
+                {
+                    "label": "Améliorer la vitesse de réponse",
+                    "points": 0
+                },
+                {
+                    "label": "Ça ne sert à rien",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Parfait, le persona est une technique très efficace pour cadrer le comportement de l'IA.",
+            "feedback_partial": "Le persona n'influence pas la vitesse, mais bien le contenu et la forme.",
+            "feedback_incorrect": "Au contraire, c'est une des techniques de base du prompting avancé.",
+            "relevance": "Maîtriser le persona permet de transformer l'IA en un assistant spécialisé."
+        },
+        {
+            "id": "Q14",
+            "theme": "Cas d’usages avancés",
+            "question": "Pour automatiser la réponse à des emails clients, quelle approche est la plus robuste ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Connecter une IA à la boîte mail via une API",
+                    "points": 5
+                },
+                {
+                    "label": "Copier-coller chaque email dans ChatGPT",
+                    "points": 1
+                },
+                {
+                    "label": "Impossible, l'IA ne peut pas lire les emails",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Oui, l'intégration via API est la seule solution viable pour l'automatisation.",
+            "feedback_partial": "Le copier-coller n'est pas une méthode d'automatisation et pose des problèmes de confidentialité.",
+            "feedback_incorrect": "Avec les bonnes intégrations (API), une IA peut lire et même envoyer des emails.",
+            "relevance": "L'automatisation via API démultiplie la puissance des IA."
+        },
+        {
+            "id": "Q15",
+            "theme": "Limites & éthique",
+            "question": "Les informations générées par une IA sont-elles protégées par le droit d'auteur ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Non, en général, seul un humain peut être auteur",
+                    "points": 5
+                },
+                {
+                    "label": "Oui, toujours",
+                    "points": 0
+                },
+                {
+                    "label": "Seulement si l'IA est payante",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "C'est la position juridique la plus courante. La créativité doit émaner d'un humain.",
+            "feedback_partial": "Le modèle économique de l'IA n'a pas d'impact sur le droit d'auteur.",
+            "feedback_incorrect": "La question est complexe, mais la tendance est que le contenu 100% généré par IA n'a pas de droit d'auteur.",
+            "relevance": "Les questions de propriété intellectuelle sont un enjeu majeur de l'IA."
+        },
+        {
+            "id": "Q16",
+            "theme": "Prompting avancé",
+            "question": "Vous voulez une réponse concise. Quel élément ajouter à votre prompt ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Une instruction sur la longueur (ex: 'en 3 points', 'en 100 mots maximum')",
+                    "points": 5
+                },
+                {
+                    "label": "Le mot 'RAPIDE'",
+                    "points": 0
+                },
+                {
+                    "label": "Mettre le prompt en majuscules",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Exact, être précis sur le format de sortie est la clé.",
+            "feedback_partial": "Les majuscules peuvent être interprétées comme un cri, mais ne garantissent pas la concision.",
+            "feedback_incorrect": "La politesse et la clarté sont plus efficaces que des injonctions vagues.",
+            "relevance": "Le contrôle de la longueur et du format est essentiel pour des réponses exploitables."
+        },
+        {
+            "id": "Q17",
+            "theme": "Cas d’usages avancés",
+            "question": "Quel est l'avantage d'utiliser une IA en local (sur son propre ordinateur) ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Confidentialité et contrôle total des données",
+                    "points": 5
+                },
+                {
+                    "label": "Accès à des modèles plus puissants",
+                    "points": 0
+                },
+                {
+                    "label": "C'est toujours plus rapide que les services en ligne",
+                    "points": 1
+                }
+            ],
+            "feedback_correct": "Oui, c'est le principal avantage : rien ne quitte votre machine.",
+            "feedback_partial": "La vitesse dépend beaucoup de votre matériel. Les serveurs cloud sont souvent plus rapides.",
+            "feedback_incorrect": "Les modèles les plus puissants sont généralement sur des serveurs cloud, pas en local.",
+            "relevance": "L'IA locale est une tendance de fond pour les usages professionnels et confidentiels."
+        },
+        {
+            "id": "Q18",
+            "theme": "Limites & éthique",
+            "question": "Qu'est-ce qu'un biais algorithmique ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "La tendance de l'IA à reproduire les stéréotypes présents dans ses données d'entraînement",
+                    "points": 5
+                },
+                {
+                    "label": "Une erreur de programmation de l'IA",
+                    "points": 1
+                },
+                {
+                    "label": "Le fait que l'IA préfère certains utilisateurs",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Exact, les IA sont le reflet des données sur lesquelles elles sont entraînées, avec leurs qualités et leurs défauts.",
+            "feedback_partial": "Ce n'est pas une erreur de code, mais un problème hérité des données.",
+            "feedback_incorrect": "L'IA n'a pas de préférences personnelles, elle ne fait que reproduire des schémas statistiques.",
+            "relevance": "Identifier et atténuer les biais est l'un des plus grands défis de l'éthique de l'IA."
+        },
+        {
+            "id": "Q19",
+            "theme": "Prompting avancé",
+            "question": "Pour comparer deux documents, quelle est la meilleure instruction ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "'Compare ces deux textes et présente les différences dans un tableau'",
+                    "points": 5
+                },
+                {
+                    "label": "'Regarde ces deux textes et dis-moi ce que tu en penses'",
+                    "points": 1
+                },
+                {
+                    "label": "'Texte 1 vs Texte 2'",
+                    "points": 0
+                }
+            ],
+            "feedback_correct": "Parfait, un prompt directif avec un format de sortie clair donne les meilleurs résultats.",
+            "feedback_partial": "C'est trop vague. L'IA ne saura pas sur quels critères baser son analyse.",
+            "feedback_incorrect": "Un prompt aussi court est une invitation à une réponse médiocre.",
+            "relevance": "La clarté et la directivité du prompt sont directement proportionnelles à la qualité de la réponse."
+        },
+        {
+            "id": "Q20",
+            "theme": "Cas d’usages avancés",
+            "question": "Vous voulez créer une série d'images avec un personnage récurrent. Comment faire ?",
+            "selectionType": "single",
+            "options": [
+                {
+                    "label": "Utiliser un 'seed' (graine) et une description très précise du personnage",
+                    "points": 5
+                },
+                {
+                    "label": "Impossible de garantir la cohérence",
+                    "points": 1
+                },
+                {
+                    "label": "Demander à l'IA 'Garde le même personnage'",
+                    "points": 2
+                }
+            ],
+            "feedback_correct": "Très bien ! Le 'seed' est la technique la plus fiable pour maintenir une cohérence stylistique et de personnage.",
+            "feedback_partial": "C'est un bon début, mais sans 'seed', la cohérence sera difficile à maintenir.",
+            "feedback_incorrect": "C'est difficile, mais des techniques comme le 'seed' et des descriptions détaillées le permettent.",
+            "relevance": "La cohérence visuelle est un enjeu majeur pour les applications narratives ou de branding."
         }
-      ],
-      "feedback_correct": "Oui, l'upload est la méthode la plus fiable et efficace pour les documents longs.",
-      "feedback_partial": "Le copier-coller risque de dépasser la limite de contexte de l'IA.",
-      "feedback_incorrect": "L'IA ne peut pas deviner le contenu d'un fichier privé.",
-      "relevance": "Savoir interagir avec des documents est une compétence clé pour l'analyse de données."
-    },
-    {
-      "id": "Q4",
-      "theme": "Prompting avancé",
-      "question": "Comment contraindre une IA à générer une réponse dans un format JSON spécifique ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "Fournir la structure JSON attendue dans le prompt",
-          "points": 5
-        },
-        { "label": "Lui dire 'Réponds en JSON'", "points": 2 },
-        { "label": "Impossible de garantir le format", "points": 0 }
-      ],
-      "feedback_correct": "Exact, fournir un exemple de la structure est la méthode la plus robuste.",
-      "feedback_partial": "C'est un bon début, mais sans structure, l'IA peut improviser.",
-      "feedback_incorrect": "Si, on peut fortement influencer le format en donnant des exemples précis.",
-      "relevance": "La maîtrise du formatage de sortie est essentielle pour intégrer l'IA dans des applications."
-    },
-    {
-      "id": "Q5",
-      "theme": "Cas d’usages avancés",
-      "question": "Pour créer un script Python qui automatise une tâche, que doit inclure votre prompt ?",
-      "selectionType": "multi",
-      "options": [
-        { "label": "Le langage (Python)", "points": 2 },
-        { "label": "Les bibliothèques à utiliser (ex: pandas)", "points": 2 },
-        {
-          "label": "Une description claire de la tâche et des données d'entrée/sortie",
-          "points": 3
-        }
-      ],
-      "feedback_correct": "Parfait, un prompt complet mène à un code plus fiable et pertinent.",
-      "feedback_partial": "Bien. N'oubliez pas de préciser les bibliothèques pour guider l'IA.",
-      "feedback_incorrect": "Un bon prompt de génération de code doit être très précis sur le contexte et l'objectif.",
-      "relevance": "Savoir briefer une IA pour générer du code est un gain de productivité immense."
-    },
-    {
-      "id": "Q6",
-      "theme": "Cas d’usages avancés",
-      "question": "Quelle IA est spécialisée dans la génération d'images photoréalistes ?",
-      "selectionType": "single",
-      "options": [
-        { "label": "Midjourney", "points": 5 },
-        { "label": "ChatGPT", "points": 1 },
-        { "label": "Google Gemini", "points": 1 }
-      ],
-      "feedback_correct": "Oui, Midjourney est reconnu pour son rendu photoréaliste de haute qualité.",
-      "feedback_partial": "ChatGPT et Gemini génèrent des images, mais Midjourney est souvent supérieur en photoréalisme.",
-      "feedback_incorrect": "Midjourney est une IA spécialisée dans la génération d'images.",
-      "relevance": "Choisir le bon outil pour la bonne tâche est crucial pour obtenir des résultats de qualité."
-    },
-    {
-      "id": "Q7",
-      "theme": "Cas d’usages avancés",
-      "question": "Pour créer un logo vectoriel, quel format de sortie demanderiez-vous à une IA ?",
-      "selectionType": "single",
-      "options": [
-        { "label": "SVG", "points": 5 },
-        { "label": "JPG", "points": 1 },
-        { "label": "PNG", "points": 1 }
-      ],
-      "feedback_correct": "Exact, le SVG est un format vectoriel, idéal pour les logos.",
-      "feedback_partial": "JPG et PNG sont des formats matriciels, moins adaptés pour les logos.",
-      "feedback_incorrect": "Le SVG est le format vectoriel par excellence, scalable sans perte de qualité.",
-      "relevance": "Comprendre les formats de fichiers est essentiel pour des usages professionnels."
-    },
-    {
-      "id": "Q8",
-      "theme": "Cas d’usages avancés",
-      "question": "Comment utiliser une IA pour créer un plan de formation personnalisé ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "Lui fournir le niveau, les objectifs et les contraintes de temps",
-          "points": 5
-        },
-        { "label": "Lui demander 'Fais-moi un plan de formation'", "points": 1 },
-        { "label": "L'IA ne peut pas faire ça", "points": 0 }
-      ],
-      "feedback_correct": "Parfait, un contexte détaillé permet à l'IA de générer un plan sur mesure.",
-      "feedback_partial": "C'est trop vague. Plus vous donnez de détails, meilleur sera le résultat.",
-      "feedback_incorrect": "Si, c'est un excellent cas d'usage pour une IA bien briefée.",
-      "relevance": "L'IA est un outil puissant pour la planification et l'organisation de projets."
-    },
-    {
-      "id": "Q9",
-      "theme": "Limites & éthique",
-      "question": "Qu'est-ce qu'une 'hallucination' pour une IA ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "Une réponse factuellement incorrecte mais plausible",
-          "points": 5
-        },
-        { "label": "Une erreur de calcul", "points": 1 },
-        { "label": "Une image qui fait peur", "points": 0 }
-      ],
-      "feedback_correct": "Exact, les hallucinations sont des 'inventions' de l'IA. Il faut toujours vérifier les faits.",
-      "feedback_partial": "C'est plus subtil qu'une simple erreur de calcul. C'est une invention crédible.",
-      "feedback_incorrect": "Ce n'est pas lié à la peur, mais à la véracité de l'information.",
-      "relevance": "Connaître les limites des IA est fondamental pour une utilisation responsable."
-    },
-    {
-      "id": "Q10",
-      "theme": "Limites & éthique",
-      "question": "Peut-on utiliser des données personnelles (email, nom, etc.) dans un prompt sur une IA publique ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "Non, c'est un risque pour la confidentialité",
-          "points": 5
-        },
-        { "label": "Oui, sans problème", "points": 0 },
-        { "label": "Seulement si on a le consentement de la personne", "points": 2 }
-      ],
-      "feedback_correct": "Très juste. Les IA publiques peuvent utiliser les données pour s'entraîner.",
-      "feedback_partial": "Même avec le consentement, le risque de fuite ou de réutilisation existe.",
-      "feedback_incorrect": "C'est une très mauvaise pratique en termes de sécurité et de confidentialité.",
-      "relevance": "La protection des données est une priorité absolue lors de l'utilisation d'outils en ligne."
-    },
-    {
-      "id": "Q11",
-      "theme": "Prompting avancé",
-      "question": "Pour obtenir des réponses plus créatives, quel paramètre de l'IA faut-il augmenter ?",
-      "selectionType": "single",
-      "options": [
-        { "label": "La température", "points": 5 },
-        { "label": "Le nombre de tokens", "points": 1 },
-        { "label": "Le 'top-p'", "points": 2 }
-      ],
-      "feedback_correct": "Oui, une température plus élevée augmente le caractère aléatoire et donc la créativité.",
-      "feedback_partial": "Le 'top-p' est un autre moyen de contrôler la créativité, mais la température est le plus courant.",
-      "feedback_incorrect": "Le nombre de tokens définit la longueur de la réponse, pas sa créativité.",
-      "relevance": "Jouer avec les paramètres de l'IA permet d'affiner la nature des réponses."
-    },
-    {
-      "id": "Q12",
-      "theme": "Cas d’usages avancés",
-      "question": "Qu'est-ce que le 'fine-tuning' d'un modèle d'IA ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "Ré-entraîner un modèle existant sur des données spécifiques",
-          "points": 5
-        },
-        { "label": "Modifier les couleurs d'une image générée", "points": 0 },
-        { "label": "Corriger une faute de frappe dans un prompt", "points": 0 }
-      ],
-      "feedback_correct": "Exact, le fine-tuning permet de spécialiser une IA pour une tâche ou un domaine précis.",
-      "feedback_partial": "C'est une opération bien plus complexe qu'une simple correction.",
-      "feedback_incorrect": "Le fine-tuning est un processus d'entraînement, pas de retouche d'image.",
-      "relevance": "Le fine-tuning est la porte d'entrée vers des IA sur-mesure pour les entreprises."
-    },
-    {
-      "id": "Q13",
-      "theme": "Prompting avancé",
-      "question": "Quelle est l'utilité de donner un 'persona' à l'IA (ex: 'Agis comme un expert en marketing') ?",
-      "selectionType": "single",
-      "options": [
-        { "label": "Orienter le style et le ton de la réponse", "points": 5 },
-        { "label": "Améliorer la vitesse de réponse", "points": 0 },
-        { "label": "Ça ne sert à rien", "points": 0 }
-      ],
-      "feedback_correct": "Parfait, le persona est une technique très efficace pour cadrer le comportement de l'IA.",
-      "feedback_partial": "Le persona n'influence pas la vitesse, mais bien le contenu et la forme.",
-      "feedback_incorrect": "Au contraire, c'est une des techniques de base du prompting avancé.",
-      "relevance": "Maîtriser le persona permet de transformer l'IA en un assistant spécialisé."
-    },
-    {
-      "id": "Q14",
-      "theme": "Cas d’usages avancés",
-      "question": "Pour automatiser la réponse à des emails clients, quelle approche est la plus robuste ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "Connecter une IA à la boîte mail via une API",
-          "points": 5
-        },
-        {
-          "label": "Copier-coller chaque email dans ChatGPT",
-          "points": 1
-        },
-        { "label": "Impossible, l'IA ne peut pas lire les emails", "points": 0 }
-      ],
-      "feedback_correct": "Oui, l'intégration via API est la seule solution viable pour l'automatisation.",
-      "feedback_partial": "Le copier-coller n'est pas une méthode d'automatisation et pose des problèmes de confidentialité.",
-      "feedback_incorrect": "Avec les bonnes intégrations (API), une IA peut lire et même envoyer des emails.",
-      "relevance": "L'automatisation via API démultiplie la puissance des IA."
-    },
-    {
-      "id": "Q15",
-      "theme": "Limites & éthique",
-      "question": "Les informations générées par une IA sont-elles protégées par le droit d'auteur ?",
-      "selectionType": "single",
-      "options": [
-        { "label": "Non, en général, seul un humain peut être auteur", "points": 5 },
-        { "label": "Oui, toujours", "points": 0 },
-        { "label": "Seulement si l'IA est payante", "points": 0 }
-      ],
-      "feedback_correct": "C'est la position juridique la plus courante. La créativité doit émaner d'un humain.",
-      "feedback_partial": "Le modèle économique de l'IA n'a pas d'impact sur le droit d'auteur.",
-      "feedback_incorrect": "La question est complexe, mais la tendance est que le contenu 100% généré par IA n'a pas de droit d'auteur.",
-      "relevance": "Les questions de propriété intellectuelle sont un enjeu majeur de l'IA."
-    },
-    {
-      "id": "Q16",
-      "theme": "Prompting avancé",
-      "question": "Vous voulez une réponse concise. Quel élément ajouter à votre prompt ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "Une instruction sur la longueur (ex: 'en 3 points', 'en 100 mots maximum')",
-          "points": 5
-        },
-        { "label": "Le mot 'RAPIDE'", "points": 0 },
-        { "label": "Mettre le prompt en majuscules", "points": 0 }
-      ],
-      "feedback_correct": "Exact, être précis sur le format de sortie est la clé.",
-      "feedback_partial": "Les majuscules peuvent être interprétées comme un cri, mais ne garantissent pas la concision.",
-      "feedback_incorrect": "La politesse et la clarté sont plus efficaces que des injonctions vagues.",
-      "relevance": "Le contrôle de la longueur et du format est essentiel pour des réponses exploitables."
-    },
-    {
-      "id": "Q17",
-      "theme": "Cas d’usages avancés",
-      "question": "Quel est l'avantage d'utiliser une IA en local (sur son propre ordinateur) ?",
-      "selectionType": "single",
-      "options": [
-        { "label": "Confidentialité et contrôle total des données", "points": 5 },
-        { "label": "Accès à des modèles plus puissants", "points": 0 },
-        {
-          "label": "C'est toujours plus rapide que les services en ligne",
-          "points": 1
-        }
-      ],
-      "feedback_correct": "Oui, c'est le principal avantage : rien ne quitte votre machine.",
-      "feedback_partial": "La vitesse dépend beaucoup de votre matériel. Les serveurs cloud sont souvent plus rapides.",
-      "feedback_incorrect": "Les modèles les plus puissants sont généralement sur des serveurs cloud, pas en local.",
-      "relevance": "L'IA locale est une tendance de fond pour les usages professionnels et confidentiels."
-    },
-    {
-      "id": "Q18",
-      "theme": "Limites & éthique",
-      "question": "Qu'est-ce qu'un biais algorithmique ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "La tendance de l'IA à reproduire les stéréotypes présents dans ses données d'entraînement",
-          "points": 5
-        },
-        { "label": "Une erreur de programmation de l'IA", "points": 1 },
-        {
-          "label": "Le fait que l'IA préfère certains utilisateurs",
-          "points": 0
-        }
-      ],
-      "feedback_correct": "Exact, les IA sont le reflet des données sur lesquelles elles sont entraînées, avec leurs qualités et leurs défauts.",
-      "feedback_partial": "Ce n'est pas une erreur de code, mais un problème hérité des données.",
-      "feedback_incorrect": "L'IA n'a pas de préférences personnelles, elle ne fait que reproduire des schémas statistiques.",
-      "relevance": "Identifier et atténuer les biais est l'un des plus grands défis de l'éthique de l'IA."
-    },
-    {
-      "id": "Q19",
-      "theme": "Prompting avancé",
-      "question": "Pour comparer deux documents, quelle est la meilleure instruction ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "'Compare ces deux textes et présente les différences dans un tableau'",
-          "points": 5
-        },
-        {
-          "label": "'Regarde ces deux textes et dis-moi ce que tu en penses'",
-          "points": 1
-        },
-        { "label": "'Texte 1 vs Texte 2'", "points": 0 }
-      ],
-      "feedback_correct": "Parfait, un prompt directif avec un format de sortie clair donne les meilleurs résultats.",
-      "feedback_partial": "C'est trop vague. L'IA ne saura pas sur quels critères baser son analyse.",
-      "feedback_incorrect": "Un prompt aussi court est une invitation à une réponse médiocre.",
-      "relevance": "La clarté et la directivité du prompt sont directement proportionnelles à la qualité de la réponse."
-    },
-    {
-      "id": "Q20",
-      "theme": "Cas d’usages avancés",
-      "question": "Vous voulez créer une série d'images avec un personnage récurrent. Comment faire ?",
-      "selectionType": "single",
-      "options": [
-        {
-          "label": "Utiliser un 'seed' (graine) et une description très précise du personnage",
-          "points": 5
-        },
-        { "label": "Impossible de garantir la cohérence", "points": 1 },
-        { "label": "Demander à l'IA 'Garde le même personnage'", "points": 2 }
-      ],
-      "feedback_correct": "Très bien ! Le 'seed' est la technique la plus fiable pour maintenir une cohérence stylistique et de personnage.",
-      "feedback_partial": "C'est un bon début, mais sans 'seed', la cohérence sera difficile à maintenir.",
-      "feedback_incorrect": "C'est difficile, mais des techniques comme le 'seed' et des descriptions détaillées le permettent.",
-      "relevance": "La cohérence visuelle est un enjeu majeur pour les applications narratives ou de branding."
-    }
-  ]
+    ],
+    "status": "published"
 }

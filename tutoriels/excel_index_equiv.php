@@ -49,9 +49,9 @@
     <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Sommaire</h2>
     <nav class="toc text-sm space-y-1" id="tocLinks"></nav>
     <div class="mt-4 flex flex-col gap-2">
-      <a href="/tutoriels/downloads/index_equiv_exercices.xlsx" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger exercices (Excel)</a>
-      <a href="/tutoriels/downloads/index_equiv_correction.xlsx" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger correction (Excel)</a>
-      <a href="/tutoriels/downloads/index_equiv_exercices.pdf" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger support (Excel)</a>
+      <a target="_blank" href="/tutoriels/downloads/index_equiv_exercices.xlsx" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger exercices (Excel)</a>
+      <a target="_blank" href="/tutoriels/downloads/index_equiv_correction.xlsx" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger correction (Excel)</a>
+      <a target="_blank" href="/tutoriels/downloads/index_equiv_exercices.pdf" class="px-3 py-2 text-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">Télécharger support (Excel)</a>
     </div>
   </aside>
 

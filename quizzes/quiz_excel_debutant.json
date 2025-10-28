@@ -1,14 +1,14 @@
 {
     "id": "excel_debutant",
-    "main_title": "Bases d\u2019Excel & premiers r\u00e9flexes",
+    "main_title": "Bases d’Excel & premiers réflexes",
     "level": "Novice",
-    "card_description": "Interface, cr\u00e9ation\/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression.",
+    "card_description": "Interface, création\/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression.",
     "themes": [],
     "questions": [
         {
             "id": "B01",
-            "theme": "D\u00e9marrage & interface",
-            "question": "Cr\u00e9er un nouveau classeur vierge : (plusieurs r\u00e9ponses possibles)",
+            "theme": "Démarrage & interface",
+            "question": "Créer un nouveau classeur vierge : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
@@ -16,7 +16,7 @@
                     "points": 3
                 },
                 {
-                    "label": "Ctrl+N (\u2318+N sur Mac)",
+                    "label": "Ctrl+N (⌘+N sur Mac)",
                     "points": 2
                 },
                 {
@@ -24,15 +24,15 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Parfait : Fichier > Nouveau ou Ctrl+N cr\u00e9ent un nouveau classeur.",
+            "feedback_correct": "Parfait : Fichier > Nouveau ou Ctrl+N créent un nouveau classeur.",
             "feedback_partial": "Bien vu ! Pour aller plus vite, pense aussi au raccourci Ctrl+N.",
             "feedback_incorrect": "Astuce : passe par Fichier > Nouveau (ou Ctrl+N) pour un classeur vierge.",
-            "relevance": "Valide la capacit\u00e9 \u00e0 d\u00e9marrer sur un carnet propre avant d\u2019exercer."
+            "relevance": "Valide la capacité à démarrer sur un carnet propre avant d’exercer."
         },
         {
             "id": "B02",
-            "theme": "D\u00e9marrage & interface",
-            "question": "Quelle est la diff\u00e9rence entre un classeur et une feuille ?",
+            "theme": "Démarrage & interface",
+            "question": "Quelle est la différence entre un classeur et une feuille ?",
             "selectionType": "single",
             "options": [
                 {
@@ -40,7 +40,7 @@
                     "points": 4
                 },
                 {
-                    "label": "C'est la m\u00eame chose",
+                    "label": "C'est la même chose",
                     "points": 0
                 },
                 {
@@ -48,15 +48,15 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Exact ! Le classeur est le fichier, la feuille est une page \u00e0 l\u2019int\u00e9rieur.",
+            "feedback_correct": "Exact ! Le classeur est le fichier, la feuille est une page à l’intérieur.",
             "feedback_partial": "Presque : le classeur est plus grand que la feuille.",
             "feedback_incorrect": "Pas de souci : le classeur est le fichier qui contient des feuilles.",
-            "relevance": "Met en place le vocabulaire de base pour se rep\u00e9rer."
+            "relevance": "Met en place le vocabulaire de base pour se repérer."
         },
         {
             "id": "B03",
-            "theme": "D\u00e9marrage & interface",
-            "question": "O\u00f9 voit-on la formule compl\u00e8te de la cellule s\u00e9lectionn\u00e9e ?",
+            "theme": "Démarrage & interface",
+            "question": "Où voit-on la formule complète de la cellule sélectionnée ?",
             "selectionType": "single",
             "options": [
                 {
@@ -64,23 +64,23 @@
                     "points": 4
                 },
                 {
-                    "label": "Directement dans la cellule (elle affiche surtout le r\u00e9sultat)",
+                    "label": "Directement dans la cellule (elle affiche surtout le résultat)",
                     "points": 1
                 },
                 {
-                    "label": "Dans la barre d\u2019\u00e9tat (en bas)",
+                    "label": "Dans la barre d’état (en bas)",
                     "points": 0
                 }
             ],
-            "feedback_correct": "Parfait : la barre de formule montre toujours la formule compl\u00e8te.",
-            "feedback_partial": "La cellule affiche surtout le r\u00e9sultat ; la formule est dans la barre de formule.",
+            "feedback_correct": "Parfait : la barre de formule montre toujours la formule complète.",
+            "feedback_partial": "La cellule affiche surtout le résultat ; la formule est dans la barre de formule.",
             "feedback_incorrect": "Regarde la barre de formule, juste au-dessus de la grille.",
-            "relevance": "Distinguer \u00ab formule \u00bb et \u00ab r\u00e9sultat affich\u00e9 \u00bb rassure beaucoup au d\u00e9but."
+            "relevance": "Distinguer « formule » et « résultat affiché » rassure beaucoup au début."
         },
         {
             "id": "B04",
-            "theme": "D\u00e9marrage & interface",
-            "question": "D\u00e9placer la s\u00e9lection d\u2019une cellule vers la droite : (plusieurs r\u00e9ponses possibles)",
+            "theme": "Démarrage & interface",
+            "question": "Déplacer la sélection d’une cellule vers la droite : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
@@ -88,27 +88,27 @@
                     "points": 2
                 },
                 {
-                    "label": "Fl\u00e8che droite \u2192",
+                    "label": "Flèche droite →",
                     "points": 2
                 },
                 {
-                    "label": "Entr\u00e9e (Enter)",
+                    "label": "Entrée (Enter)",
                     "points": 0
                 }
             ],
-            "feedback_correct": "Oui : Tab et la fl\u00e8che \u2192 permettent d\u2019aller \u00e0 droite.",
-            "feedback_partial": "Bien jou\u00e9. Tab et la fl\u00e8che \u2192 vont \u00e0 droite ; Enter va vers le bas.",
-            "feedback_incorrect": "Astuce : Tab ou la fl\u00e8che \u2192 d\u00e9placent la s\u00e9lection \u00e0 droite.",
-            "relevance": "Aide \u00e0 se d\u00e9placer avec confiance sans la souris."
+            "feedback_correct": "Oui : Tab et la flèche → permettent d’aller à droite.",
+            "feedback_partial": "Bien joué. Tab et la flèche → vont à droite ; Enter va vers le bas.",
+            "feedback_incorrect": "Astuce : Tab ou la flèche → déplacent la sélection à droite.",
+            "relevance": "Aide à se déplacer avec confiance sans la souris."
         },
         {
             "id": "B05",
-            "theme": "D\u00e9marrage & interface",
-            "question": "S\u00e9lectionner toute la feuille rapidement : (plusieurs r\u00e9ponses possibles)",
+            "theme": "Démarrage & interface",
+            "question": "Sélectionner toute la feuille rapidement : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
-                    "label": "Cliquer le petit triangle en haut \u00e0 gauche de la grille",
+                    "label": "Cliquer le petit triangle en haut à gauche de la grille",
                     "points": 3
                 },
                 {
@@ -120,19 +120,19 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Parfait : le coin sup\u00e9rieur gauche ou Ctrl+A s\u00e9lectionnent tout.",
-            "feedback_partial": "Bien vu. Pense aussi au petit triangle en haut \u00e0 gauche.",
-            "feedback_incorrect": "Essaie le triangle en haut \u00e0 gauche ou le raccourci Ctrl+A.",
-            "relevance": "Pratique pour appliquer un format ou copier une feuille enti\u00e8re."
+            "feedback_correct": "Parfait : le coin supérieur gauche ou Ctrl+A sélectionnent tout.",
+            "feedback_partial": "Bien vu. Pense aussi au petit triangle en haut à gauche.",
+            "feedback_incorrect": "Essaie le triangle en haut à gauche ou le raccourci Ctrl+A.",
+            "relevance": "Pratique pour appliquer un format ou copier une feuille entière."
         },
         {
             "id": "B06",
             "theme": "Saisie & types",
-            "question": "Conserver le z\u00e9ro initial (ex. 0123) : (plusieurs r\u00e9ponses possibles)",
+            "question": "Conserver le zéro initial (ex. 0123) : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
-                    "label": "Appliquer le format Texte \u00e0 la cellule",
+                    "label": "Appliquer le format Texte à la cellule",
                     "points": 2
                 },
                 {
@@ -140,7 +140,7 @@
                     "points": 2
                 },
                 {
-                    "label": "Utiliser un format personnalis\u00e9 0000",
+                    "label": "Utiliser un format personnalisé 0000",
                     "points": 2
                 },
                 {
@@ -148,15 +148,15 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Tr\u00e8s bien : Texte, apostrophe ou format 0000 conservent le z\u00e9ro.",
-            "feedback_partial": "On y est ! Les formats ou l\u2019apostrophe aident \u00e0 garder les z\u00e9ros en t\u00eate.",
-            "feedback_incorrect": "Par d\u00e9faut, Excel supprime le z\u00e9ro. Utilise le format Texte, l\u2019apostrophe, ou un format 0000.",
-            "relevance": "\u00c9vite les surprises avec des codes, num\u00e9ros d\u2019\u00e9l\u00e8ve, etc."
+            "feedback_correct": "Très bien : Texte, apostrophe ou format 0000 conservent le zéro.",
+            "feedback_partial": "On y est ! Les formats ou l’apostrophe aident à garder les zéros en tête.",
+            "feedback_incorrect": "Par défaut, Excel supprime le zéro. Utilise le format Texte, l’apostrophe, ou un format 0000.",
+            "relevance": "Évite les surprises avec des codes, numéros d’élève, etc."
         },
         {
             "id": "B07",
             "theme": "Saisie & types",
-            "question": "Saisir 15\/03\/2025 dans une cellule, c\u2019est g\u00e9n\u00e9ralement\u2026",
+            "question": "Saisir 15\/03\/2025 dans une cellule, c’est généralement…",
             "selectionType": "single",
             "options": [
                 {
@@ -168,19 +168,19 @@
                     "points": 0
                 },
                 {
-                    "label": "Un nombre (repr\u00e9sentation interne des dates)",
+                    "label": "Un nombre (représentation interne des dates)",
                     "points": 1
                 }
             ],
-            "feedback_correct": "Oui : Excel reconna\u00eet la date et applique un format date.",
-            "feedback_partial": "Techniquement une date est stock\u00e9e comme un nombre, mais affich\u00e9e comme date.",
-            "feedback_incorrect": "Excel reconna\u00eet souvent ce format comme une date.",
-            "relevance": "Rassure sur le comportement des dates et du format d\u2019affichage."
+            "feedback_correct": "Oui : Excel reconnaît la date et applique un format date.",
+            "feedback_partial": "Techniquement une date est stockée comme un nombre, mais affichée comme date.",
+            "feedback_incorrect": "Excel reconnaît souvent ce format comme une date.",
+            "relevance": "Rassure sur le comportement des dates et du format d’affichage."
         },
         {
             "id": "B08",
             "theme": "Saisie & types",
-            "question": "Obtenir 15% dans la cellule : (plusieurs r\u00e9ponses possibles)",
+            "question": "Obtenir 15% dans la cellule : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
@@ -196,15 +196,15 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Parfait : deux m\u00e9thodes valides pour 15%.",
-            "feedback_partial": "Bien vu. 15% direct ou 0,15 avec le format %, \u00e7a marche.",
-            "feedback_incorrect": "Pense \u00e0 saisir 15% ou 0,15 puis format % (et non 15 \u2192 1500%).",
-            "relevance": "Relie la valeur saisie au format affich\u00e9 (pour \u00e9viter les surprises)."
+            "feedback_correct": "Parfait : deux méthodes valides pour 15%.",
+            "feedback_partial": "Bien vu. 15% direct ou 0,15 avec le format %, ça marche.",
+            "feedback_incorrect": "Pense à saisir 15% ou 0,15 puis format % (et non 15 → 1500%).",
+            "relevance": "Relie la valeur saisie au format affiché (pour éviter les surprises)."
         },
         {
             "id": "B09",
             "theme": "Saisie & types",
-            "question": "Additionner les cellules A1 et B1 : (plusieurs r\u00e9ponses possibles)",
+            "question": "Additionner les cellules A1 et B1 : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
@@ -222,13 +222,13 @@
             ],
             "feedback_correct": "Exact : =A1+B1 ou =SOMME(A1;B1) donnent une addition correcte.",
             "feedback_partial": "Bien. =A1+B1 est la forme la plus simple ; SOMME fonctionne aussi.",
-            "feedback_incorrect": "Pense \u00e0 utiliser + ou la fonction SOMME.",
-            "relevance": "Installe le r\u00e9flexe de base pour les calculs."
+            "feedback_incorrect": "Pense à utiliser + ou la fonction SOMME.",
+            "relevance": "Installe le réflexe de base pour les calculs."
         },
         {
             "id": "B10",
             "theme": "Saisie & types",
-            "question": "Effacer le contenu d\u2019une cellule sans supprimer la cellule : (plusieurs r\u00e9ponses possibles)",
+            "question": "Effacer le contenu d’une cellule sans supprimer la cellule : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
@@ -244,51 +244,51 @@
                     "points": 2
                 },
                 {
-                    "label": "Supprimer la ligne enti\u00e8re",
+                    "label": "Supprimer la ligne entière",
                     "points": 0
                 }
             ],
             "feedback_correct": "Parfait : ces actions vident la cellule sans casser le tableau.",
-            "feedback_partial": "Bien jou\u00e9. Efface le contenu plut\u00f4t que de supprimer la ligne.",
-            "feedback_incorrect": "Utilise \u00ab Effacer le contenu \u00bb ou la touche Suppr pour vider seulement la cellule.",
-            "relevance": "\u00c9vite de d\u00e9caler tout le tableau par erreur."
+            "feedback_partial": "Bien joué. Efface le contenu plutôt que de supprimer la ligne.",
+            "feedback_incorrect": "Utilise « Effacer le contenu » ou la touche Suppr pour vider seulement la cellule.",
+            "relevance": "Évite de décaler tout le tableau par erreur."
         },
         {
             "id": "B11",
             "theme": "Mise en forme & affichage",
-            "question": "Ajuster la largeur d\u2019une colonne : (plusieurs r\u00e9ponses possibles)",
+            "question": "Ajuster la largeur d’une colonne : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
-                    "label": "Double-cliquer la bordure droite de l\u2019en-t\u00eate",
+                    "label": "Double-cliquer la bordure droite de l’en-tête",
                     "points": 2
                 },
                 {
-                    "label": "Faire glisser la bordure droite de l\u2019en-t\u00eate",
+                    "label": "Faire glisser la bordure droite de l’en-tête",
                     "points": 2
                 },
                 {
-                    "label": "Renvoyer \u00e0 la ligne automatique",
+                    "label": "Renvoyer à la ligne automatique",
                     "points": 0
                 }
             ],
             "feedback_correct": "Exact : double-clic ou glisser ajustent la largeur.",
-            "feedback_partial": "Bien vu. Le double-clic ajuste exactement \u00e0 la plus grande entr\u00e9e.",
-            "feedback_incorrect": "Pense \u00e0 manipuler la bordure de l\u2019en-t\u00eate de colonne.",
-            "relevance": "Am\u00e9liore la lisibilit\u00e9 en un geste simple."
+            "feedback_partial": "Bien vu. Le double-clic ajuste exactement à la plus grande entrée.",
+            "feedback_incorrect": "Pense à manipuler la bordure de l’en-tête de colonne.",
+            "relevance": "Améliore la lisibilité en un geste simple."
         },
         {
             "id": "B12",
             "theme": "Mise en forme & affichage",
-            "question": "Afficher un texte long sur plusieurs lignes dans la m\u00eame cellule : (plusieurs r\u00e9ponses possibles)",
+            "question": "Afficher un texte long sur plusieurs lignes dans la même cellule : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
-                    "label": "Activer \u00ab Renvoyer \u00e0 la ligne automatiquement \u00bb",
+                    "label": "Activer « Renvoyer à la ligne automatiquement »",
                     "points": 2
                 },
                 {
-                    "label": "Saut de ligne manuel (Alt+Entr\u00e9e)",
+                    "label": "Saut de ligne manuel (Alt+Entrée)",
                     "points": 2
                 },
                 {
@@ -296,23 +296,23 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Parfait : retour \u00e0 la ligne auto ou Alt+Entr\u00e9e selon le besoin.",
-            "feedback_partial": "Bien. \u00ab Fusionner et centrer \u00bb ne fait pas de retour \u00e0 la ligne.",
-            "feedback_incorrect": "Utilise le renvoi \u00e0 la ligne ou Alt+Entr\u00e9e pour a\u00e9rer le texte.",
-            "relevance": "Distingue la mise en forme du texte de la fusion de cellules (\u00e0 \u00e9viter)."
+            "feedback_correct": "Parfait : retour à la ligne auto ou Alt+Entrée selon le besoin.",
+            "feedback_partial": "Bien. « Fusionner et centrer » ne fait pas de retour à la ligne.",
+            "feedback_incorrect": "Utilise le renvoi à la ligne ou Alt+Entrée pour aérer le texte.",
+            "relevance": "Distingue la mise en forme du texte de la fusion de cellules (à éviter)."
         },
         {
             "id": "B13",
             "theme": "Mise en forme & affichage",
-            "question": "Appliquer un format mon\u00e9taire (\u20ac) proprement :",
+            "question": "Appliquer un format monétaire (€) proprement :",
             "selectionType": "single",
             "options": [
                 {
-                    "label": "Accueil > Nombre > choisir le symbole \u20ac",
+                    "label": "Accueil > Nombre > choisir le symbole €",
                     "points": 4
                 },
                 {
-                    "label": "Taper le symbole \u20ac manuellement dans la cellule",
+                    "label": "Taper le symbole € manuellement dans la cellule",
                     "points": 1
                 },
                 {
@@ -320,10 +320,10 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Oui, c\u2019est le format num\u00e9rique adapt\u00e9 (pas du texte).",
-            "feedback_partial": "Mieux vaut un vrai format \u20ac plut\u00f4t que du texte contenant \u00ab \u20ac \u00bb. ",
-            "feedback_incorrect": "Utilise un format mon\u00e9taire pour des calculs fiables.",
-            "relevance": "Assure des calculs et des alignements coh\u00e9rents."
+            "feedback_correct": "Oui, c’est le format numérique adapté (pas du texte).",
+            "feedback_partial": "Mieux vaut un vrai format € plutôt que du texte contenant « € ». ",
+            "feedback_incorrect": "Utilise un format monétaire pour des calculs fiables.",
+            "relevance": "Assure des calculs et des alignements cohérents."
         },
         {
             "id": "B14",
@@ -340,23 +340,23 @@
                     "points": 1
                 },
                 {
-                    "label": "Accueil > Alignement > Align\u00e9 \u00e0 gauche",
+                    "label": "Accueil > Alignement > Aligné à gauche",
                     "points": 0
                 }
             ],
-            "feedback_correct": "Exact : l\u2019alignement \u00ab Centre \u00bb suffit, sans fusionner.",
-            "feedback_partial": "\u00c7a recentre visuellement, mais la fusion cr\u00e9e des soucis plus tard.",
-            "feedback_incorrect": "Utilise le bouton d\u2019alignement \u00ab Centre \u00bb pour un r\u00e9sultat propre.",
-            "relevance": "Encourage les bonnes pratiques d\u2019alignement (sans fusion inutile)."
+            "feedback_correct": "Exact : l’alignement « Centre » suffit, sans fusionner.",
+            "feedback_partial": "Ça recentre visuellement, mais la fusion crée des soucis plus tard.",
+            "feedback_incorrect": "Utilise le bouton d’alignement « Centre » pour un résultat propre.",
+            "relevance": "Encourage les bonnes pratiques d’alignement (sans fusion inutile)."
         },
         {
             "id": "B15",
             "theme": "Mise en forme & affichage",
-            "question": "Zoomer\/d\u00e9zoomer rapidement : (plusieurs r\u00e9ponses possibles)",
+            "question": "Zoomer\/dézoomer rapidement : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
-                    "label": "Curseur de zoom (barre d\u2019\u00e9tat, en bas \u00e0 droite)",
+                    "label": "Curseur de zoom (barre d’état, en bas à droite)",
                     "points": 2
                 },
                 {
@@ -369,18 +369,18 @@
                 }
             ],
             "feedback_correct": "Parfait : curseur de zoom, Ctrl+molette, ou menu Affichage.",
-            "feedback_partial": "Bien. Essaie aussi le curseur de zoom en bas \u00e0 droite.",
-            "feedback_incorrect": "Regarde le curseur en bas \u00e0 droite ou Ctrl+molette.",
-            "relevance": "Ajuste le confort de lecture selon l\u2019\u00e9cran."
+            "feedback_partial": "Bien. Essaie aussi le curseur de zoom en bas à droite.",
+            "feedback_incorrect": "Regarde le curseur en bas à droite ou Ctrl+molette.",
+            "relevance": "Ajuste le confort de lecture selon l’écran."
         },
         {
             "id": "B16",
             "theme": "Listes & filtres",
-            "question": "Activer des filtres sur un tableau : (plusieurs r\u00e9ponses possibles)",
+            "question": "Activer des filtres sur un tableau : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
-                    "label": "Onglet Donn\u00e9es > Filtrer",
+                    "label": "Onglet Données > Filtrer",
                     "points": 3
                 },
                 {
@@ -392,15 +392,15 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Exact : Donn\u00e9es > Filtrer ou Ctrl+Maj+L ajoutent les filtres.",
+            "feedback_correct": "Exact : Données > Filtrer ou Ctrl+Maj+L ajoutent les filtres.",
             "feedback_partial": "Bien ! Essaie aussi le raccourci Ctrl+Maj+L.",
-            "feedback_incorrect": "Va dans Donn\u00e9es > Filtrer (ou Ctrl+Maj+L).",
-            "relevance": "Donne un r\u00e9flexe simple pour explorer une liste."
+            "feedback_incorrect": "Va dans Données > Filtrer (ou Ctrl+Maj+L).",
+            "relevance": "Donne un réflexe simple pour explorer une liste."
         },
         {
             "id": "B17",
             "theme": "Impression",
-            "question": "Voir l\u2019aper\u00e7u avant impression : (plusieurs r\u00e9ponses possibles)",
+            "question": "Voir l’aperçu avant impression : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
@@ -408,7 +408,7 @@
                     "points": 2
                 },
                 {
-                    "label": "Ctrl+P (\u2318+P sur Mac)",
+                    "label": "Ctrl+P (⌘+P sur Mac)",
                     "points": 2
                 },
                 {
@@ -416,39 +416,39 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Parfait : Fichier > Imprimer ou Ctrl+P ouvrent l\u2019aper\u00e7u.",
+            "feedback_correct": "Parfait : Fichier > Imprimer ou Ctrl+P ouvrent l’aperçu.",
             "feedback_partial": "Bien vu ! Pense aussi au raccourci Ctrl+P.",
-            "feedback_incorrect": "Passe par Fichier > Imprimer (ou Ctrl+P) pour l\u2019aper\u00e7u.",
-            "relevance": "Permet de v\u00e9rifier la mise en page avant d\u2019imprimer."
+            "feedback_incorrect": "Passe par Fichier > Imprimer (ou Ctrl+P) pour l’aperçu.",
+            "relevance": "Permet de vérifier la mise en page avant d’imprimer."
         },
         {
             "id": "B18",
             "theme": "Fichiers",
-            "question": "Quelles affirmations sont exactes ? (plusieurs r\u00e9ponses possibles)",
+            "question": "Quelles affirmations sont exactes ? (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
-                    "label": "\u00ab Enregistrer \u00bb met \u00e0 jour le fichier actuel",
+                    "label": "« Enregistrer » met à jour le fichier actuel",
                     "points": 2
                 },
                 {
-                    "label": "\u00ab Enregistrer sous \u00bb cr\u00e9e une copie (nouveau nom\/emplacement)",
+                    "label": "« Enregistrer sous » crée une copie (nouveau nom\/emplacement)",
                     "points": 2
                 },
                 {
-                    "label": "\u00ab Enregistrer sous \u00bb supprime l\u2019original",
+                    "label": "« Enregistrer sous » supprime l’original",
                     "points": 0
                 }
             ],
-            "feedback_correct": "Exact : \u00ab Enregistrer \u00bb met \u00e0 jour, \u00ab Enregistrer sous \u00bb cr\u00e9e une copie.",
-            "feedback_partial": "Bien. Pense que \u00ab Enregistrer sous \u00bb ne supprime pas l\u2019original.",
-            "feedback_incorrect": "Astuce : Enregistrer met \u00e0 jour ; Enregistrer sous cr\u00e9e une nouvelle copie.",
-            "relevance": "Donne confiance pour g\u00e9rer les versions d\u2019un fichier."
+            "feedback_correct": "Exact : « Enregistrer » met à jour, « Enregistrer sous » crée une copie.",
+            "feedback_partial": "Bien. Pense que « Enregistrer sous » ne supprime pas l’original.",
+            "feedback_incorrect": "Astuce : Enregistrer met à jour ; Enregistrer sous crée une nouvelle copie.",
+            "relevance": "Donne confiance pour gérer les versions d’un fichier."
         },
         {
             "id": "B19",
             "theme": "Fichiers",
-            "question": "Fermer le classeur sans quitter Excel : (plusieurs r\u00e9ponses possibles)",
+            "question": "Fermer le classeur sans quitter Excel : (plusieurs réponses possibles)",
             "selectionType": "multi",
             "options": [
                 {
@@ -456,7 +456,7 @@
                     "points": 2
                 },
                 {
-                    "label": "Ctrl+W (\u2318+W sur Mac)",
+                    "label": "Ctrl+W (⌘+W sur Mac)",
                     "points": 2
                 },
                 {
@@ -467,12 +467,12 @@
             "feedback_correct": "Parfait : Fichier > Fermer ou Ctrl+W ferment le classeur seulement.",
             "feedback_partial": "Oui. Alt+F4 ferme tout le programme, pas uniquement le fichier.",
             "feedback_incorrect": "Essaie Fichier > Fermer ou le raccourci Ctrl+W.",
-            "relevance": "\u00c9vite de quitter Excel par erreur en pleine s\u00e9ance."
+            "relevance": "Évite de quitter Excel par erreur en pleine séance."
         },
         {
             "id": "B20",
-            "theme": "Rep\u00e8res & adresses",
-            "question": "Comment s\u2019\u00e9crit l\u2019adresse de la cellule colonne C, ligne 5 ?",
+            "theme": "Repères & adresses",
+            "question": "Comment s’écrit l’adresse de la cellule colonne C, ligne 5 ?",
             "selectionType": "single",
             "options": [
                 {
@@ -488,15 +488,15 @@
                     "points": 0
                 }
             ],
-            "feedback_correct": "Exact : lettre de colonne puis num\u00e9ro de ligne.",
-            "feedback_partial": "Pense \u00ab colonne (lettre) \u00bb puis \u00ab ligne (num\u00e9ro) \u00bb.",
-            "feedback_incorrect": "Astuce : d\u2019abord la lettre de colonne, puis le num\u00e9ro de ligne (C5).",
-            "relevance": "Asseoit le rep\u00e8re de base pour lire\/\u00e9crire des formules."
+            "feedback_correct": "Exact : lettre de colonne puis numéro de ligne.",
+            "feedback_partial": "Pense « colonne (lettre) » puis « ligne (numéro) ».",
+            "feedback_incorrect": "Astuce : d’abord la lettre de colonne, puis le numéro de ligne (C5).",
+            "relevance": "Asseoit le repère de base pour lire\/écrire des formules."
         }
     ],
     "status": "published",
     "time": "N\/A",
     "features": [],
-    "title": "Bases d\u2019Excel & premiers r\u00e9flexes",
-    "description": "Interface, cr\u00e9ation\/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression."
+    "title": "Bases d’Excel & premiers réflexes",
+    "description": "Interface, création\/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression."
 }
