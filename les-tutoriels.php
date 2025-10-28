@@ -1,6 +1,20 @@
 <?php
 $pageTitle = "Liste des Tutoriels";
 require_once 'includes/auth_check.php';
+// We need to buffer the output to set headers
+ob_start();
+?>
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo isset($pageTitle) ? htmlspecialchars($pageTitle) : 'Tutoriels'; ?></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+<?php
+// Now that the head is defined, we can include the header
 require_once 'header.php';
 
 $tutoriels_data = json_decode(file_get_contents('tutoriels.json'), true);
@@ -31,4 +45,7 @@ $categories = $tutoriels_data['categories'];
 
 </div>
 
-<?php require_once 'footer.php'; ?>
+<?php
+require_once 'footer.php';
+ob_end_flush();
+?>
