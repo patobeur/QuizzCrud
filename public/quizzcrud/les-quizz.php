@@ -191,20 +191,26 @@
                             $progress_html = "<span class='absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-2.5 py-1 rounded-full'>{$percentage}%</span>";
                         }
                     }
-                    $tag = (isset($_SESSION['user_id'])) ? 'a href="qcm.php?quiz=' . $quiz_id . '"' : "div";
-                    $tagend = (isset($_SESSION['user_id'])) ? 'a' : "div";
-                    $buttontest = "";
+                    $tag_open = '';
+                    $tag_close = '';
+                    $button_html = '';
+
                     if (isset($_SESSION['user_id'])) {
-                        $buttontest = '
+                        $tag_open = '<a href="qcm.php?quiz=' . $quiz_id . '"';
+                        $tag_close = 'a';
+                        $button_html = '
                         <div class="mt-6">
                             <span class="inline-flex items-center justify-center px-4 py-2 rounded-xl ' . $level_colors['button_bg'] . ' text-white text-sm ' . $level_colors['button_hover_bg'] . ' transition">
                                 Passer le test
                             </span>
                         </div>';
+                    } else {
+                        $tag_open = '<div';
+                        $tag_close = 'div';
                     }
 
                     echo <<<HTML
-                    <{$tag}"
+                    {$tag_open}
                        data-quiz-id="{$quiz_id}"
                        class="group relative block bg-white rounded-2xl shadow p-5 md:p-6 border border-transparent {$level_colors['border']} hover:shadow-lg focus:outline-none focus:ring-4 {$level_colors['focus_ring']} transition">
 
@@ -231,8 +237,8 @@
                             </div>
                         </div>
 
-                        {$buttontest}
-                    </{$tagend}>
+                        {$button_html}
+                    </{$tag_close}>
 HTML;
                 }
             }
