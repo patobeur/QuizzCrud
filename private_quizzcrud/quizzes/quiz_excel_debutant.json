@@ -1,0 +1,506 @@
+{
+	"id": "excel_debutant",
+	"title": "Bases d’Excel & premiers réflexes",
+	"level": "Novice",
+	"time": "≈ 5–10 min",
+	"main_title": "Bases d’Excel & premiers réflexes",
+	"card_description": "Interface, création/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression.",
+	"features": [
+		"20 questions (radio & checkbox)",
+		"Points par réponse & feedback personnalisé",
+		"Pertinence : évaluer l’aptitude à suivre une formation de 7 h"
+	],
+	"themes": ["Formules", "Logique", "Données"],
+	"description": "Interface, création/enregistrement, saisie (textes, nombres, dates), formats simples, navigation, zoom, filtres, impression.",
+	"questions": [
+		{
+			"id": "B01",
+			"theme": "Démarrage & interface",
+			"question": "Créer un nouveau classeur vierge : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Fichier > Nouveau > Classeur vierge",
+					"points": 3
+				},
+				{
+					"label": "Ctrl+N (⌘+N sur Mac)",
+					"points": 2
+				},
+				{
+					"label": "Insertion > Classeur",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Parfait : Fichier > Nouveau ou Ctrl+N créent un nouveau classeur.",
+			"feedback_partial": "Bien vu ! Pour aller plus vite, pense aussi au raccourci Ctrl+N.",
+			"feedback_incorrect": "Astuce : passe par Fichier > Nouveau (ou Ctrl+N) pour un classeur vierge.",
+			"relevance": "Valide la capacité à démarrer sur un carnet propre avant d’exercer."
+		},
+		{
+			"id": "B02",
+			"theme": "Démarrage & interface",
+			"question": "Quelle est la différence entre un classeur et une feuille ?",
+			"selectionType": "single",
+			"options": [
+				{
+					"label": "Un classeur contient une ou plusieurs feuilles",
+					"points": 4
+				},
+				{
+					"label": "C'est la même chose",
+					"points": 0
+				},
+				{
+					"label": "Une feuille contient plusieurs classeurs",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Exact ! Le classeur est le fichier, la feuille est une page à l’intérieur.",
+			"feedback_partial": "Presque : le classeur est plus grand que la feuille.",
+			"feedback_incorrect": "Pas de souci : le classeur est le fichier qui contient des feuilles.",
+			"relevance": "Met en place le vocabulaire de base pour se repérer."
+		},
+		{
+			"id": "B03",
+			"theme": "Démarrage & interface",
+			"question": "Où voit-on la formule complète de la cellule sélectionnée ?",
+			"selectionType": "single",
+			"options": [
+				{
+					"label": "Dans la barre de formule (au-dessus de la grille)",
+					"points": 4
+				},
+				{
+					"label": "Directement dans la cellule (elle affiche surtout le résultat)",
+					"points": 1
+				},
+				{
+					"label": "Dans la barre d’état (en bas)",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Parfait : la barre de formule montre toujours la formule complète.",
+			"feedback_partial": "La cellule affiche surtout le résultat ; la formule est dans la barre de formule.",
+			"feedback_incorrect": "Regarde la barre de formule, juste au-dessus de la grille.",
+			"relevance": "Distinguer « formule » et « résultat affiché » rassure beaucoup au début."
+		},
+		{
+			"id": "B04",
+			"theme": "Démarrage & interface",
+			"question": "Déplacer la sélection d’une cellule vers la droite : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Touche Tab",
+					"points": 2
+				},
+				{
+					"label": "Flèche droite →",
+					"points": 2
+				},
+				{
+					"label": "Entrée (Enter)",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Oui : Tab et la flèche → permettent d’aller à droite.",
+			"feedback_partial": "Bien joué. Tab et la flèche → vont à droite ; Enter va vers le bas.",
+			"feedback_incorrect": "Astuce : Tab ou la flèche → déplacent la sélection à droite.",
+			"relevance": "Aide à se déplacer avec confiance sans la souris."
+		},
+		{
+			"id": "B05",
+			"theme": "Démarrage & interface",
+			"question": "Sélectionner toute la feuille rapidement : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Cliquer le petit triangle en haut à gauche de la grille",
+					"points": 3
+				},
+				{
+					"label": "Ctrl+A (une ou deux fois selon le contexte)",
+					"points": 2
+				},
+				{
+					"label": "Double-cliquer une cellule",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Parfait : le coin supérieur gauche ou Ctrl+A sélectionnent tout.",
+			"feedback_partial": "Bien vu. Pense aussi au petit triangle en haut à gauche.",
+			"feedback_incorrect": "Essaie le triangle en haut à gauche ou le raccourci Ctrl+A.",
+			"relevance": "Pratique pour appliquer un format ou copier une feuille entière."
+		},
+		{
+			"id": "B06",
+			"theme": "Saisie & types",
+			"question": "Conserver le zéro initial (ex. 0123) : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Appliquer le format Texte à la cellule",
+					"points": 2
+				},
+				{
+					"label": "Commencer par une apostrophe : '0123",
+					"points": 2
+				},
+				{
+					"label": "Utiliser un format personnalisé 0000",
+					"points": 2
+				},
+				{
+					"label": "Taper 0123 sans rien faire",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Très bien : Texte, apostrophe ou format 0000 conservent le zéro.",
+			"feedback_partial": "On y est ! Les formats ou l’apostrophe aident à garder les zéros en tête.",
+			"feedback_incorrect": "Par défaut, Excel supprime le zéro. Utilise le format Texte, l’apostrophe, ou un format 0000.",
+			"relevance": "Évite les surprises avec des codes, numéros d’élève, etc."
+		},
+		{
+			"id": "B07",
+			"theme": "Saisie & types",
+			"question": "Saisir 15/03/2025 dans une cellule, c’est généralement…",
+			"selectionType": "single",
+			"options": [
+				{
+					"label": "Reconnu comme une date",
+					"points": 4
+				},
+				{
+					"label": "Du texte",
+					"points": 0
+				},
+				{
+					"label": "Un nombre (représentation interne des dates)",
+					"points": 1
+				}
+			],
+			"feedback_correct": "Oui : Excel reconnaît la date et applique un format date.",
+			"feedback_partial": "Techniquement une date est stockée comme un nombre, mais affichée comme date.",
+			"feedback_incorrect": "Excel reconnaît souvent ce format comme une date.",
+			"relevance": "Rassure sur le comportement des dates et du format d’affichage."
+		},
+		{
+			"id": "B08",
+			"theme": "Saisie & types",
+			"question": "Obtenir 15% dans la cellule : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Saisir 15%",
+					"points": 2
+				},
+				{
+					"label": "Saisir 0,15 puis appliquer le format %",
+					"points": 2
+				},
+				{
+					"label": "Saisir 15 puis appliquer le format % (donnera 1500%)",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Parfait : deux méthodes valides pour 15%.",
+			"feedback_partial": "Bien vu. 15% direct ou 0,15 avec le format %, ça marche.",
+			"feedback_incorrect": "Pense à saisir 15% ou 0,15 puis format % (et non 15 → 1500%).",
+			"relevance": "Relie la valeur saisie au format affiché (pour éviter les surprises)."
+		},
+		{
+			"id": "B09",
+			"theme": "Saisie & types",
+			"question": "Additionner les cellules A1 et B1 : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "=A1+B1",
+					"points": 3
+				},
+				{
+					"label": "=SOMME(A1;B1)",
+					"points": 2
+				},
+				{
+					"label": "=A1B1",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Exact : =A1+B1 ou =SOMME(A1;B1) donnent une addition correcte.",
+			"feedback_partial": "Bien. =A1+B1 est la forme la plus simple ; SOMME fonctionne aussi.",
+			"feedback_incorrect": "Pense à utiliser + ou la fonction SOMME.",
+			"relevance": "Installe le réflexe de base pour les calculs."
+		},
+		{
+			"id": "B10",
+			"theme": "Saisie & types",
+			"question": "Effacer le contenu d’une cellule sans supprimer la cellule : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Touche Suppr",
+					"points": 2
+				},
+				{
+					"label": "Clic droit > Effacer le contenu",
+					"points": 2
+				},
+				{
+					"label": "Accueil > Effacer > Effacer le contenu",
+					"points": 2
+				},
+				{
+					"label": "Supprimer la ligne entière",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Parfait : ces actions vident la cellule sans casser le tableau.",
+			"feedback_partial": "Bien joué. Efface le contenu plutôt que de supprimer la ligne.",
+			"feedback_incorrect": "Utilise « Effacer le contenu » ou la touche Suppr pour vider seulement la cellule.",
+			"relevance": "Évite de décaler tout le tableau par erreur."
+		},
+		{
+			"id": "B11",
+			"theme": "Mise en forme & affichage",
+			"question": "Ajuster la largeur d’une colonne : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Double-cliquer la bordure droite de l’en-tête",
+					"points": 2
+				},
+				{
+					"label": "Faire glisser la bordure droite de l’en-tête",
+					"points": 2
+				},
+				{
+					"label": "Renvoyer à la ligne automatique",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Exact : double-clic ou glisser ajustent la largeur.",
+			"feedback_partial": "Bien vu. Le double-clic ajuste exactement à la plus grande entrée.",
+			"feedback_incorrect": "Pense à manipuler la bordure de l’en-tête de colonne.",
+			"relevance": "Améliore la lisibilité en un geste simple."
+		},
+		{
+			"id": "B12",
+			"theme": "Mise en forme & affichage",
+			"question": "Afficher un texte long sur plusieurs lignes dans la même cellule : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Activer « Renvoyer à la ligne automatiquement »",
+					"points": 2
+				},
+				{
+					"label": "Saut de ligne manuel (Alt+Entrée)",
+					"points": 2
+				},
+				{
+					"label": "Fusionner et centrer",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Parfait : retour à la ligne auto ou Alt+Entrée selon le besoin.",
+			"feedback_partial": "Bien. « Fusionner et centrer » ne fait pas de retour à la ligne.",
+			"feedback_incorrect": "Utilise le renvoi à la ligne ou Alt+Entrée pour aérer le texte.",
+			"relevance": "Distingue la mise en forme du texte de la fusion de cellules (à éviter)."
+		},
+		{
+			"id": "B13",
+			"theme": "Mise en forme & affichage",
+			"question": "Appliquer un format monétaire (€) proprement :",
+			"selectionType": "single",
+			"options": [
+				{
+					"label": "Accueil > Nombre > choisir le symbole €",
+					"points": 4
+				},
+				{
+					"label": "Taper le symbole € manuellement dans la cellule",
+					"points": 1
+				},
+				{
+					"label": "Laisser le format Standard",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Oui, c’est le format numérique adapté (pas du texte).",
+			"feedback_partial": "Mieux vaut un vrai format € plutôt que du texte contenant « € ». ",
+			"feedback_incorrect": "Utilise un format monétaire pour des calculs fiables.",
+			"relevance": "Assure des calculs et des alignements cohérents."
+		},
+		{
+			"id": "B14",
+			"theme": "Mise en forme & affichage",
+			"question": "Centrer un texte dans sa cellule :",
+			"selectionType": "single",
+			"options": [
+				{
+					"label": "Accueil > Alignement > Centre",
+					"points": 4
+				},
+				{
+					"label": "Fusionner et centrer",
+					"points": 1
+				},
+				{
+					"label": "Accueil > Alignement > Aligné à gauche",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Exact : l’alignement « Centre » suffit, sans fusionner.",
+			"feedback_partial": "Ça recentre visuellement, mais la fusion crée des soucis plus tard.",
+			"feedback_incorrect": "Utilise le bouton d’alignement « Centre » pour un résultat propre.",
+			"relevance": "Encourage les bonnes pratiques d’alignement (sans fusion inutile)."
+		},
+		{
+			"id": "B15",
+			"theme": "Mise en forme & affichage",
+			"question": "Zoomer/dézoomer rapidement : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Curseur de zoom (barre d’état, en bas à droite)",
+					"points": 2
+				},
+				{
+					"label": "Ctrl + molette de la souris",
+					"points": 2
+				},
+				{
+					"label": "Onglet Affichage > Zoom",
+					"points": 1
+				}
+			],
+			"feedback_correct": "Parfait : curseur de zoom, Ctrl+molette, ou menu Affichage.",
+			"feedback_partial": "Bien. Essaie aussi le curseur de zoom en bas à droite.",
+			"feedback_incorrect": "Regarde le curseur en bas à droite ou Ctrl+molette.",
+			"relevance": "Ajuste le confort de lecture selon l’écran."
+		},
+		{
+			"id": "B16",
+			"theme": "Listes & filtres",
+			"question": "Activer des filtres sur un tableau : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Onglet Données > Filtrer",
+					"points": 3
+				},
+				{
+					"label": "Ctrl+Maj+L",
+					"points": 2
+				},
+				{
+					"label": "Onglet Insertion > Filtrer",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Exact : Données > Filtrer ou Ctrl+Maj+L ajoutent les filtres.",
+			"feedback_partial": "Bien ! Essaie aussi le raccourci Ctrl+Maj+L.",
+			"feedback_incorrect": "Va dans Données > Filtrer (ou Ctrl+Maj+L).",
+			"relevance": "Donne un réflexe simple pour explorer une liste."
+		},
+		{
+			"id": "B17",
+			"theme": "Impression",
+			"question": "Voir l’aperçu avant impression : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Fichier > Imprimer",
+					"points": 2
+				},
+				{
+					"label": "Ctrl+P (⌘+P sur Mac)",
+					"points": 2
+				},
+				{
+					"label": "Accueil > Police",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Parfait : Fichier > Imprimer ou Ctrl+P ouvrent l’aperçu.",
+			"feedback_partial": "Bien vu ! Pense aussi au raccourci Ctrl+P.",
+			"feedback_incorrect": "Passe par Fichier > Imprimer (ou Ctrl+P) pour l’aperçu.",
+			"relevance": "Permet de vérifier la mise en page avant d’imprimer."
+		},
+		{
+			"id": "B18",
+			"theme": "Fichiers",
+			"question": "Quelles affirmations sont exactes ? (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "« Enregistrer » met à jour le fichier actuel",
+					"points": 2
+				},
+				{
+					"label": "« Enregistrer sous » crée une copie (nouveau nom/emplacement)",
+					"points": 2
+				},
+				{
+					"label": "« Enregistrer sous » supprime l’original",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Exact : « Enregistrer » met à jour, « Enregistrer sous » crée une copie.",
+			"feedback_partial": "Bien. Pense que « Enregistrer sous » ne supprime pas l’original.",
+			"feedback_incorrect": "Astuce : Enregistrer met à jour ; Enregistrer sous crée une nouvelle copie.",
+			"relevance": "Donne confiance pour gérer les versions d’un fichier."
+		},
+		{
+			"id": "B19",
+			"theme": "Fichiers",
+			"question": "Fermer le classeur sans quitter Excel : (plusieurs réponses possibles)",
+			"selectionType": "multi",
+			"options": [
+				{
+					"label": "Fichier > Fermer",
+					"points": 2
+				},
+				{
+					"label": "Ctrl+W (⌘+W sur Mac)",
+					"points": 2
+				},
+				{
+					"label": "Alt+F4 (ferme tout le programme)",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Parfait : Fichier > Fermer ou Ctrl+W ferment le classeur seulement.",
+			"feedback_partial": "Oui. Alt+F4 ferme tout le programme, pas uniquement le fichier.",
+			"feedback_incorrect": "Essaie Fichier > Fermer ou le raccourci Ctrl+W.",
+			"relevance": "Évite de quitter Excel par erreur en pleine séance."
+		},
+		{
+			"id": "B20",
+			"theme": "Repères & adresses",
+			"question": "Comment s’écrit l’adresse de la cellule colonne C, ligne 5 ?",
+			"selectionType": "single",
+			"options": [
+				{
+					"label": "C5",
+					"points": 4
+				},
+				{
+					"label": "5C",
+					"points": 0
+				},
+				{
+					"label": "C-5",
+					"points": 0
+				}
+			],
+			"feedback_correct": "Exact : lettre de colonne puis numéro de ligne.",
+			"feedback_partial": "Pense « colonne (lettre) » puis « ligne (numéro) ».",
+			"feedback_incorrect": "Astuce : d’abord la lettre de colonne, puis le numéro de ligne (C5).",
+			"relevance": "Asseoit le repère de base pour lire/écrire des formules."
+		}
+	],
+	"status": "published"
+}
