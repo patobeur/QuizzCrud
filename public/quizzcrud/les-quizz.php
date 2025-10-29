@@ -191,8 +191,8 @@
                             $progress_html = "<span class='absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-2.5 py-1 rounded-full'>{$percentage}%</span>";
                         }
                     }
-                    $tag = (isset($_SESSION['user_id'])) ? 'a href="qcm.php?quiz=' . $quiz_id . '"' : "span";
-                    $tagend = (isset($_SESSION['user_id'])) ? 'a' : "span";
+                    $tag = (isset($_SESSION['user_id'])) ? 'a href="qcm.php?quiz=' . $quiz_id . '"' : "div";
+                    $tagend = (isset($_SESSION['user_id'])) ? 'a' : "div";
                     $buttontest = "";
                     if (isset($_SESSION['user_id'])) {
                         $buttontest = '
